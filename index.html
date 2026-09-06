@@ -452,6 +452,466 @@
 
 </style>
 
+
+<style id="hero-width-fix">
+/* PC幅による右余白のズレ対策 */
+#mainVisual,
+.mainVisual,
+.mv,
+.hero,
+.firstView {
+  width: calc(100% - 32px) !important;
+  max-width: none !important;
+  margin-left: 16px !important;
+  margin-right: 16px !important;
+  box-sizing: border-box !important;
+}
+
+#mainVisual img,
+.mainVisual img,
+.mv img,
+.hero img,
+.firstView img {
+  width: 100% !important;
+  max-width: none !important;
+  display: block !important;
+  object-fit: cover !important;
+}
+
+@media screen and (min-width: 1200px) {
+  #mainVisual,
+  .mainVisual,
+  .mv,
+  .hero,
+  .firstView {
+    width: calc(100% - 48px) !important;
+    margin-left: 24px !important;
+    margin-right: 24px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #mainVisual,
+  .mainVisual,
+  .mv,
+  .hero,
+  .firstView {
+    width: calc(100% - 20px) !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+<style id="support-card-redesign">
+
+/* =========================
+   SUPPORT 全体
+========================= */
+
+#globus-support {
+  position: relative !important;
+  padding: 100px 40px 110px !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+
+  background:
+    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.18)),
+    url("assets/support-bg.png") center top / cover no-repeat !important;
+}
+
+#globus-support::before {
+  display: none !important;
+}
+
+#globus-support .gs-inner {
+  width: min(1420px, 100%) !important;
+  margin: 0 auto !important;
+}
+
+
+/* =========================
+   見出し
+========================= */
+
+#globus-support .gs-heading {
+  text-align: center !important;
+  margin-bottom: 58px !important;
+}
+
+#globus-support .gs-label {
+  margin: 0 0 16px !important;
+  font-size: 14px !important;
+  letter-spacing: .25em !important;
+  color: #248da8 !important;
+  font-weight: 600 !important;
+}
+
+#globus-support .gs-label::after {
+  content: "";
+  display: block;
+  width: 86px;
+  height: 1px;
+  margin: 12px auto 0;
+  background: #248da8;
+}
+
+#globus-support .gs-title {
+  margin: 0 !important;
+  font-size: clamp(30px, 3vw, 48px) !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+  letter-spacing: .035em !important;
+  color: #173354 !important;
+}
+
+#globus-support .gs-copy {
+  max-width: 980px !important;
+  margin: 26px auto 0 !important;
+  font-size: 15px !important;
+  line-height: 2 !important;
+  color: #495a69 !important;
+}
+
+
+/* =========================
+   5カード配置
+   上3 / 下2
+========================= */
+
+#globus-support .gs-grid {
+  display: grid !important;
+  grid-template-columns: repeat(6, 1fr) !important;
+  gap: 24px !important;
+}
+
+#globus-support .gs-card {
+  grid-column: span 2 !important;
+
+  position: relative !important;
+  min-height: 280px !important;
+  overflow: hidden !important;
+
+  border-radius: 12px !important;
+  background: rgba(255,255,255,.97) !important;
+  box-shadow: 0 12px 35px rgba(31,54,73,.10) !important;
+
+  text-decoration: none !important;
+  isolation: isolate !important;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease !important;
+}
+
+/* 4枚目・5枚目は横長 */
+#globus-support .gs-card:nth-child(4),
+#globus-support .gs-card:nth-child(5),
+#globus-support .gs-card-wide {
+  grid-column: span 3 !important;
+}
+
+
+/* =========================
+   写真：右側を曲線で見せる
+========================= */
+
+#globus-support .gs-image {
+  position: absolute !important;
+
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: auto !important;
+
+  width: 60% !important;
+  height: 100% !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+
+  /*
+   白い情報面との境界を大きな曲線に
+  */
+  clip-path: ellipse(73% 115% at 100% 50%) !important;
+
+  transition:
+    transform .55s ease,
+    filter .4s ease !important;
+}
+
+
+/* 既存の濃いオーバーレイは消す */
+#globus-support .gs-overlay {
+  display: none !important;
+}
+
+
+/* =========================
+   白い情報エリア
+========================= */
+
+#globus-support .gs-content {
+  position: relative !important;
+  z-index: 3 !important;
+
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  width: 56% !important;
+  min-height: 280px !important;
+
+  padding: 34px 26px 28px 30px !important;
+  box-sizing: border-box !important;
+
+  color: #173354 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+
+  /*
+   写真の下に確実に白面を作る
+  */
+  background: transparent !important;
+}
+
+
+/* =========================
+   番号
+========================= */
+
+#globus-support .gs-no {
+  display: block !important;
+
+  margin-bottom: 22px !important;
+
+  font-size: 29px !important;
+  line-height: 1 !important;
+  letter-spacing: .03em !important;
+
+  color: #2a9ab2 !important;
+  font-weight: 300 !important;
+}
+
+
+/* =========================
+   カードタイトル
+========================= */
+
+#globus-support .gs-card-title {
+  margin: 0 0 16px !important;
+
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+
+  color: #173354 !important;
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+}
+
+
+/* =========================
+   説明文
+========================= */
+
+#globus-support .gs-card-copy {
+  margin: 0 !important;
+
+  max-width: 280px !important;
+
+  font-size: 13px !important;
+  line-height: 1.9 !important;
+
+  color: #4e606d !important;
+  opacity: 1 !important;
+}
+
+
+/* =========================
+   小さい丸矢印
+========================= */
+
+#globus-support .gs-arrow {
+  position: absolute !important;
+
+  right: 22px !important;
+  bottom: 20px !important;
+
+  width: 34px !important;
+  height: 34px !important;
+
+  border: 1px solid #2a9ab2 !important;
+  border-radius: 50% !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  color: #2a9ab2 !important;
+  background: rgba(255,255,255,.78) !important;
+
+  font-size: 16px !important;
+  font-weight: 400 !important;
+
+  z-index: 5 !important;
+}
+
+
+/* =========================
+   Hover
+========================= */
+
+#globus-support .gs-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 18px 45px rgba(31,54,73,.16) !important;
+}
+
+#globus-support .gs-card:hover .gs-image {
+  transform: scale(1.035) !important;
+}
+
+#globus-support .gs-card:hover .gs-arrow {
+  background: #2a9ab2 !important;
+  color: #fff !important;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+#globus-support .gs-cta-wrap {
+  margin-top: 42px !important;
+  text-align: center !important;
+}
+
+#globus-support .gs-cta {
+  min-width: 430px !important;
+  min-height: 72px !important;
+
+  padding: 16px 42px !important;
+
+  border: none !important;
+  border-radius: 6px !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #258ca7 0%,
+      #45a4a3 55%,
+      #b5ad75 100%
+    ) !important;
+
+  color: #fff !important;
+
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  letter-spacing: .06em !important;
+
+  box-shadow: 0 10px 28px rgba(38,122,145,.18) !important;
+}
+
+#globus-support .gs-cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media screen and (max-width: 1100px) {
+
+  #globus-support {
+    padding: 80px 25px 90px !important;
+  }
+
+  #globus-support .gs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  #globus-support .gs-card,
+  #globus-support .gs-card:nth-child(4),
+  #globus-support .gs-card:nth-child(5),
+  #globus-support .gs-card-wide {
+    grid-column: span 1 !important;
+  }
+
+  #globus-support .gs-card:last-child {
+    grid-column: 1 / -1 !important;
+  }
+
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media screen and (max-width: 700px) {
+
+  #globus-support {
+    padding: 70px 16px 75px !important;
+    background-position: center top !important;
+  }
+
+  #globus-support .gs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  #globus-support .gs-card,
+  #globus-support .gs-card:nth-child(4),
+  #globus-support .gs-card:nth-child(5),
+  #globus-support .gs-card-wide,
+  #globus-support .gs-card:last-child {
+    grid-column: 1 !important;
+    min-height: 320px !important;
+  }
+
+  #globus-support .gs-image {
+    width: 67% !important;
+    clip-path: ellipse(76% 110% at 100% 50%) !important;
+  }
+
+  #globus-support .gs-content {
+    width: 60% !important;
+    min-height: 320px !important;
+    padding: 28px 18px 25px 22px !important;
+  }
+
+  #globus-support .gs-no {
+    font-size: 25px !important;
+    margin-bottom: 18px !important;
+  }
+
+  #globus-support .gs-card-title {
+    font-size: 21px !important;
+  }
+
+  #globus-support .gs-card-copy {
+    font-size: 12px !important;
+    line-height: 1.8 !important;
+  }
+
+  #globus-support .gs-cta {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+}
+
+</style>
+
 </head>
 <body id="top" style="">
     <!-- === header === -->
@@ -574,6 +1034,8 @@
                       </section>
                       <!-- 画像なしの場合 -->
                                                                                                                   
+</div><!-- /.container SUPPORT full width -->
+
 <section id="globus-support">
 
   <div class="gs-inner">
@@ -673,6 +1135,7 @@
 
 </section>
 
+<div class="container">
                       <!-- 画像なしの場合 -->
                                                 <!-- === /articleArea === -->
             </div>
