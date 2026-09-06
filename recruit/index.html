@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>採用情報｜株式会社グローパス</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    "Yu Gothic",
+    "YuGothic",
+    "Hiragino Kaku Gothic ProN",
+    Meiryo,
+    sans-serif;
+  color:#173354;
+  background:#fff;
+  line-height:1.9;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  height:78px;
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(23,51,84,.08);
+}
+
+.header-inner{
+  width:min(1240px,calc(100% - 48px));
+  height:100%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.header-back{
+  font-size:14px;
+  color:#248da8;
+  letter-spacing:.05em;
+}
+
+.header-nav{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  font-size:14px;
+}
+
+.header-nav a{
+  position:relative;
+}
+
+.header-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:100%;
+  height:1px;
+  background:#248da8;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:.35s ease;
+}
+
+.header-nav a:hover::after{
+  transform:scaleX(1);
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero{
+  position:relative;
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(240,251,255,.97) 0%,
+      rgba(239,252,249,.93) 47%,
+      rgba(255,255,255,.40) 100%
+    ),
+    url("../assets/support-staff.jpg") center right / cover no-repeat;
+}
+
+.hero-inner{
+  width:min(1200px,calc(100% - 60px));
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+.hero-label{
+  margin:0 0 22px;
+  font-size:14px;
+  color:#248da8;
+  letter-spacing:.25em;
+  font-weight:600;
+}
+
+.hero-title{
+  margin:0;
+  font-size:clamp(42px,5vw,70px);
+  line-height:1.3;
+  font-weight:400;
+  color:#0877c9;
+  letter-spacing:.02em;
+}
+
+.hero-copy{
+  max-width:650px;
+  margin:30px 0 0;
+  font-size:16px;
+  line-height:2.2;
+  color:#405a6d;
+}
+
+
+/* ==============================
+   COMMON
+============================== */
+
+.section{
+  padding:110px 30px;
+}
+
+.section-inner{
+  width:min(1120px,100%);
+  margin:auto;
+}
+
+.section-head{
+  text-align:center;
+  margin-bottom:65px;
+}
+
+.section-label{
+  margin:0 0 13px;
+  font-size:13px;
+  letter-spacing:.25em;
+  color:#248da8;
+  font-weight:600;
+}
+
+.section-label::after{
+  content:"";
+  display:block;
+  width:65px;
+  height:1px;
+  background:#248da8;
+  margin:12px auto 0;
+}
+
+.section-title{
+  margin:0;
+  font-size:clamp(30px,3.5vw,44px);
+  line-height:1.45;
+  font-weight:400;
+  color:#0877c9;
+}
+
+.section-intro{
+  max-width:800px;
+  margin:25px auto 0;
+  text-align:center;
+  color:#536b7b;
+}
+
+
+/* ==============================
+   JOB
+============================== */
+
+.jobs{
+  background:#fff;
+}
+
+.job{
+  margin-bottom:80px;
+  border-radius:22px;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      135deg,
+      #f4fbff 0%,
+      #f2fcf9 55%,
+      #fff 100%
+    );
+  box-shadow:0 18px 55px rgba(27,82,110,.08);
+}
+
+.job:last-child{
+  margin-bottom:0;
+}
+
+.job-heading{
+  padding:48px 55px 38px;
+  border-bottom:1px solid rgba(36,141,168,.12);
+}
+
+.job-number{
+  display:block;
+  margin-bottom:12px;
+  font-size:14px;
+  letter-spacing:.18em;
+  color:#2a9ab2;
+}
+
+.job-title{
+  margin:0;
+  font-size:34px;
+  font-weight:500;
+  color:#173354;
+}
+
+.job-catch{
+  margin:10px 0 0;
+  font-size:20px;
+  color:#248da8;
+}
+
+.job-description{
+  margin:25px 0 0;
+  color:#536675;
+}
+
+.job-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  padding:42px 55px 50px;
+}
+
+.info-card{
+  padding:32px;
+  background:rgba(255,255,255,.85);
+  border-radius:15px;
+}
+
+.info-card h3{
+  margin:0 0 22px;
+  font-size:20px;
+  color:#173354;
+}
+
+.info-card ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.info-card li{
+  position:relative;
+  padding:6px 0 6px 20px;
+  color:#536675;
+}
+
+.info-card li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:18px;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#67c7c3;
+}
+
+.job-note{
+  grid-column:1/-1;
+  margin:5px 0 0;
+  padding:25px 30px;
+  border-left:3px solid #67c7c3;
+  background:rgba(255,255,255,.65);
+  color:#536675;
+}
+
+
+/* ==============================
+   ATTRACTION
+============================== */
+
+.attraction{
+  background:
+    linear-gradient(
+      135deg,
+      #eefaff 0%,
+      #effbf7 55%,
+      #f8fff5 100%
+    );
+}
+
+.attraction-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.attraction-card{
+  padding:45px 32px;
+  border-radius:18px;
+  background:rgba(255,255,255,.90);
+  text-align:center;
+  box-shadow:0 12px 35px rgba(40,100,120,.07);
+}
+
+.attraction-no{
+  display:block;
+  margin-bottom:20px;
+  font-size:34px;
+  font-weight:300;
+  color:#64bfc4;
+}
+
+.attraction-card h3{
+  margin:0 0 18px;
+  font-size:21px;
+  color:#173354;
+}
+
+.attraction-card p{
+  margin:0;
+  font-size:14px;
+  color:#5b6e7c;
+}
+
+
+/* ==============================
+   VOICES
+============================== */
+
+.voices{
+  background:#fff;
+}
+
+.voice-group{
+  margin-bottom:90px;
+}
+
+.voice-group:last-child{
+  margin-bottom:0;
+}
+
+.voice-group-title{
+  text-align:center;
+  margin:0 0 50px;
+  font-size:28px;
+  font-weight:500;
+  color:#173354;
+}
+
+.voice{
+  display:flex;
+  align-items:center;
+  gap:45px;
+  margin:0 auto 55px;
+  max-width:950px;
+}
+
+.voice.reverse{
+  flex-direction:row-reverse;
+}
+
+.person{
+  flex:0 0 150px;
+  text-align:center;
+}
+
+.person-icon{
+  width:110px;
+  height:110px;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    linear-gradient(
+      135deg,
+      #bdefff,
+      #c9f4e9
+    );
+}
+
+.person-icon svg{
+  width:62px;
+  height:62px;
+  fill:#248da8;
+}
+
+.person-name{
+  margin-top:14px;
+  font-size:13px;
+  line-height:1.6;
+  color:#536675;
+  font-weight:600;
+}
+
+.bubble{
+  position:relative;
+  flex:1;
+  padding:30px 35px;
+  border-radius:20px;
+  background:#f3fbfd;
+  color:#536675;
+  box-shadow:0 12px 35px rgba(31,94,120,.07);
+}
+
+.voice:not(.reverse) .bubble::before{
+  content:"";
+  position:absolute;
+  left:-16px;
+  top:42px;
+  border-width:12px 17px 12px 0;
+  border-style:solid;
+  border-color:transparent #f3fbfd transparent transparent;
+}
+
+.voice.reverse .bubble::before{
+  content:"";
+  position:absolute;
+  right:-16px;
+  top:42px;
+  border-width:12px 0 12px 17px;
+  border-style:solid;
+  border-color:transparent transparent transparent #f3fbfd;
+}
+
+.bubble p{
+  margin:0;
+}
+
+
+/* ==============================
+   ENTRY
+============================== */
+
+.entry{
+  padding:110px 30px;
+  text-align:center;
+  background:
+    linear-gradient(
+      90deg,
+      #e8f9ff 0%,
+      #eafbf5 55%,
+      #f2ffe8 100%
+    );
+}
+
+.entry-inner{
+  width:min(850px,100%);
+  margin:auto;
+}
+
+.entry h2{
+  margin:0;
+  font-size:40px;
+  font-weight:400;
+  color:#0877c9;
+}
+
+.entry p{
+  margin:28px 0 0;
+  color:#536675;
+}
+
+.line-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  min-width:360px;
+  min-height:76px;
+  margin-top:38px;
+  padding:15px 38px;
+  border-radius:8px;
+  background:#06C755;
+  color:#fff;
+  font-size:19px;
+  font-weight:600;
+  box-shadow:0 12px 30px rgba(6,199,85,.20);
+  transition:.25s ease;
+}
+
+.line-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 35px rgba(6,199,85,.27);
+}
+
+.line-icon{
+  width:42px;
+  height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#fff;
+  color:#06C755;
+  font-size:9px;
+  font-weight:800;
+}
+
+.entry-note{
+  margin-top:24px !important;
+  font-size:14px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer{
+  padding:45px 25px;
+  text-align:center;
+  background:#fff;
+  color:#70818d;
+  font-size:12px;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:768px){
+
+  .header{
+    height:auto;
+  }
+
+  .header-inner{
+    width:calc(100% - 30px);
+    min-height:68px;
+  }
+
+  .header-nav{
+    gap:15px;
+    font-size:11px;
+  }
+
+  .header-back{
+    font-size:11px;
+  }
+
+  .hero{
+    min-height:580px;
+    background:
+      linear-gradient(
+        rgba(239,251,255,.92),
+        rgba(239,252,249,.90)
+      ),
+      url("../assets/support-staff.jpg") center / cover no-repeat;
+  }
+
+  .hero-inner{
+    width:calc(100% - 40px);
+  }
+
+  .hero-title{
+    font-size:42px;
+  }
+
+  .section{
+    padding:80px 20px;
+  }
+
+  .job-heading{
+    padding:35px 25px;
+  }
+
+  .job-title{
+    font-size:27px;
+  }
+
+  .job-catch{
+    font-size:17px;
+  }
+
+  .job-body{
+    grid-template-columns:1fr;
+    padding:25px;
+  }
+
+  .job-note{
+    grid-column:auto;
+  }
+
+  .attraction-grid{
+    grid-template-columns:1fr;
+  }
+
+  .voice,
+  .voice.reverse{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .person{
+    flex:auto;
+  }
+
+  .voice .bubble::before,
+  .voice.reverse .bubble::before{
+    display:none;
+  }
+
+  .bubble{
+    width:100%;
+  }
+
+  .entry h2{
+    font-size:32px;
+  }
+
+  .line-btn{
+    min-width:0;
+    width:100%;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <a class="header-back" href="../index.html">← グローパス TOP</a>
+
+    <nav class="header-nav">
+      <a href="#jobs">募集職種</a>
+      <a href="#attraction">働く魅力</a>
+      <a href="#voices">スタッフの声</a>
+      <a href="#entry">応募</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <p class="hero-label">RECRUIT</p>
+
+    <h1 class="hero-title">
+      イベントの現場を、<br>
+      一緒につくる。
+    </h1>
+
+    <p class="hero-copy">
+      株式会社グローパスでは、イベント運営を一緒に支えてくださるスタッフを募集しています。<br><br>
+
+      私たちは、官公庁主催のセミナー・シンポジウム・展示会を中心に、
+      企画から会場運営、音響・映像・オンライン配信までを一貫して手がけています。<br><br>
+
+      イベントは、一人ではつくれません。
+      それぞれの力が合わさることで、ひとつのイベントが完成します。
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section jobs" id="jobs">
+
+  <div class="section-inner">
+
+    <div class="section-head">
+      <p class="section-label">JOBS</p>
+      <h2 class="section-title">募集職種</h2>
+
+      <p class="section-intro">
+        経験を活かしたい方はもちろん、イベント業界に興味があり、
+        新しい仕事に挑戦したい方も歓迎しています。
+      </p>
+    </div>
+
+
+    <article class="job">
+
+      <div class="job-heading">
+        <span class="job-number">01 / TECHNICAL STAFF</span>
+
+        <h2 class="job-title">テクニカルスタッフ募集</h2>
+
+        <p class="job-catch">
+          音響・映像・配信の技術で、イベントを支える仕事です
+        </p>
+
+        <p class="job-description">
+          セミナーやシンポジウム、展示会などの現場で、
+          音響・映像・オンライン配信を中心としたテクニカル業務を担当していただきます。
+          官公庁関連のイベントや企業イベント、ハイブリッドイベントなど、
+          さまざまな現場を経験できるため、技術者として幅広いスキルを身につけることができます。
+        </p>
+      </div>
+
+      <div class="job-body">
+
+        <div class="info-card">
+          <h3>主な業務内容</h3>
+          <ul>
+            <li>音響機材の設営、調整、オペレーション</li>
+            <li>マイク、ミキサー等の管理</li>
+            <li>カメラ、映像スイッチャーの操作</li>
+            <li>プロジェクター、モニター等の映像調整</li>
+            <li>Zoom、YouTube Live等を使用したオンライン配信</li>
+            <li>ライブ配信中の映像、音声、通信状況の監視</li>
+            <li>同時通訳システムの設営、オペレーション</li>
+            <li>機材の搬入、設営、撤去</li>
+            <li>本番中のトラブル対応 など</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>こんな方を歓迎します</h3>
+          <ul>
+            <li>音響、映像、配信業務の経験がある方</li>
+            <li>カメラやミキサー、スイッチャー等の操作経験がある方</li>
+            <li>ZoomやYouTube Liveなどの配信に関する知識がある方</li>
+            <li>イベントやライブ、放送業界での経験を活かしたい方</li>
+            <li>現場での対応力やチームワークを大切にできる方</li>
+            <li>新しい技術を学ぶことが好きな方</li>
+          </ul>
+        </div>
+
+        <p class="job-note">
+          経験やスキルに応じて、アシスタント業務からスタートし、
+          メインオペレーター、チーフオペレーター、テクニカルディレクターなど、
+          より専門性の高いポジションを目指すこともできます。
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <article class="job">
+
+      <div class="job-heading">
+
+        <span class="job-number">02 / EVENT STAFF</span>
+
+        <h2 class="job-title">イベント運営スタッフ募集</h2>
+
+        <p class="job-catch">
+          イベントの最前線で、参加者を迎える仕事です
+        </p>
+
+        <p class="job-description">
+          セミナー・シンポジウム・展示会などの会場で、
+          受付や参加者案内、会場運営のサポートを担当していただきます。
+          特別な専門知識は必要ありません。
+          スタッフ同士で協力しながらイベントを運営するため、
+          人と接することが好きな方や、イベントの仕事に興味がある方にぴったりのお仕事です。
+        </p>
+
+      </div>
+
+      <div class="job-body">
+
+        <div class="info-card">
+          <h3>主な業務内容</h3>
+          <ul>
+            <li>参加者受付、名簿確認</li>
+            <li>資料、名札、参加証等の配布</li>
+            <li>会場内の案内、誘導</li>
+            <li>質疑応答時のマイク対応</li>
+            <li>参加者からのお問い合わせ対応</li>
+            <li>会場設営、撤去のサポート</li>
+            <li>その他、イベント運営に関する業務</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>こんな方を歓迎します</h3>
+          <ul>
+            <li>人と接することが好きな方</li>
+            <li>明るく丁寧な対応ができる方</li>
+            <li>チームワークを大切にできる方</li>
+            <li>責任を持って仕事に取り組める方</li>
+            <li>イベント業界に興味がある方</li>
+            <li>学生、フリーター、Wワークの方</li>
+          </ul>
+        </div>
+
+        <p class="job-note">
+          未経験の方でも、現場で業務を覚えていただける環境です。
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<section class="section attraction" id="attraction">
+
+  <div class="section-inner">
+
+    <div class="section-head">
+      <p class="section-label">ATTRACTION</p>
+      <h2 class="section-title">グローパスで働く魅力</h2>
+    </div>
+
+    <div class="attraction-grid">
+
+      <div class="attraction-card">
+        <span class="attraction-no">01</span>
+        <h3>さまざまなイベントに携われる</h3>
+        <p>
+          官公庁関連のセミナーやシンポジウム、展示会など、
+          毎回異なるテーマ・会場のイベントに携わることができます。
+        </p>
+      </div>
+
+      <div class="attraction-card">
+        <span class="attraction-no">02</span>
+        <h3>現場で役立つスキルが身につく</h3>
+        <p>
+          接客力、対応力、チームワークはもちろん、
+          テクニカルスタッフの場合は音響・映像・配信などの専門技術を
+          実践的に身につけることができます。
+        </p>
+      </div>
+
+      <div class="attraction-card">
+        <span class="attraction-no">03</span>
+        <h3>チームでイベントをつくる達成感</h3>
+        <p>
+          多くのスタッフと協力し、準備から本番、撤去まで
+          ひとつのイベントをつくり上げます。
+          無事にイベントを終えたときの達成感は、この仕事ならではです。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section voices" id="voices">
+
+  <div class="section-inner">
+
+    <div class="section-head">
+      <p class="section-label">VOICE</p>
+      <h2 class="section-title">スタッフの声</h2>
+    </div>
+
+
+    <div class="voice-group">
+
+      <h3 class="voice-group-title">テクニカルスタッフの声</h3>
+
+      <div class="voice">
+
+        <div class="person">
+          <div class="person-icon">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="31" r="19"/>
+              <path d="M18 91c2-27 14-39 32-39s30 12 32 39z"/>
+            </svg>
+          </div>
+          <div class="person-name">
+            テクニカルスタッフ・Cさん<br>
+            28歳／経験3年
+          </div>
+        </div>
+
+        <div class="bubble">
+          <p>
+            「音響の専門学校を卒業後、こちらでお世話になっています。
+            毎回異なる会場、異なる要求に対応するため、
+            技術者としてのスキルが飛躍的に向上しました。
+            特に同時通訳システムの技術は他では学べない貴重な経験です。」
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="voice reverse">
+
+        <div class="person">
+          <div class="person-icon">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="31" r="19"/>
+              <path d="M18 91c2-27 14-39 32-39s30 12 32 39z"/>
+            </svg>
+          </div>
+          <div class="person-name">
+            テクニカルスタッフ・Dさん<br>
+            35歳／経験5年
+          </div>
+        </div>
+
+        <div class="bubble">
+          <p>
+            「放送局での経験を活かして転職しました。
+            官公庁のイベントは社会的意義が高く、
+            自分の技術が多くの人に届くことにやりがいを感じています。
+            最新機材に触れる機会も多く、
+            技術者として常に成長できる環境です。」
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="voice-group">
+
+      <h3 class="voice-group-title">イベント運営スタッフの声</h3>
+
+      <div class="voice">
+
+        <div class="person">
+          <div class="person-icon">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="31" r="19"/>
+              <path d="M18 91c2-27 14-39 32-39s30 12 32 39z"/>
+            </svg>
+          </div>
+          <div class="person-name">
+            大学生・Aさん<br>
+            20歳
+          </div>
+        </div>
+
+        <div class="bubble">
+          <p>
+            「初めてのアルバイトでしたが、
+            先輩スタッフの皆さんが優しく教えてくださり、
+            すぐに慣れることができました。
+            様々な分野の専門家の方々とお話しできるのがとても勉強になります。
+            将来の就職活動にも活かせそうです。」
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="voice reverse">
+
+        <div class="person">
+          <div class="person-icon">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="31" r="19"/>
+              <path d="M18 91c2-27 14-39 32-39s30 12 32 39z"/>
+            </svg>
+          </div>
+          <div class="person-name">
+            主婦・Bさん<br>
+            35歳
+          </div>
+        </div>
+
+        <div class="bubble">
+          <p>
+            「子育ての合間に働けるシフト制が魅力的でした。
+            イベントごとに違う会場で働けるので、
+            毎回新鮮な気持ちで取り組めます。
+            参加者の方から『ありがとう』と言われると、
+            とてもやりがいを感じます。」
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="entry" id="entry">
+
+  <div class="entry-inner">
+
+    <p class="section-label">ENTRY</p>
+
+    <h2>ご応募について</h2>
+
+    <p>
+      ご応募・お問い合わせは、<strong>公式LINE</strong>より受け付けています。<br><br>
+
+      「イベント運営スタッフ希望」または
+      「テクニカルスタッフ希望」とメッセージをお送りください。<br>
+
+      担当者より、今後の流れについてご案内いたします。
+    </p>
+
+    <a class="line-btn" href="../index.html#globus-contact">
+      <span class="line-icon">LINE</span>
+      LINEで応募する →
+    </a>
+
+    <p class="entry-note">
+      まずは話を聞いてみたい、という方もお気軽にご連絡ください。<br>
+      皆さまからのご応募をお待ちしております。
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+  copyright © 株式会社グローパス｜イベント運営のプロフェッショナル
+</footer>
+
+</body>
+</html>

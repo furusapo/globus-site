@@ -912,6 +912,118 @@
 
 </style>
 
+
+<style id="news-hover-line">
+
+#newsTopics .news-title {
+  position: relative !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: inherit;
+}
+
+#newsTopics .news-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: #148ba6;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+
+  transition:
+    transform .5s cubic-bezier(.22, 1, .36, 1);
+}
+
+#newsTopics .news-title:hover::after {
+  transform: scaleX(1);
+}
+
+#newsTopics a.news-title,
+#newsTopics a.news-title:link,
+#newsTopics a.news-title:visited,
+#newsTopics a.news-title:hover,
+#newsTopics a.news-title:active {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+#newsTopics a.news-title {
+  transition: color .28s ease;
+}
+
+#newsTopics a.news-title:hover {
+  color: #148ba6 !important;
+}
+
+</style>
+
+
+<style id="support-cta-gradient-fix">
+
+#globus-support .gs-cta {
+  background:
+    linear-gradient(
+      90deg,
+      #9BE8FF 0%,
+      #BDF2E8 55%,
+      #DDF5C4 100%
+    ) !important;
+
+  color: #0B78C4 !important;
+  border: none !important;
+
+  box-shadow:
+    0 10px 28px rgba(71, 169, 191, .16) !important;
+}
+
+#globus-support .gs-cta:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #91E3FA 0%,
+      #B4ECE2 55%,
+      #D5EEBC 100%
+    ) !important;
+
+  color: #086DAF !important;
+  filter: none !important;
+}
+
+</style>
+
+
+<style id="support-title-match">
+
+/* SUPPORT見出しを
+   「想いを、成功という体験へ。」と同じ文字設定へ */
+#globus-support .gs-title {
+  font-family: inherit !important;
+  font-size: 36px !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  letter-spacing: normal !important;
+  color: #0877c9 !important;
+}
+
+@media screen and (max-width: 768px) {
+  #globus-support .gs-title {
+    font-size: 28px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #globus-support .gs-title {
+    font-size: 24px !important;
+  }
+}
+
+</style>
+
 </head>
 <body id="top" style="">
     <!-- === header === -->
@@ -944,9 +1056,8 @@
 </li>
 <li class="parent"><a class="parentNav" href="https://user.toriaez-hp.jp/55b59da8-6490-46be-92a8-b2029780ef4f/cont3/main.html">ご依頼の流れ</a>
 </li>
-<li class="parent"><a class="parentNav" href="https://user.toriaez-hp.jp/55b59da8-6490-46be-92a8-b2029780ef4f/cont4/main.html">よくあるご質問</a>
-</li>
-<li class="parent"><a class="parentNav" href="https://user.toriaez-hp.jp/55b59da8-6490-46be-92a8-b2029780ef4f/cont7/main.html">スタッフ登録</a>
+
+<li class="parent"><a class="parentNav" href="recruit/index.html">採用情報</a>
 </li>
 </ul>
 </nav>                <!-- /=== mainNav === -->
@@ -995,20 +1106,20 @@
                         <ul class="list">
                                                     <li>
                                 <span class="day">2025.02.11</span>
-                                                                    <a href="https://www.grps.jp/cont7/main.html" target="_blank" title="">スタッフ募集中！
+                                                                    <a class="news-title" href="https://www.grps.jp/cont7/main.html" target="_blank" title="">スタッフ募集中！
 </a>
                                                             </li>
                                                     <li>
                                 <span class="day">2025.02.11</span>
-                                                                    <a href="https://www.grps.jp/cont6/main.html" target="_blank" title="">実績を掲載しました。</a>
+                                                                    <a class="news-title" href="https://www.grps.jp/cont6/main.html" target="_blank" title="">実績を掲載しました。</a>
                                                             </li>
                                                     <li>
                                 <span class="day">2022.02.15</span>
-                                                                    内容を一部更新しました。
+                                                                    <span class="news-title">内容を一部更新しました。</span>
                                                             </li>
                                                     <li>
                                 <span class="day">2020.12.08</span>
-                                                                    ホームページが公開されました。
+                                                                    <span class="news-title">ホームページが公開されました。</span>
                                                             </li>
                                                 </ul>
                         <div class="moreBtn" style="display: none;">
@@ -1110,12 +1221,12 @@
         </div>
       </a>
 
-      <a class="gs-card gs-card-wide" href="#">
-        <img class="gs-image" src="assets/support-staff.jpg" alt="スタッフ登録">
+      <a class="gs-card gs-card-wide" href="recruit/index.html">
+        <img class="gs-image" src="assets/support-staff.jpg" alt="採用情報">
         <div class="gs-overlay"></div>
         <div class="gs-content">
           <span class="gs-no">05</span>
-          <h3 class="gs-card-title">スタッフ登録</h3>
+          <h3 class="gs-card-title">採用情報</h3>
           <p class="gs-card-copy">
             イベント運営の現場で一緒に働くスタッフを募集しています。
           </p>
