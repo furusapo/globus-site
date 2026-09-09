@@ -201,3 +201,70 @@ footer{padding:45px 30px;color:#758895;text-align:center;font-size:12px;border-t
 <footer>© 株式会社グローパス</footer>
 </body>
 </html>
+
+<style>
+/* ===== 縦型YEARデザイン ===== */
+
+.year-block{
+  position:relative;
+  min-height:700px;
+  padding-left:180px;
+}
+
+.year-heading{
+  position:relative;
+  display:block !important;
+  margin-bottom:38px !important;
+  padding-bottom:22px !important;
+  border-bottom:1px solid #d8e7ed !important;
+}
+
+.year-number{
+  position:absolute;
+  left:-185px;
+  top:10px;
+
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+
+  font-size:150px !important;
+  line-height:.8 !important;
+  font-weight:700 !important;
+  letter-spacing:-.08em !important;
+
+  color:rgba(13,144,178,.12) !important;
+
+  user-select:none;
+  pointer-events:none;
+}
+
+.year-title{
+  padding:0 !important;
+  color:#123b63 !important;
+  font-size:34px !important;
+  font-weight:700 !important;
+}
+
+.result-list{
+  margin-left:0 !important;
+}
+
+/* モバイル */
+@media(max-width:900px){
+
+  .year-block{
+    padding-left:70px;
+    min-height:auto;
+  }
+
+  .year-number{
+    left:-72px;
+    top:5px;
+    font-size:72px !important;
+  }
+
+  .year-title{
+    font-size:26px !important;
+  }
+}
+</style>
