@@ -198,6 +198,81 @@ footer{padding:42px 30px;text-align:center;color:#78909c;font-size:12px}
 }
 </style>
 
+
+<style id="responsive-center-fix">
+/* ===== PCサイズ差による横ズレ防止 ===== */
+
+html,
+body{
+  width:100%;
+  max-width:100%;
+  margin:0;
+  overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+/* ヘッダー内側を常に画面中央へ */
+.header-inner,
+.header-top,
+.main-nav-inner{
+  width:min(1280px, calc(100% - 48px)) !important;
+  max-width:1280px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* 各主要コンテンツも中央基準 */
+.hero-inner,
+.page-hero-inner,
+.results-inner,
+.intro-inner,
+.jobs-inner,
+.voices-inner,
+.attraction-inner,
+.gallery-inner{
+  width:min(1280px, calc(100% - 48px)) !important;
+  max-width:1280px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
+
+/* TOPページのカスタムセクション */
+#globus-top-hero > *,
+#globus-support > *,
+#globus-contact > *{
+  max-width:1280px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* 画像が画面幅を押し広げない */
+img{
+  max-width:100%;
+}
+
+/* タブレット以下 */
+@media(max-width:900px){
+  .header-inner,
+  .header-top,
+  .main-nav-inner,
+  .hero-inner,
+  .page-hero-inner,
+  .results-inner,
+  .intro-inner,
+  .jobs-inner,
+  .voices-inner,
+  .attraction-inner,
+  .gallery-inner{
+    width:calc(100% - 32px) !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
