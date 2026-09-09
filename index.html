@@ -1754,6 +1754,29 @@ img{
 }
 </style>
 
+
+<style id="footer-logo-quality-fix">
+/* フッター：ヘッダーと同じ高画質ロゴ */
+#footer img[src*="glowpas-logo"],
+footer img[src*="glowpas-logo"]{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:220px !important;
+  max-height:none !important;
+  margin:28px auto 34px !important;
+  object-fit:contain !important;
+}
+
+@media(max-width:768px){
+  #footer img[src*="glowpas-logo"],
+  footer img[src*="glowpas-logo"]{
+    max-width:165px !important;
+    margin:22px auto 28px !important;
+  }
+}
+</style>
+
 </head>
 
 <body id="top" style="">
