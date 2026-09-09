@@ -125,12 +125,85 @@ footer{padding:42px 30px;text-align:center;color:#78909c;font-size:12px}
   .gallery-track img{width:78vw;height:220px}
 }
 </style>
+
+<style>
+.header-logo{
+  display:flex;
+  align-items:center;
+  flex-shrink:0;
+  text-decoration:none;
+}
+.header-logo img{
+  display:block;
+  width:auto;
+  height:58px;
+  object-fit:contain;
+}
+@media(max-width:768px){
+  .header-logo img{
+    height:46px;
+  }
+}
+</style>
+
+<style id="glowpas-header-logo-style">
+.header-logo{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-shrink:0;
+  text-decoration:none;
+}
+
+.header-logo img{
+  display:block;
+  width:auto;
+  height:58px;
+  object-fit:contain;
+}
+
+.header-logo-copy{
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.08em;
+  color:#1b2d4f;
+  white-space:nowrap;
+  padding-left:18px;
+  border-left:1px solid #d7dce5;
+}
+
+@media(max-width:768px){
+  .header-logo{
+    gap:10px;
+  }
+
+  .header-logo img{
+    height:46px;
+  }
+
+  .header-logo-copy{
+    font-size:10px;
+    letter-spacing:.03em;
+    padding-left:10px;
+  }
+}
+
+@media(max-width:480px){
+  .header-logo-copy{
+    display:none;
+  }
+}
+</style>
+
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
-    <a class="logo" href="../index.html">GROWPAS</a>
+    <a href="../index.html" class="header-logo">
+  <img src="../assets/glowpas-logo.png" alt="グローパス">
+  <span class="header-logo-copy">官公庁・企業イベントの企画・運営</span>
+</a>
     <nav class="nav">
       <a href="../index.html">HOME</a>
       <a href="#jobs">募集職種</a>
