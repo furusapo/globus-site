@@ -703,3 +703,63 @@ footer{padding:45px 30px;color:#758895;text-align:center;font-size:12px;border-t
   }
 }
 </style>
+
+<style>
+/* 実績HEROをコンパクト化 */
+.page-hero{
+  min-height:260px !important;
+  height:260px !important;
+}
+
+.page-hero-inner{
+  padding:40px 0 !important;
+}
+
+.page-hero:before{
+  width:280px !important;
+  height:280px !important;
+  left:-110px !important;
+  top:-115px !important;
+}
+
+.page-hero:after{
+  top:45px !important;
+  bottom:45px !important;
+}
+
+.page-hero h1{
+  padding-left:90px !important;
+  font-size:38px !important;
+}
+
+.page-hero h1:before{
+  width:65px !important;
+}
+
+.page-hero h1:after{
+  left:20px !important;
+  top:45px !important;
+  font-size:95px !important;
+}
+
+@media(max-width:900px){
+  .page-hero{
+    min-height:210px !important;
+    height:210px !important;
+  }
+
+  .page-hero h1{
+    font-size:30px !important;
+    padding-left:65px !important;
+  }
+
+  .page-hero h1:before{
+    width:45px !important;
+  }
+
+  .page-hero h1:after{
+    font-size:65px !important;
+    top:38px !important;
+  }
+}
+</style>
