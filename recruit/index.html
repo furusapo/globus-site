@@ -273,6 +273,86 @@ img{
 }
 </style>
 
+
+<style id="unified-growpas-header">
+/* ===== 全ページ共通：ロゴ＋事業説明 ===== */
+
+.header-logo,
+.logo,
+#siteTtl a{
+  display:flex !important;
+  align-items:center !important;
+  gap:22px !important;
+  width:auto !important;
+  max-width:none !important;
+  text-decoration:none !important;
+}
+
+.header-logo img,
+.logo img,
+#siteTtl img{
+  width:auto !important;
+  height:72px !important;
+  max-width:none !important;
+  object-fit:contain !important;
+  flex:0 0 auto !important;
+}
+
+.header-logo::after,
+.logo::after,
+#siteTtl a::after{
+  content:"官公庁・企業イベントの企画・運営";
+  display:block;
+  padding-left:22px;
+  border-left:1px solid #d5e0e7;
+  color:#173b60;
+  font-size:17px;
+  line-height:1.4;
+  font-weight:700;
+  white-space:nowrap;
+  letter-spacing:.02em;
+}
+
+/* ヘッダー自体も1枚目くらいの高さへ */
+.header-inner,
+.header-top{
+  min-height:104px !important;
+  padding-top:10px !important;
+  padding-bottom:10px !important;
+  align-items:center !important;
+}
+
+/* スマホ */
+@media(max-width:900px){
+
+  .header-logo,
+  .logo,
+  #siteTtl a{
+    gap:10px !important;
+  }
+
+  .header-logo img,
+  .logo img,
+  #siteTtl img{
+    height:48px !important;
+  }
+
+  .header-logo::after,
+  .logo::after,
+  #siteTtl a::after{
+    padding-left:10px;
+    font-size:10px;
+    white-space:normal;
+    max-width:145px;
+  }
+
+  .header-inner,
+  .header-top{
+    min-height:72px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
