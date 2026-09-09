@@ -1197,57 +1197,6 @@
 
 </style>
 
-
-<style id="support-2x2-fix">
-
-/* SUPPORTを2列×2段に固定 */
-#globus-support .gs-grid{
-  display:grid !important;
-  grid-template-columns:repeat(2, minmax(0,1fr)) !important;
-  gap:28px !important;
-}
-
-/* 全カードを同じ幅に */
-#globus-support .gs-card,
-#globus-support .gs-card:nth-child(4),
-#globus-support .gs-card:nth-child(5),
-#globus-support .gs-card-wide,
-#globus-support .gs-card:last-child{
-  grid-column:auto !important;
-  width:100% !important;
-  min-height:360px !important;
-}
-
-/* 採用情報だけ横長にならないよう解除 */
-#globus-support .gs-card-wide{
-  grid-column:auto !important;
-}
-
-/* 2列でも見た目が崩れないよう調整 */
-#globus-support .gs-image{
-  width:58% !important;
-}
-
-#globus-support .gs-content{
-  width:58% !important;
-  min-height:360px !important;
-}
-
-/* タブレット以下は1列 */
-@media screen and (max-width:900px){
-  #globus-support .gs-grid{
-    grid-template-columns:1fr !important;
-  }
-
-  #globus-support .gs-card,
-  #globus-support .gs-card-wide,
-  #globus-support .gs-card:last-child{
-    grid-column:1 !important;
-  }
-}
-
-</style>
-
 </head>
 
 <body id="top" style="">
@@ -1561,13 +1510,24 @@
         </div>
       </a>
 
-      
+      <a class="gs-card" href="#">
+        <img class="gs-image" src="assets/support-flow.jpg" alt="ご依頼の流れ">
+        <div class="gs-overlay"></div>
+        <div class="gs-content">
+          <span class="gs-no">04</span>
+          <h3 class="gs-card-title">ご依頼の流れ</h3>
+          <p class="gs-card-copy">
+            ご相談から企画、準備、当日の運営まで分かりやすくご案内します。
+          </p>
+          <span class="gs-arrow">→</span>
+        </div>
+      </a>
 
       <a class="gs-card gs-card-wide" href="recruit/index.html">
         <img class="gs-image" src="assets/support-staff.jpg" alt="採用情報">
         <div class="gs-overlay"></div>
         <div class="gs-content">
-          <span class="gs-no">04</span>
+          <span class="gs-no">05</span>
           <h3 class="gs-card-title">採用情報</h3>
           <p class="gs-card-copy">
             イベント運営の現場で一緒に働くスタッフを募集しています。
