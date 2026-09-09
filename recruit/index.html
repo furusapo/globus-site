@@ -274,104 +274,54 @@ img{
 </style>
 
 
-<style id="unified-growpas-header">
-/* ===== 全ページ共通：ロゴ＋事業説明 ===== */
 
-.header-logo,
-.logo,
-#siteTtl a{
-  display:flex !important;
-  align-items:center !important;
-  gap:22px !important;
-  width:auto !important;
-  max-width:none !important;
-  text-decoration:none !important;
+
+
+<style id="gp-global-header-v2">
+.gp-header,.gp-header *{box-sizing:border-box!important}
+.gp-header{position:relative!important;z-index:1000!important;width:100%!important;margin:0!important;padding:0!important;background:#fff!important;color:#12395f!important;border-bottom:1px solid #e7edf1!important;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo",sans-serif!important}
+.gp-header a{color:inherit!important;text-decoration:none!important}
+.gp-header-main{width:min(1280px,calc(100% - 48px))!important;min-height:104px!important;margin:0 auto!important;padding:12px 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:30px!important}
+.gp-brand{display:flex!important;align-items:center!important;gap:22px!important;min-width:0!important;width:auto!important;max-width:none!important}
+.gp-brand img{display:block!important;width:auto!important;height:70px!important;max-width:none!important;object-fit:contain!important;flex:0 0 auto!important}
+.gp-brand-text{display:block!important;padding-left:22px!important;border-left:1px solid #cfdae2!important;color:#173b60!important;font-size:17px!important;line-height:1.45!important;font-weight:700!important;letter-spacing:.02em!important;white-space:nowrap!important}
+.gp-header-toplinks{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:30px!important;flex:0 0 auto!important;font-size:14px!important;font-weight:700!important}
+.gp-contact{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:150px!important;min-height:52px!important;padding:12px 24px!important;border-radius:14px!important;color:#fff!important;background:linear-gradient(90deg,#058bd1,#10b8cf)!important}
+.gp-header-nav{width:100%!important;border-top:1px solid #edf1f4!important;background:#fff!important}
+.gp-header-nav-inner{width:min(1280px,calc(100% - 48px))!important;min-height:66px!important;margin:0 auto!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:36px!important;font-size:15px!important;font-weight:700!important;white-space:nowrap!important}
+@media(max-width:1050px){
+.gp-header-main,.gp-header-nav-inner{width:calc(100% - 32px)!important}
+.gp-brand{gap:14px!important}.gp-brand img{height:58px!important}.gp-brand-text{padding-left:14px!important;font-size:14px!important}
+.gp-header-toplinks{gap:18px!important;font-size:13px!important}
+.gp-header-nav-inner{gap:24px!important;overflow-x:auto!important;justify-content:flex-start!important}
 }
-
-.header-logo img,
-.logo img,
-#siteTtl img{
-  width:auto !important;
-  height:72px !important;
-  max-width:none !important;
-  object-fit:contain !important;
-  flex:0 0 auto !important;
-}
-
-.header-logo::after,
-.logo::after,
-#siteTtl a::after{
-  content:"官公庁・企業イベントの企画・運営";
-  display:block;
-  padding-left:22px;
-  border-left:1px solid #d5e0e7;
-  color:#173b60;
-  font-size:17px;
-  line-height:1.4;
-  font-weight:700;
-  white-space:nowrap;
-  letter-spacing:.02em;
-}
-
-/* ヘッダー自体も1枚目くらいの高さへ */
-.header-inner,
-.header-top{
-  min-height:104px !important;
-  padding-top:10px !important;
-  padding-bottom:10px !important;
-  align-items:center !important;
-}
-
-/* スマホ */
-@media(max-width:900px){
-
-  .header-logo,
-  .logo,
-  #siteTtl a{
-    gap:10px !important;
-  }
-
-  .header-logo img,
-  .logo img,
-  #siteTtl img{
-    height:48px !important;
-  }
-
-  .header-logo::after,
-  .logo::after,
-  #siteTtl a::after{
-    padding-left:10px;
-    font-size:10px;
-    white-space:normal;
-    max-width:145px;
-  }
-
-  .header-inner,
-  .header-top{
-    min-height:72px !important;
-  }
+@media(max-width:760px){
+.gp-header-main{min-height:76px!important;gap:12px!important}
+.gp-brand img{height:48px!important}
+.gp-brand-text{max-width:170px!important;padding-left:10px!important;font-size:10px!important;line-height:1.4!important;white-space:normal!important}
+.gp-header-toplinks>a:not(.gp-contact){display:none!important}
+.gp-contact{min-width:auto!important;min-height:42px!important;padding:10px 15px!important;border-radius:11px!important;font-size:12px!important}
+.gp-header-nav-inner{min-height:52px!important;gap:21px!important;font-size:12px!important}
 }
 </style>
 
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="../index.html" class="header-logo">
-  <img src="../assets/glowpas-logo.png" alt="グローパス">
-  <span class="header-logo-copy">官公庁・企業イベントの企画・運営</span>
-</a>
-    <nav class="nav">
-      <a href="../index.html">HOME</a>
-      <a href="#jobs">募集職種</a>
-      <a href="#voices">スタッフの声</a>
-      <a href="#attraction">働く魅力</a>
-      
-      <a class="contact" href="#entry">お問い合わせ</a>
-    </nav>
+
+<header class="gp-header">
+  <div class="gp-header-main">
+    <a class="gp-brand" href="../index.html">
+      <img src="../assets/glowpas-logo.png" alt="グローパス">
+      <span class="gp-brand-text">官公庁・企業イベントの企画・運営</span>
+    </a>
+    <div class="gp-header-toplinks"><a href="#entry" class="gp-contact">お問い合わせ</a></div>
   </div>
+  <nav class="gp-header-nav" aria-label="メインナビゲーション">
+    <div class="gp-header-nav-inner"><a href="../index.html">HOME</a><a href="#jobs">募集職種</a><a href="#voices">スタッフの声</a><a href="#attraction">働く魅力</a></div>
+  </nav>
 </header>
+
 
 <section class="hero">
   <div class="hero-inner">
