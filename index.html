@@ -1806,6 +1806,19 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="globus-responsive-hero-image">
+#globus-top-hero .globus-hero-picture{
+  display:block;
+  width:100%;
+}
+#globus-top-hero .globus-hero-picture img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+</style>
+
 </head>
 
 <body id="top" style="">
@@ -1895,25 +1908,10 @@ footer img[src*="glowpas-logo"]{
 >
 
   <!-- HERO IMAGE -->
-  <img
-    src="assets/top-hero-bg.png"
-    alt=""
-    style="
-      grid-column:1 !important;
-      grid-row:1 !important;
-      display:block !important;
-      position:static !important;
-      float:none !important;
-      width:100% !important;
-      max-width:none !important;
-      height:auto !important;
-      margin:0 !important;
-      padding:0 !important;
-      transform:none !important;
-      object-fit:cover !important;
-      z-index:1 !important;
-    "
-  >
+  <picture class="globus-hero-picture">
+  <source media="(max-width: 767px)" srcset="assets/top-hero-bg-mobile.png?v=20260910">
+  <img src="assets/top-hero-bg.png?v=20260910" alt="グローパス イベント運営">
+</picture>
 
   <!-- HERO COPY -->
   <div
