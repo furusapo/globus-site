@@ -1807,187 +1807,15 @@ footer img[src*="glowpas-logo"]{
 </style>
 
 
-<style id="globus-hero-overlay-style">
-#globus-top-hero,#globus-top-hero *{box-sizing:border-box}
-#globus-top-hero{position:relative;width:100%;aspect-ratio:1704/864;overflow:hidden;background:#eefaff}
-#globus-top-hero .gph-background{position:absolute;inset:0;display:block;width:100%;height:100%}
-#globus-top-hero .gph-background img{display:block;width:100%;height:100%;max-width:none;object-fit:cover}
-#globus-top-hero .gph-content{position:absolute;z-index:3;top:10.5%;left:5.2%;width:31%;color:#073f7d;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo",sans-serif}
-#globus-top-hero .gph-eyebrow{margin:0;color:#078baa;font-size:clamp(14px,1.25vw,23px);font-weight:700;line-height:1.5;letter-spacing:.06em}
-#globus-top-hero .gph-rule{width:45px;height:2px;margin:18px 0 30px;background:#0b91aa}
-#globus-top-hero .gph-title{margin:0;padding:0;color:#073f7d;font-size:clamp(46px,4.7vw,82px);font-weight:700;line-height:1.18}
-#globus-top-hero .gph-lead{margin:28px 0 0;color:#294f6c;font-size:clamp(14px,1.15vw,20px);font-weight:500;line-height:1.9}
-#globus-top-hero .gph-actions{display:flex;gap:18px;margin-top:28px}
-#globus-top-hero .gph-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:25px;min-width:190px;min-height:58px;padding:14px 28px;border-radius:999px;font-size:15px;font-weight:700;line-height:1;text-decoration:none}
-#globus-top-hero .gph-btn-primary{color:#fff;background:linear-gradient(90deg,#0784d0,#00a8d2)}
-#globus-top-hero .gph-btn-outline{color:#073f7d;background:rgba(255,255,255,.7);border:1.5px solid #638bb4}
-@media(max-width:767px){#globus-top-hero{aspect-ratio:896/1664}#globus-top-hero .gph-background img{object-fit:cover;object-position:center top}#globus-top-hero .gph-content{top:6%;left:7%;width:86%}#globus-top-hero .gph-eyebrow{font-size:12px}#globus-top-hero .gph-rule{width:34px;margin:12px 0 18px}#globus-top-hero .gph-title{font-size:clamp(42px,13vw,62px);line-height:1.15}#globus-top-hero .gph-lead{max-width:92%;margin-top:20px;font-size:13px;line-height:1.8}#globus-top-hero .gph-lead br{display:none}#globus-top-hero .gph-actions{gap:10px;margin-top:20px}#globus-top-hero .gph-btn{min-width:0;min-height:46px;padding:11px 17px;font-size:12px;gap:14px}}
-</style>
-
-<style id="globus-hero-fine-adjust">
-@media (min-width:768px){
-  #globus-top-hero .gph-content{
-    top:72px !important;
-    left:5.2% !important;
-    width:32% !important;
-  }
-
-  #globus-top-hero .gph-eyebrow{
-    margin-bottom:0 !important;
-  }
-
-  #globus-top-hero .gph-rule{
-    margin:14px 0 24px !important;
-  }
-
-  #globus-top-hero .gph-title{
-    font-size:clamp(48px,4.4vw,76px) !important;
-    line-height:1.15 !important;
-  }
-
-  #globus-top-hero .gph-lead{
-    margin-top:26px !important;
-  }
-
-  #globus-top-hero .gph-actions{
-    margin-top:24px !important;
-  }
+<style id="globus-responsive-hero-image">
+#globus-top-hero .globus-hero-picture{
+  display:block;
+  width:100%;
 }
-</style>
-
-<style id="service-header-copy">
-.header{width:100%;background:#fff;border-bottom:1px solid #e8eef2;position:relative;z-index:10}
-.header-main{width:min(1280px,calc(100% - 48px));min-height:98px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px}
-.brand{display:flex;align-items:center;gap:20px}
-.brand img{height:64px;width:auto}
-.brand-copy{padding-left:20px;border-left:1px solid #d2dde4;color:#123b66;font-size:16px;line-height:1.5;font-weight:700;white-space:nowrap}
-.header-links{display:flex;align-items:center;gap:26px;color:#123b66;font-size:14px;font-weight:700}
-.contact-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 24px;border-radius:14px;color:#fff;background:linear-gradient(90deg,#0788ce,#14b6c9)}
-.nav{border-top:1px solid #edf2f5}
-.nav-inner{width:min(1280px,calc(100% - 48px));min-height:62px;margin:auto;display:flex;align-items:center;justify-content:flex-end;gap:34px;color:#123b66;font-size:14px;font-weight:700}
-.header a{color:inherit;text-decoration:none}
-.header img{max-width:100%;display:block}
-@media(max-width:900px){
-  .header-main,.nav-inner{width:calc(100% - 32px)}
-  .brand img{height:50px}
-  .brand-copy{font-size:11px;padding-left:12px}
-  .header-links>a:not(.contact-btn){display:none}
-  .nav{overflow:hidden}
-  .nav-inner{justify-content:flex-start;gap:22px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
-}
-@media(max-width:560px){
-  .header-main{min-height:76px;gap:10px}
-  .brand{gap:9px}
-  .brand img{height:43px}
-  .brand-copy{max-width:125px;padding-left:9px;font-size:8px;white-space:normal}
-  .contact-btn{padding:10px 12px;font-size:10px}
-  .nav-inner{min-height:50px;font-size:11px}
-}
-</style>
-
-<style id="service-header-exact-copy">
-.service-copy-header{width:100%!important;background:#fff!important;border-bottom:1px solid #e8eef2!important;position:relative!important;z-index:100!important;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo",sans-serif!important}
-.service-copy-header *{box-sizing:border-box!important}
-.service-copy-header a{text-decoration:none!important}
-.service-copy-header-main{width:min(1280px,calc(100% - 48px))!important;min-height:98px!important;margin:auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:28px!important}
-.service-copy-brand{display:flex!important;align-items:center!important;gap:20px!important}
-.service-copy-brand img{height:64px!important;width:auto!important;max-width:none!important;display:block!important}
-.service-copy-brand-text{padding-left:20px!important;border-left:1px solid #d2dde4!important;color:#123b66!important;font-size:16px!important;line-height:1.5!important;font-weight:700!important;white-space:nowrap!important}
-.service-copy-links{display:flex!important;align-items:center!important;gap:26px!important;color:#123b66!important;font-size:14px!important;font-weight:700!important}
-.service-copy-links>a{color:#123b66!important}
-.service-copy-contact{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:50px!important;padding:12px 24px!important;border-radius:14px!important;color:#fff!important;background:linear-gradient(90deg,#0788ce,#14b6c9)!important}
-.service-copy-nav{border-top:1px solid #edf2f5!important;background:#fff!important}
-.service-copy-nav-inner{width:min(1280px,calc(100% - 48px))!important;min-height:62px!important;margin:auto!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:34px!important;color:#123b66!important;font-size:14px!important;font-weight:700!important}
-.service-copy-nav-inner a{color:#123b66!important;white-space:nowrap!important}
-
-@media(max-width:900px){
-  .service-copy-header-main,.service-copy-nav-inner{width:calc(100% - 32px)!important}
-  .service-copy-brand img{height:50px!important}
-  .service-copy-brand-text{font-size:11px!important;padding-left:12px!important}
-  .service-copy-links>a:not(.service-copy-contact){display:none!important}
-  .service-copy-nav{overflow:hidden!important}
-  .service-copy-nav-inner{justify-content:flex-start!important;gap:22px!important;overflow-x:auto!important;white-space:nowrap!important;-webkit-overflow-scrolling:touch!important}
-}
-@media(max-width:560px){
-  .service-copy-header-main{min-height:76px!important;gap:10px!important}
-  .service-copy-brand{gap:9px!important}
-  .service-copy-brand img{height:43px!important}
-  .service-copy-brand-text{max-width:125px!important;padding-left:9px!important;font-size:8px!important;white-space:normal!important}
-  .service-copy-contact{padding:10px 12px!important;font-size:10px!important}
-  .service-copy-nav-inner{min-height:50px!important;font-size:11px!important}
-}
-</style>
-
-<style id="top-header-two-row-fix">
-.service-copy-header{
-  display:block !important;
-  width:100% !important;
-}
-
-.service-copy-header-main{
-  display:flex !important;
-  width:min(1280px,calc(100% - 48px)) !important;
-  margin:0 auto !important;
-}
-
-.service-copy-nav{
-  display:block !important;
-  width:100% !important;
-  clear:both !important;
-}
-
-.service-copy-nav-inner{
-  display:flex !important;
-  width:min(1280px,calc(100% - 48px)) !important;
-  margin:0 auto !important;
-}
-</style>
-
-
-<style id="top-hero-fullwidth-fix">
-#globus-top-hero{
-  width:100vw !important;
-  max-width:none !important;
-  margin-left:calc(50% - 50vw) !important;
-  margin-right:calc(50% - 50vw) !important;
-  border-radius:0 !important;
-}
-</style>
-
-
-<style id="hero-edge-to-edge">
-#globus-top-hero{
-  width:100vw !important;
-  max-width:none !important;
-  margin-left:calc(50% - 50vw) !important;
-  margin-right:calc(50% - 50vw) !important;
-  overflow:hidden !important;
-}
-
-#globus-top-hero .gph-background,
-#globus-top-hero .gph-background img{
-  width:100% !important;
-  max-width:none !important;
-}
-
-#globus-top-hero .gph-background img{
-  display:block !important;
-  object-fit:cover !important;
-}
-</style>
-
-
-<style id="service-button-gradient">
-#globus-top-hero .gph-btn-primary{
-  background:linear-gradient(
-    90deg,
-    #259cf0 0%,
-    #13b8d1 52%,
-    #49d995 100%
-  ) !important;
-  color:#fff !important;
-  border:none !important;
-  box-shadow:0 8px 22px rgba(20,160,190,.16) !important;
+#globus-top-hero .globus-hero-picture img{
+  display:block;
+  width:100%;
+  height:auto;
 }
 </style>
 
@@ -1995,28 +1823,65 @@ footer img[src*="glowpas-logo"]{
 
 <body id="top" style="">
     <!-- === header === -->
-    <header class="service-copy-header">
-  <div class="service-copy-header-main">
-    <a class="service-copy-brand" href="index.html">
-      <img src="assets/glowpas-logo.png" alt="グローパス">
-      <span class="service-copy-brand-text">官公庁・企業イベントの企画・運営</span>
-    </a>
-    <div class="service-copy-links">
-      <a href="index.html#company">会社概要</a>
-      <a href="index.html#access">アクセス</a>
-      <a class="service-copy-contact" href="contact/index.html">お問い合わせ</a>
-    </div>
-  </div>
-  <nav class="service-copy-nav">
-    <div class="service-copy-nav-inner">
-      <a href="index.html">HOME</a>
-      <a href="service/index.html">サービス内容</a>
-      <a href="results/index.html">実績</a>
-      <a href="recruit/index.html">採用情報</a>
-      <a href="privacy/index.html">個人情報保護方針</a>
-    </div>
-  </nav>
-</header>
+    <header id="header" class="">
+        <div class="inner">
+            <!-- === siteTtl === -->
+                        <h1 id="siteTtl"><a href="service/index.html" class=""><img src="assets/glowpas-logo.png" alt="株式会社グローパス｜イベント運営のプロフェッショナル"></a></h1>
+                        <!-- /=== siteTtl === -->
+            <!-- === humbergerBtn === -->
+            <div class="humBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- === humbergerBtn === -->
+
+            <div id="headWrapper" class="">
+                <!-- === mainNav === -->
+<nav id="mainNav">
+<ul>
+<li class="parent"><a href="index.html">HOME</a></li>
+<li class="parent"><a class="parentNav" href="index.html">コンセプト</a>
+</li>
+<li class="parent childIn"><a class="parentNav" href="service/index.html">サービス内容</a>
+<ul class="child" style="display: none; height: 150px; padding-top: 0px; margin-top: 10px; padding-bottom: 0px; margin-bottom: 20px;"><li><a href="index.html">企画</a></li>
+<li><a href="index.html">制作</a></li>
+<li><a href="index.html">キャスティング</a></li>
+</ul></li>
+<li class="parent"><a class="parentNav" href="results/index.html">実績</a>
+</li>
+<li class="parent"><a class="parentNav" href="index.html">ご依頼の流れ</a>
+</li>
+
+<li class="parent"><a class="parentNav" href="recruit/index.html">採用情報</a>
+</li>
+<li class="parent"><a class="parentNav" href="privacy/index.html">個人情報保護方針</a>
+</li>
+</ul>
+</nav>                <!-- /=== mainNav === -->
+                <!-- === headNav === -->
+                                <nav id="headNav">
+                  <ul>
+                                                <li id="profileNav">
+                              <a href="index.html">
+                                                                        会社概要
+                                                                </a>
+                          </li>
+                                                                      <li id="accessNav">
+                              <a href="index.html">
+                                                                        アクセス
+                                                                </a>
+                          </li>
+                                                                      <li id="contactNav" onclick="location.href='contact/index.html'">
+                                                          <div class="mail icon"></div><span>お問い合わせ</span>
+                                                      </li>
+                                        </ul>
+                </nav>
+                              <!-- /=== headNav === -->
+                            </div>
+            <!-- /=== header === -->
+        </div>
+    </header>
         
         <!-- === main === -->
         <main>
@@ -2025,20 +1890,116 @@ footer img[src*="glowpas-logo"]{
 
 
 <!-- NEW TOP HERO -->
-<section id="globus-top-hero">
-<picture class="gph-background">
-<source media="(max-width:767px)" srcset="assets/top-hero-bg-mobile.png?v=20260910-2010">
-<img src="assets/top-hero-bg.png?v=20260910-2010" alt="グローパス イベント運営">
+<section
+  id="globus-top-hero"
+  style="
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    grid-template-rows:1fr !important;
+    width:calc(100% - 48px) !important;
+    max-width:1600px !important;
+    margin:187px auto 50px !important;
+    padding:0 !important;
+    overflow:hidden !important;
+    border-radius:22px !important;
+    box-sizing:border-box !important;
+    background:#eefaff !important;
+  "
+>
+
+  <!-- HERO IMAGE -->
+  <picture class="globus-hero-picture">
+  <source media="(max-width: 767px)" srcset="assets/top-hero-bg-mobile.png?v=20260910-2000">
+  <img src="assets/top-hero-bg.png?v=20260910-2000" alt="グローパス イベント運営">
 </picture>
-<div class="gph-content">
-<p class="gph-eyebrow">官公庁・企業イベントの企画・運営</p>
-<div class="gph-rule"></div>
-<h1 class="gph-title">想いを、<br>成功という<br>体験へ。</h1>
-<p class="gph-lead">企画から運営、音響・映像、オンライン配信まで。<br>イベントの成功をワンストップで支えます。</p>
-<div class="gph-actions">
-<a class="gph-btn gph-btn-primary" href="service/index.html">サービス内容 <span>→</span></a>
-<a class="gph-btn gph-btn-outline" href="contact/index.html">お問い合わせ <span>→</span></a>
-</div></div></section>
+
+  <!-- HERO COPY -->
+  <div
+    class="gph-copy"
+    style="
+      grid-column:1 !important;
+      grid-row:1 !important;
+      align-self:center !important;
+      justify-self:start !important;
+      position:static !important;
+      float:none !important;
+      z-index:5 !important;
+      width:38% !important;
+      margin:0 0 0 6.2% !important;
+      padding:0 !important;
+      transform:none !important;
+      text-align:left !important;
+      box-sizing:border-box !important;
+    "
+  >
+
+    <div
+      class="gph-label"
+      style="
+        display:block !important;
+        position:static !important;
+        width:auto !important;
+        margin:0 0 22px !important;
+        padding:0 !important;
+        color:#1389aa !important;
+        font-size:18px !important;
+        font-weight:600 !important;
+        line-height:1.5 !important;
+        letter-spacing:.12em !important;
+        text-align:left !important;
+        transform:none !important;
+      "
+    >
+      官公庁・企業イベントの企画・運営
+    </div>
+
+    <div
+      class="gph-title"
+      style="
+        display:block !important;
+        position:static !important;
+        width:auto !important;
+        max-width:none !important;
+        margin:0 !important;
+        padding:0 !important;
+        color:#073f7d !important;
+        font-size:54px !important;
+        font-weight:700 !important;
+        line-height:1.15 !important;
+        letter-spacing:-.01em !important;
+        text-align:left !important;
+        white-space:normal !important;
+        transform:none !important;
+      "
+    >
+      想いを、<br>
+      成功という<br>
+      体験へ。
+    </div>
+
+    <div
+      class="gph-description"
+      style="
+        display:block !important;
+        position:static !important;
+        width:auto !important;
+        margin:30px 0 0 !important;
+        padding:0 !important;
+        color:#304e68 !important;
+        font-size:17px !important;
+        font-weight:400 !important;
+        line-height:2 !important;
+        letter-spacing:.03em !important;
+        text-align:left !important;
+        transform:none !important;
+      "
+    >
+      企画から運営、音響・映像、オンライン配信まで。<br>
+      イベントの成功をワンストップで支えます。
+    </div>
+
+  </div>
+</section>
 <!-- /NEW TOP HERO -->
 
 
