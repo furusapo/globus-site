@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サービス内容｜株式会社グローパス</title>
+<meta name="description" content="株式会社グローパスのイベント企画・運営サービス。企画から準備、当日の運営、終了後のフォローまでワンストップで支援します。">
+
+<style>
+:root{
+  --navy:#123b66;
+  --blue:#0b84c6;
+  --cyan:#12a8c8;
+  --pale:#eef9fd;
+  --line:#dce8ee;
+  --text:#2e4a60;
+  --muted:#657b8c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#fff;
+  color:var(--text);
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+.header{width:100%;background:#fff;border-bottom:1px solid #e8eef2;position:relative;z-index:10}
+.header-main{width:min(1280px,calc(100% - 48px));min-height:98px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:20px}
+.brand img{height:64px;width:auto}
+.brand-copy{padding-left:20px;border-left:1px solid #d2dde4;color:var(--navy);font-size:16px;line-height:1.5;font-weight:700;white-space:nowrap}
+.header-links{display:flex;align-items:center;gap:26px;color:var(--navy);font-size:14px;font-weight:700}
+.contact-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 24px;border-radius:14px;color:#fff;background:linear-gradient(90deg,#0788ce,#14b6c9)}
+.nav{border-top:1px solid #edf2f5}
+.nav-inner{width:min(1280px,calc(100% - 48px));min-height:62px;margin:auto;display:flex;align-items:center;justify-content:flex-end;gap:34px;color:var(--navy);font-size:14px;font-weight:700}
+
+.hero{position:relative;min-height:500px;overflow:hidden;background:radial-gradient(circle at 15% 20%,rgba(130,220,245,.26),transparent 34%),radial-gradient(circle at 85% 30%,rgba(55,150,220,.15),transparent 30%),linear-gradient(135deg,#f7fcff 0%,#eef9fd 48%,#ffffff 100%)}
+.hero:before{content:"";position:absolute;width:760px;height:760px;right:-280px;top:-360px;border:1px solid rgba(58,159,198,.18);border-radius:50%}
+.hero:after{content:"";position:absolute;width:520px;height:520px;left:-250px;bottom:-290px;border:1px solid rgba(58,159,198,.14);border-radius:50%}
+.hero-inner{position:relative;z-index:2;width:min(1180px,calc(100% - 48px));min-height:500px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px}
+.eyebrow{margin:0 0 14px;color:var(--cyan);font-size:14px;font-weight:700;letter-spacing:.18em}
+.hero h1{margin:0;color:var(--navy);font-size:clamp(42px,5vw,72px);line-height:1.15;font-weight:700;letter-spacing:.01em}
+.hero-copy{margin:28px 0 0;max-width:550px;color:#38566d;font-size:17px;line-height:2}
+.photo-placeholder{min-height:320px;border-radius:24px;border:1px solid #d7e8ef;background:linear-gradient(135deg,rgba(11,132,198,.05),rgba(18,168,200,.14)),#fff;display:flex;align-items:center;justify-content:center;color:#7aa4b7;font-size:13px;letter-spacing:.14em}
+
+.section{padding:100px 24px}
+.section-inner{width:min(1180px,100%);margin:auto}
+.section-head{margin-bottom:48px}
+.section-label{margin:0 0 12px;color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:.16em}
+.section-title{margin:0;color:var(--navy);font-size:clamp(30px,3.5vw,46px);line-height:1.35;font-weight:700}
+.section-lead{max-width:820px;margin:22px 0 0;color:var(--muted);font-size:15px;line-height:2}
+
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:start}
+.why-points{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.point{padding:28px 20px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.point-no{width:46px;height:46px;margin-bottom:18px;border-radius:50%;display:grid;place-items:center;background:var(--pale);color:var(--blue);font-size:14px;font-weight:700}
+.point h3{margin:0 0 10px;color:var(--navy);font-size:18px}
+.point p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}
+
+.overview{background:linear-gradient(180deg,#0e426f 0%,#0a365e 100%);color:#fff}
+.overview .section-label,.overview .section-title,.overview .section-lead{color:#fff}
+.overview-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.overview-card{display:grid;grid-template-columns:42% 58%;min-height:280px;overflow:hidden;border-radius:18px;background:#fff;color:var(--text)}
+.overview-card .photo-placeholder{border:0;border-radius:0;min-height:100%;background:linear-gradient(135deg,#dff5fc,#b9e6f5)}
+.overview-body{padding:34px 30px}
+.overview-no{color:var(--cyan);font-size:32px;font-weight:700;line-height:1}
+.overview-en{margin:8px 0 16px;color:#7b96a6;font-size:10px;font-weight:700;letter-spacing:.12em}
+.overview-card h3{margin:0 0 14px;color:var(--navy);font-size:23px;line-height:1.45}
+.overview-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.9}
+
+.service-detail{background:#f8fcfe}
+.service-block + .service-block{margin-top:100px}
+.service-top{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;margin-bottom:38px}
+.service-number{display:inline-block;margin-right:18px;color:var(--blue);font-size:48px;font-weight:700;vertical-align:middle}
+.service-top h2{display:inline;margin:0;color:var(--navy);font-size:34px;line-height:1.4}
+.service-top p{margin:20px 0 0;color:var(--muted);font-size:15px;line-height:1.9}
+.task-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.task{min-height:150px;padding:22px 18px;border-radius:14px;background:#fff;border:1px solid #dbe8ee}
+.task-no{color:var(--cyan);font-size:13px;font-weight:700;letter-spacing:.08em}
+.task h4{margin:14px 0 7px;color:var(--navy);font-size:16px;line-height:1.45}
+.task p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+
+.problems{background:#fff}
+.problem-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.problem{padding:28px 20px;border:1px solid var(--line);border-radius:14px;text-align:center;color:var(--navy);font-size:14px;line-height:1.8;font-weight:700}
+
+.coverage{background:#f7fafc}
+.coverage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 30px}
+.coverage-item{position:relative;padding:13px 0 13px 30px;border-bottom:1px solid #dfe8ed;color:#425d70;font-size:14px;line-height:1.7}
+.coverage-item:before{content:"✓";position:absolute;left:0;top:13px;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;background:#0c91bf;color:#fff;font-size:11px;font-weight:700}
+
+.cta{position:relative;overflow:hidden;padding:86px 24px;background:linear-gradient(135deg,#0a3e70 0%,#07548b 100%);color:#fff;text-align:center}
+.cta:before{content:"";position:absolute;width:600px;height:600px;right:-320px;top:-300px;border:1px solid rgba(255,255,255,.12);border-radius:50%}
+.cta h2{position:relative;margin:0;font-size:34px;font-weight:700}
+.cta p{position:relative;margin:18px 0 32px;font-size:14px;line-height:1.9;opacity:.86}
+.cta a{position:relative;display:inline-flex;min-width:320px;min-height:58px;padding:15px 30px;align-items:center;justify-content:center;border-radius:999px;background:linear-gradient(90deg,#0b98c6,#13b9b7);color:#fff;font-size:15px;font-weight:700}
+
+footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-top:1px solid #e8eef2}
+
+@media(max-width:900px){
+  .header-main,.nav-inner{width:calc(100% - 32px)}
+  .brand img{height:50px}.brand-copy{font-size:11px;padding-left:12px}
+  .header-links>a:not(.contact-btn){display:none}
+  .nav{overflow:hidden}
+  .nav-inner{justify-content:flex-start;gap:22px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+  .hero-inner{grid-template-columns:1fr;gap:34px;padding:64px 0}
+  .hero{min-height:auto}.photo-placeholder{min-height:220px}
+  .why-grid{grid-template-columns:1fr;gap:40px}.why-points{grid-template-columns:1fr}
+  .overview-grid{grid-template-columns:1fr}
+  .service-top{grid-template-columns:1fr;gap:28px}
+  .task-grid{grid-template-columns:repeat(2,1fr)}
+  .problem-grid{grid-template-columns:repeat(2,1fr)}
+  .coverage-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .header-main{min-height:76px;gap:10px}.brand{gap:9px}.brand img{height:43px}
+  .brand-copy{max-width:125px;padding-left:9px;font-size:8px;white-space:normal}
+  .contact-btn{padding:10px 12px;font-size:10px}
+  .nav-inner{min-height:50px;font-size:11px}
+  .hero-inner{width:calc(100% - 32px)}.hero h1{font-size:40px}.hero-copy{font-size:14px}
+  .section{padding:72px 18px}
+  .overview-card{grid-template-columns:1fr}.overview-card .photo-placeholder{min-height:190px}
+  .service-number{font-size:38px}.service-top h2{font-size:26px}
+  .task-grid,.problem-grid,.coverage-grid{grid-template-columns:1fr}
+  .cta h2{font-size:28px}.cta a{min-width:0;width:100%;max-width:360px}
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <div class="header-main">
+    <a class="brand" href="../index.html">
+      <img src="../assets/glowpas-logo.png" alt="グローパス">
+      <span class="brand-copy">官公庁・企業イベントの企画・運営</span>
+    </a>
+    <div class="header-links">
+      <a href="../index.html#company">会社概要</a>
+      <a href="../index.html#access">アクセス</a>
+      <a class="contact-btn" href="../contact/index.html">お問い合わせ</a>
+    </div>
+  </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html">HOME</a>
+      <a href="./">サービス内容</a>
+      <a href="../results/index.html">実績</a>
+      <a href="../recruit/index.html">採用情報</a>
+      <a href="../privacy/index.html">個人情報保護方針</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">SERVICE</p>
+      <h1>サービス内容</h1>
+      <p class="hero-copy">
+        企画から準備、当日の運営、終了後のフォローまで。<br>
+        イベントを成功体験へつなぎ、新たな未来を一緒につくります。
+      </p>
+    </div>
+    <div class="photo-placeholder">HERO IMAGE</div>
+  </div>
+</section>
+
+<section class="section why">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <div class="section-head">
+          <p class="section-label">WHY GLOBUS</p>
+          <h2 class="section-title">イベント運営を、<br>ひとつのチームで。</h2>
+          <p class="section-lead">
+            グローパスは、企画・テクニカル・運営・演出など各分野のプロが
+            ひとつのチームとして連携し、イベントをワンストップで支援します。
+            スムーズな情報共有と柔軟な対応力で、主催者のパートナーとして
+            最適なイベント運営を実現します。
+          </p>
+        </div>
+      </div>
+      <div class="why-points">
+        <article class="point"><div class="point-no">01</div><h3>社内連携</h3><p>各専門チームが連携し、スムーズに対応します。</p></article>
+        <article class="point"><div class="point-no">02</div><h3>一括管理</h3><p>企画から運営まで、一貫してサポートします。</p></article>
+        <article class="point"><div class="point-no">03</div><h3>柔軟対応</h3><p>規模や目的に応じて最適なプランをご提案します。</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section overview">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="section-label">SERVICE OVERVIEW</p>
+      <h2 class="section-title">グローパスのサービス</h2>
+      <p class="section-lead">イベントの成功に向けて、企画から運営まで幅広い領域をサポートします。</p>
+    </div>
+    <div class="overview-grid">
+      <article class="overview-card">
+        <div class="photo-placeholder">PHOTO 01</div>
+        <div class="overview-body">
+          <div class="overview-no">01</div>
+          <div class="overview-en">EVENT & PROJECT</div>
+          <h3>イベント・プロジェクト<br>運営支援</h3>
+          <p>企画立案から会場準備、当日運営、終了後のフォローまで、イベントを成功に導くトータルサポートを提供します。</p>
+        </div>
+      </article>
+      <article class="overview-card">
+        <div class="photo-placeholder">PHOTO 02</div>
+        <div class="overview-body">
+          <div class="overview-no">02</div>
+          <div class="overview-en">DIRECTION & OPERATIONS</div>
+          <h3>現場統括・運営<br>ディレクション</h3>
+          <p>主催者・会場・出演者・関係各社との調整やスタッフ管理、進行まで一元的に統括し、現場を円滑に進行します。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section service-detail">
+  <div class="section-inner">
+    <div class="service-block">
+      <div class="service-top">
+        <div>
+          <div><span class="service-number">01</span><h2>イベント・プロジェクト運営支援</h2></div>
+          <p>イベントの成功に向けて、企画から運営まで幅広い領域をサポートします。</p>
+        </div>
+        <div class="photo-placeholder">PHOTO 03</div>
+      </div>
+      <div class="task-grid">
+        <article class="task"><div class="task-no">01</div><h4>企画・設計</h4><p>目的整理、企画設計、戦略の策定</p></article>
+        <article class="task"><div class="task-no">02</div><h4>会場・制作</h4><p>会場設計、デザイン、制作物の準備</p></article>
+        <article class="task"><div class="task-no">03</div><h4>広報・集客</h4><p>告知、集客、運営ツールの制作</p></article>
+        <article class="task"><div class="task-no">04</div><h4>会場・備品</h4><p>設営準備、必要備品の手配と管理</p></article>
+        <article class="task"><div class="task-no">05</div><h4>進行管理</h4><p>進行管理、各種お問い合わせ対応</p></article>
+        <article class="task"><div class="task-no">06</div><h4>運営・受付</h4><p>スタッフ手配、教育、受付運営</p></article>
+        <article class="task"><div class="task-no">07</div><h4>各種手配</h4><p>ケータリング、輸送、宿泊等の手配</p></article>
+        <article class="task"><div class="task-no">08</div><h4>フォローアップ</h4><p>終了後の報告、振り返り、改善提案</p></article>
+      </div>
+    </div>
+
+    <div class="service-block">
+      <div class="service-top">
+        <div>
+          <div><span class="service-number">02</span><h2>現場統括・運営ディレクション</h2></div>
+          <p>イベント運営の現場を統合し、確かな実現力で支えます。主催者・スタッフ・関係各社・会場との連携を図り、トラブル対応まで一元的に統括します。</p>
+        </div>
+        <div class="photo-placeholder">PHOTO 04</div>
+      </div>
+      <div class="task-grid">
+        <article class="task"><div class="task-no">01</div><h4>進行管理</h4><p>スムーズなタイムテーブル運営を実現</p></article>
+        <article class="task"><div class="task-no">02</div><h4>現場統括</h4><p>関係者との密な連携で円滑に対応</p></article>
+        <article class="task"><div class="task-no">03</div><h4>緊急時対応</h4><p>トラブル時も迅速かつ柔軟に対応</p></article>
+        <article class="task"><div class="task-no">04</div><h4>トラブル対応</h4><p>想定外の事態にも安心のサポート体制</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section problems">
+  <div class="section-inner">
+    <div class="section-head" style="text-align:center">
+      <p class="section-label">SUPPORT</p>
+      <h2 class="section-title">こんなお悩みに対応します</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem">イベント運営の経験がなく<br>何から始めればよいかわからない</div>
+      <div class="problem">人手やノウハウが不足しており<br>スタッフを手配できない</div>
+      <div class="problem">進行管理や関係各部門の<br>負担を減らしたい</div>
+      <div class="problem">当日のトラブルが不安で<br>安心できるパートナーが欲しい</div>
+    </div>
+  </div>
+</section>
+
+<section class="section coverage">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="section-label">COVERAGE</p>
+      <h2 class="section-title">対応業務</h2>
+      <p class="section-lead">イベントに関わる幅広い業務に対応し、目的に合わせて最適なサポートを提供します。</p>
+    </div>
+    <div class="coverage-grid">
+      <div class="coverage-item">イベント全体の進行管理</div>
+      <div class="coverage-item">タイムスケジュールおよび進行状況の管理</div>
+      <div class="coverage-item">トラブル対応と緊急時への迅速な対応</div>
+      <div class="coverage-item">運営スタッフの配置・教育・管理</div>
+      <div class="coverage-item">会場や機材の手配・設営管理</div>
+      <div class="coverage-item">終了後の撤収・配送・備品管理</div>
+      <div class="coverage-item">会場設営、受付、誘導、案内の管理</div>
+      <div class="coverage-item">広報・告知の対応、問い合わせ対応</div>
+      <div class="coverage-item">実施レポートの作成とフィードバック</div>
+      <div class="coverage-item">出演者・来賓・関係者との連絡・調整</div>
+      <div class="coverage-item">映像・音響・照明など各種演出スタッフとの連携</div>
+      <div class="coverage-item">ケータリング・輸送・宿泊等の各種手配</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>お問い合わせ</h2>
+  <p>ご相談・お見積り・資料請求など、まずはお気軽にご相談ください。</p>
+  <a href="../contact/index.html">お問い合わせはこちら →</a>
+</section>
+</main>
+
+<footer>© 株式会社グローパス</footer>
+</body>
+</html>
