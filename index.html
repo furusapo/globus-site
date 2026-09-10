@@ -1807,18 +1807,22 @@ footer img[src*="glowpas-logo"]{
 </style>
 
 
-<style id="globus-responsive-hero-image">
-#globus-top-hero .globus-hero-picture{
-  display:block;
-  width:100%;
-}
-#globus-top-hero .globus-hero-picture img{
-  display:block;
-  width:100%;
-  height:auto;
-}
+<style id="globus-hero-overlay-style">
+#globus-top-hero,#globus-top-hero *{box-sizing:border-box}
+#globus-top-hero{position:relative;width:100%;aspect-ratio:1704/864;overflow:hidden;background:#eefaff}
+#globus-top-hero .gph-background{position:absolute;inset:0;display:block;width:100%;height:100%}
+#globus-top-hero .gph-background img{display:block;width:100%;height:100%;max-width:none;object-fit:cover}
+#globus-top-hero .gph-content{position:absolute;z-index:3;top:10.5%;left:5.2%;width:31%;color:#073f7d;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo",sans-serif}
+#globus-top-hero .gph-eyebrow{margin:0;color:#078baa;font-size:clamp(14px,1.25vw,23px);font-weight:700;line-height:1.5;letter-spacing:.06em}
+#globus-top-hero .gph-rule{width:45px;height:2px;margin:18px 0 30px;background:#0b91aa}
+#globus-top-hero .gph-title{margin:0;padding:0;color:#073f7d;font-size:clamp(46px,4.7vw,82px);font-weight:700;line-height:1.18}
+#globus-top-hero .gph-lead{margin:28px 0 0;color:#294f6c;font-size:clamp(14px,1.15vw,20px);font-weight:500;line-height:1.9}
+#globus-top-hero .gph-actions{display:flex;gap:18px;margin-top:28px}
+#globus-top-hero .gph-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:25px;min-width:190px;min-height:58px;padding:14px 28px;border-radius:999px;font-size:15px;font-weight:700;line-height:1;text-decoration:none}
+#globus-top-hero .gph-btn-primary{color:#fff;background:linear-gradient(90deg,#0784d0,#00a8d2)}
+#globus-top-hero .gph-btn-outline{color:#073f7d;background:rgba(255,255,255,.7);border:1.5px solid #638bb4}
+@media(max-width:767px){#globus-top-hero{aspect-ratio:896/1664}#globus-top-hero .gph-background img{object-fit:cover;object-position:center top}#globus-top-hero .gph-content{top:6%;left:7%;width:86%}#globus-top-hero .gph-eyebrow{font-size:12px}#globus-top-hero .gph-rule{width:34px;margin:12px 0 18px}#globus-top-hero .gph-title{font-size:clamp(42px,13vw,62px);line-height:1.15}#globus-top-hero .gph-lead{max-width:92%;margin-top:20px;font-size:13px;line-height:1.8}#globus-top-hero .gph-lead br{display:none}#globus-top-hero .gph-actions{gap:10px;margin-top:20px}#globus-top-hero .gph-btn{min-width:0;min-height:46px;padding:11px 17px;font-size:12px;gap:14px}}
 </style>
-
 </head>
 
 <body id="top" style="">
@@ -1890,116 +1894,20 @@ footer img[src*="glowpas-logo"]{
 
 
 <!-- NEW TOP HERO -->
-<section
-  id="globus-top-hero"
-  style="
-    display:grid !important;
-    grid-template-columns:1fr !important;
-    grid-template-rows:1fr !important;
-    width:calc(100% - 48px) !important;
-    max-width:1600px !important;
-    margin:187px auto 50px !important;
-    padding:0 !important;
-    overflow:hidden !important;
-    border-radius:22px !important;
-    box-sizing:border-box !important;
-    background:#eefaff !important;
-  "
->
-
-  <!-- HERO IMAGE -->
-  <picture class="globus-hero-picture">
-  <source media="(max-width: 767px)" srcset="assets/top-hero-bg-mobile.png?v=20260910-2000">
-  <img src="assets/top-hero-bg.png?v=20260910-2000" alt="グローパス イベント運営">
+<section id="globus-top-hero">
+<picture class="gph-background">
+<source media="(max-width:767px)" srcset="assets/top-hero-bg-mobile.png?v=20260910-2010">
+<img src="assets/top-hero-bg.png?v=20260910-2010" alt="グローパス イベント運営">
 </picture>
-
-  <!-- HERO COPY -->
-  <div
-    class="gph-copy"
-    style="
-      grid-column:1 !important;
-      grid-row:1 !important;
-      align-self:center !important;
-      justify-self:start !important;
-      position:static !important;
-      float:none !important;
-      z-index:5 !important;
-      width:38% !important;
-      margin:0 0 0 6.2% !important;
-      padding:0 !important;
-      transform:none !important;
-      text-align:left !important;
-      box-sizing:border-box !important;
-    "
-  >
-
-    <div
-      class="gph-label"
-      style="
-        display:block !important;
-        position:static !important;
-        width:auto !important;
-        margin:0 0 22px !important;
-        padding:0 !important;
-        color:#1389aa !important;
-        font-size:18px !important;
-        font-weight:600 !important;
-        line-height:1.5 !important;
-        letter-spacing:.12em !important;
-        text-align:left !important;
-        transform:none !important;
-      "
-    >
-      官公庁・企業イベントの企画・運営
-    </div>
-
-    <div
-      class="gph-title"
-      style="
-        display:block !important;
-        position:static !important;
-        width:auto !important;
-        max-width:none !important;
-        margin:0 !important;
-        padding:0 !important;
-        color:#073f7d !important;
-        font-size:54px !important;
-        font-weight:700 !important;
-        line-height:1.15 !important;
-        letter-spacing:-.01em !important;
-        text-align:left !important;
-        white-space:normal !important;
-        transform:none !important;
-      "
-    >
-      想いを、<br>
-      成功という<br>
-      体験へ。
-    </div>
-
-    <div
-      class="gph-description"
-      style="
-        display:block !important;
-        position:static !important;
-        width:auto !important;
-        margin:30px 0 0 !important;
-        padding:0 !important;
-        color:#304e68 !important;
-        font-size:17px !important;
-        font-weight:400 !important;
-        line-height:2 !important;
-        letter-spacing:.03em !important;
-        text-align:left !important;
-        transform:none !important;
-      "
-    >
-      企画から運営、音響・映像、オンライン配信まで。<br>
-      イベントの成功をワンストップで支えます。
-    </div>
-
-  </div>
-</section>
+<div class="gph-content">
+<p class="gph-eyebrow">官公庁・企業イベントの企画・運営</p>
+<div class="gph-rule"></div>
+<h1 class="gph-title">想いを、<br>成功という<br>体験へ。</h1>
+<p class="gph-lead">企画から運営、音響・映像、オンライン配信まで。<br>イベントの成功をワンストップで支えます。</p>
+<div class="gph-actions">
+<a class="gph-btn gph-btn-primary" href="service/index.html">サービス内容 <span>→</span></a>
+<a class="gph-btn gph-btn-outline" href="contact/index.html">お問い合わせ <span>→</span></a>
+</div></div></section>
 <!-- /NEW TOP HERO -->
 
 
