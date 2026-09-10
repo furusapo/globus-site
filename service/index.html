@@ -160,6 +160,68 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
 }
 </style>
 
+
+<style id="service-real-photo-style">
+
+.service-photo{
+  display:block;
+  width:100%;
+  object-fit:cover;
+}
+
+.hero-photo{
+  height:340px;
+  border-radius:24px;
+  object-position:center;
+}
+
+.overview-card .overview-photo{
+  width:100%;
+  height:100%;
+  min-height:280px;
+  object-fit:cover;
+}
+
+.detail-photo{
+  width:100%;
+  height:280px;
+  border-radius:20px;
+  object-fit:cover;
+}
+
+@media(max-width:900px){
+  .hero-photo{
+    height:280px;
+  }
+
+  .overview-card .overview-photo{
+    height:230px;
+    min-height:230px;
+  }
+
+  .detail-photo{
+    height:240px;
+  }
+}
+
+@media(max-width:560px){
+  .hero-photo{
+    height:220px;
+    border-radius:16px;
+  }
+
+  .overview-card .overview-photo{
+    height:200px;
+  }
+
+  .detail-photo{
+    height:210px;
+    border-radius:14px;
+  }
+}
+
+</style>
+
 </head>
 
 <body>
@@ -198,7 +260,7 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
   グローパスがイベントの全工程をサポートします。
 </p>
     </div>
-    <div class="photo-placeholder">HERO IMAGE</div>
+    <img class="service-photo hero-photo" src="../assets/service/photos/service-hero.jpg" alt="イベント会場">
   </div>
 </section>
 
@@ -235,7 +297,7 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
     </div>
     <div class="overview-grid">
       <article class="overview-card">
-        <div class="photo-placeholder">PHOTO 01</div>
+        <img class="service-photo overview-photo" src="../assets/service/photos/service-project.jpg" alt="イベント運営">
         <div class="overview-body">
           <div class="overview-no">01</div>
           <div class="overview-en">EVENT & PROJECT</div>
@@ -244,7 +306,7 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
         </div>
       </article>
       <article class="overview-card">
-        <div class="photo-placeholder">PHOTO 02</div>
+        <img class="service-photo overview-photo" src="../assets/service/photos/service-direction.jpg" alt="イベント運営ディレクション">
         <div class="overview-body">
           <div class="overview-no">02</div>
           <div class="overview-en">DIRECTION & OPERATIONS</div>
@@ -264,7 +326,7 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
           <div><span class="service-number">01</span><h2>イベント・プロジェクト運営支援</h2></div>
           <p>イベントの成功に向けて、企画から運営まで幅広い領域をサポートします。</p>
         </div>
-        <div class="photo-placeholder">PHOTO 03</div>
+        <img class="service-photo detail-photo" src="../assets/service/photos/service-project-detail.jpg" alt="イベント受付・運営">
       </div>
       <div class="task-grid">
         <article class="task">
@@ -301,7 +363,7 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
           <div><span class="service-number">02</span><h2>現場統括・運営ディレクション</h2></div>
           <p>イベント運営の現場を統合し、確かな実現力で支えます。主催者・スタッフ・関係各社・会場との連携を図り、トラブル対応まで一元的に統括します。</p>
         </div>
-        <div class="photo-placeholder">PHOTO 04</div>
+        <img class="service-photo detail-photo" src="../assets/service/photos/service-direction-detail.jpg" alt="イベントテクニカル運営">
       </div>
       <div class="task-grid">
         <article class="task"><div class="task-no">01</div><h4>進行管理</h4><p>スムーズなタイムテーブル運営を実現</p></article>
