@@ -354,6 +354,47 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
 }
 </style>
 
+
+<style id="service-page-lead-style">
+
+.service-page-heading{
+  position:relative;
+}
+
+.service-page-lead{
+  position:relative;
+  z-index:3;
+  margin:28px 0 0 90px;
+  color:#526d83;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    "YuGothic",
+    "Meiryo",
+    sans-serif;
+  font-size:17px;
+  font-weight:500;
+  line-height:1.9;
+  letter-spacing:.04em;
+}
+
+/* 薄いSERVICEの上に文章が来る */
+.service-page-hero h1::after{
+  z-index:-1;
+}
+
+@media(max-width:900px){
+
+  .service-page-lead{
+    margin:24px 20px 0 65px;
+    font-size:14px;
+    line-height:1.8;
+  }
+
+}
+
+</style>
+
 </head>
 
 <body>
@@ -384,7 +425,15 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
 
 <section class="service-page-hero">
   <div class="service-page-hero-inner">
-    <h1>サービス内容</h1>
+    <div class="service-page-heading">
+      <h1>サービス内容</h1>
+
+      <p class="service-page-lead">
+        企画・準備から、イベント当日の運営、<br>
+        そして終了後のフォローまで。<br>
+        グローパスがイベントの全工程をサポートします。
+      </p>
+    </div>
   </div>
 </section>
 
