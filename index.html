@@ -1885,24 +1885,56 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+<style id="service-header-exact-copy">
+.service-copy-header{width:100%!important;background:#fff!important;border-bottom:1px solid #e8eef2!important;position:relative!important;z-index:100!important;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic","Meiryo",sans-serif!important}
+.service-copy-header *{box-sizing:border-box!important}
+.service-copy-header a{text-decoration:none!important}
+.service-copy-header-main{width:min(1280px,calc(100% - 48px))!important;min-height:98px!important;margin:auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:28px!important}
+.service-copy-brand{display:flex!important;align-items:center!important;gap:20px!important}
+.service-copy-brand img{height:64px!important;width:auto!important;max-width:none!important;display:block!important}
+.service-copy-brand-text{padding-left:20px!important;border-left:1px solid #d2dde4!important;color:#123b66!important;font-size:16px!important;line-height:1.5!important;font-weight:700!important;white-space:nowrap!important}
+.service-copy-links{display:flex!important;align-items:center!important;gap:26px!important;color:#123b66!important;font-size:14px!important;font-weight:700!important}
+.service-copy-links>a{color:#123b66!important}
+.service-copy-contact{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:50px!important;padding:12px 24px!important;border-radius:14px!important;color:#fff!important;background:linear-gradient(90deg,#0788ce,#14b6c9)!important}
+.service-copy-nav{border-top:1px solid #edf2f5!important;background:#fff!important}
+.service-copy-nav-inner{width:min(1280px,calc(100% - 48px))!important;min-height:62px!important;margin:auto!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:34px!important;color:#123b66!important;font-size:14px!important;font-weight:700!important}
+.service-copy-nav-inner a{color:#123b66!important;white-space:nowrap!important}
+
+@media(max-width:900px){
+  .service-copy-header-main,.service-copy-nav-inner{width:calc(100% - 32px)!important}
+  .service-copy-brand img{height:50px!important}
+  .service-copy-brand-text{font-size:11px!important;padding-left:12px!important}
+  .service-copy-links>a:not(.service-copy-contact){display:none!important}
+  .service-copy-nav{overflow:hidden!important}
+  .service-copy-nav-inner{justify-content:flex-start!important;gap:22px!important;overflow-x:auto!important;white-space:nowrap!important;-webkit-overflow-scrolling:touch!important}
+}
+@media(max-width:560px){
+  .service-copy-header-main{min-height:76px!important;gap:10px!important}
+  .service-copy-brand{gap:9px!important}
+  .service-copy-brand img{height:43px!important}
+  .service-copy-brand-text{max-width:125px!important;padding-left:9px!important;font-size:8px!important;white-space:normal!important}
+  .service-copy-contact{padding:10px 12px!important;font-size:10px!important}
+  .service-copy-nav-inner{min-height:50px!important;font-size:11px!important}
+}
+</style>
 </head>
 
 <body id="top" style="">
     <!-- === header === -->
-    <header class="header">
-  <div class="header-main">
-    <a class="brand" href="index.html">
+    <header class="service-copy-header">
+  <div class="service-copy-header-main">
+    <a class="service-copy-brand" href="index.html">
       <img src="assets/glowpas-logo.png" alt="グローパス">
-      <span class="brand-copy">官公庁・企業イベントの企画・運営</span>
+      <span class="service-copy-brand-text">官公庁・企業イベントの企画・運営</span>
     </a>
-    <div class="header-links">
+    <div class="service-copy-links">
       <a href="index.html#company">会社概要</a>
       <a href="index.html#access">アクセス</a>
-      <a class="contact-btn" href="contact/index.html">お問い合わせ</a>
+      <a class="service-copy-contact" href="contact/index.html">お問い合わせ</a>
     </div>
   </div>
-  <nav class="nav">
-    <div class="nav-inner">
+  <nav class="service-copy-nav">
+    <div class="service-copy-nav-inner">
       <a href="index.html">HOME</a>
       <a href="service/index.html">サービス内容</a>
       <a href="results/index.html">実績</a>
