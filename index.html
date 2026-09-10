@@ -1855,57 +1855,62 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+<style id="service-header-copy">
+.header{width:100%;background:#fff;border-bottom:1px solid #e8eef2;position:relative;z-index:10}
+.header-main{width:min(1280px,calc(100% - 48px));min-height:98px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:20px}
+.brand img{height:64px;width:auto}
+.brand-copy{padding-left:20px;border-left:1px solid #d2dde4;color:#123b66;font-size:16px;line-height:1.5;font-weight:700;white-space:nowrap}
+.header-links{display:flex;align-items:center;gap:26px;color:#123b66;font-size:14px;font-weight:700}
+.contact-btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 24px;border-radius:14px;color:#fff;background:linear-gradient(90deg,#0788ce,#14b6c9)}
+.nav{border-top:1px solid #edf2f5}
+.nav-inner{width:min(1280px,calc(100% - 48px));min-height:62px;margin:auto;display:flex;align-items:center;justify-content:flex-end;gap:34px;color:#123b66;font-size:14px;font-weight:700}
+.header a{color:inherit;text-decoration:none}
+.header img{max-width:100%;display:block}
+@media(max-width:900px){
+  .header-main,.nav-inner{width:calc(100% - 32px)}
+  .brand img{height:50px}
+  .brand-copy{font-size:11px;padding-left:12px}
+  .header-links>a:not(.contact-btn){display:none}
+  .nav{overflow:hidden}
+  .nav-inner{justify-content:flex-start;gap:22px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+}
+@media(max-width:560px){
+  .header-main{min-height:76px;gap:10px}
+  .brand{gap:9px}
+  .brand img{height:43px}
+  .brand-copy{max-width:125px;padding-left:9px;font-size:8px;white-space:normal}
+  .contact-btn{padding:10px 12px;font-size:10px}
+  .nav-inner{min-height:50px;font-size:11px}
+}
+</style>
+
 </head>
 
 <body id="top" style="">
     <!-- === header === -->
-    <header id="header" class="">
-        <div class="inner">
-            <!-- === siteTtl === -->
-                        <h1 id="siteTtl"><a href="service/index.html" class=""><img src="assets/glowpas-logo.png" alt="株式会社グローパス｜イベント運営のプロフェッショナル"></a></h1>
-                        <!-- /=== siteTtl === -->
-            <!-- === humbergerBtn === -->
-            <div class="humBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <!-- === humbergerBtn === -->
-
-            <div id="headWrapper" class="">
-                <!-- === mainNav === -->
-<nav id="mainNav">
-<ul>
-<li class="parent"><a href="index.html">HOME</a></li>
-<li class="parent"><a href="service/index.html">サービス内容</a></li>
-<li class="parent"><a href="results/index.html">実績</a></li>
-<li class="parent"><a href="recruit/index.html">採用情報</a></li>
-<li class="parent"><a href="privacy/index.html">個人情報保護方針</a></li>
-</ul>
-</nav>                <!-- /=== mainNav === -->
-                <!-- === headNav === -->
-                                <nav id="headNav">
-                  <ul>
-                                                <li id="profileNav">
-                              <a href="index.html">
-                                                                        会社概要
-                                                                </a>
-                          </li>
-                                                                      <li id="accessNav">
-                              <a href="index.html">
-                                                                        アクセス
-                                                                </a>
-                          </li>
-                                                                      <li id="contactNav" onclick="location.href='contact/index.html'">
-                                                          <div class="mail icon"></div><span>お問い合わせ</span>
-                                                      </li>
-                                        </ul>
-                </nav>
-                              <!-- /=== headNav === -->
-                            </div>
-            <!-- /=== header === -->
-        </div>
-    </header>
+    <header class="header">
+  <div class="header-main">
+    <a class="brand" href="index.html">
+      <img src="assets/glowpas-logo.png" alt="グローパス">
+      <span class="brand-copy">官公庁・企業イベントの企画・運営</span>
+    </a>
+    <div class="header-links">
+      <a href="index.html#company">会社概要</a>
+      <a href="index.html#access">アクセス</a>
+      <a class="contact-btn" href="contact/index.html">お問い合わせ</a>
+    </div>
+  </div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html">HOME</a>
+      <a href="service/index.html">サービス内容</a>
+      <a href="results/index.html">実績</a>
+      <a href="recruit/index.html">採用情報</a>
+      <a href="privacy/index.html">個人情報保護方針</a>
+    </div>
+  </nav>
+</header>
         
         <!-- === main === -->
         <main>
