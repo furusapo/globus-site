@@ -1459,6 +1459,110 @@ footer img[src*="glowpas-logo"]{
 
 
 
+
+<style id="concept-redesign-final">
+
+#ydc1{
+  text-align:center !important;
+}
+
+#ydc1 .concept-inner{
+  width:min(1180px,calc(100% - 48px));
+  margin:0 auto;
+  padding:70px 20px 82px;
+}
+
+#ydc1 .concept-label{
+  margin:0;
+  color:#1590b0;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.28em;
+}
+
+#ydc1 .concept-label::after{
+  content:"";
+  display:block;
+  width:58px;
+  height:1px;
+  margin:11px auto 0;
+  background:#1590b0;
+}
+
+#ydc1 .concept-title{
+  margin:34px 0 28px;
+  color:#16385d;
+  font-size:clamp(30px,3vw,46px);
+  font-weight:700;
+  line-height:1.35;
+  letter-spacing:.02em;
+}
+
+#ydc1 .concept-lead{
+  margin:0 auto;
+  color:#52697a;
+  font-size:15px;
+  line-height:1.9;
+}
+
+#ydc1 .concept-values{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:42px;
+  margin:52px auto;
+  color:#0b609a;
+  font-size:20px;
+  font-weight:700;
+}
+
+#ydc1 .concept-values span{
+  width:1px;
+  height:34px;
+  background:#42b7d8;
+}
+
+#ydc1 .concept-bottom{
+  color:#52697a;
+  font-size:14px;
+  line-height:2;
+}
+
+#ydc1 .concept-bottom p{
+  margin:0 0 12px;
+}
+
+@media(max-width:700px){
+
+  #ydc1 .concept-inner{
+    width:calc(100% - 32px);
+    padding:56px 10px 64px;
+  }
+
+  #ydc1 .concept-title{
+    font-size:28px;
+  }
+
+  #ydc1 .concept-lead br,
+  #ydc1 .concept-bottom br{
+    display:none;
+  }
+
+  #ydc1 .concept-values{
+    flex-direction:column;
+    gap:16px;
+    margin:38px auto;
+    font-size:18px;
+  }
+
+  #ydc1 .concept-values span{
+    width:40px;
+    height:1px;
+  }
+
+}
+</style>
+
 </head>
 
 <body id="top" style="">
@@ -1548,20 +1652,40 @@ footer img[src*="glowpas-logo"]{
                         </div>
                 </article>
                             <!-- === articleArea === -->
-                                                                                                  <section class="articleBox noImg bg_color" id="ydc1">
-                                              <!-- 画像なしの場合 -->
-                    <h2 class="articleTtl">想いを、成功という体験へ。</h2>                        <div class="articleTxt">
-                              <p>グローパスは、官公庁・自治体・企業のイベントを企画から運営まで一貫して支援するプロフェッショナルチームです。</p>
-<br>
-<p>私たちが届けたいのは、イベントそのものではなく、その先にある価値です。</p>
-<br>
-<p><strong>人と人をつなぐ。</strong></p>
-<p><strong>企業と社会をつなぐ。</strong></p>
-<p><strong>想いと未来をつなぐ。</strong></p>
-<br>
-<p>「Grow（成長）」と「Pass（つなぐ・受け渡す）」の名のもとに、<br>確かな運営力と柔軟な対応力で、お客様の想いを成功という体験へと導きます。</p>
-                          </div>
-                      </section>
+                                                                                                  
+<section class="articleBox noImg bg_color" id="ydc1">
+
+  <div class="concept-inner">
+
+    <p class="concept-label">CONCEPT</p>
+
+    <h2 class="concept-title">想いを、成功という体験へ。</h2>
+
+    <p class="concept-lead">
+      グローパスは、官公庁・自治体・企業のイベントを<br>
+      企画から運営まで一貫して支援するプロフェッショナルチームです。
+    </p>
+
+    <div class="concept-values">
+      <strong>人と人をつなぐ。</strong>
+      <span></span>
+      <strong>企業と社会をつなぐ。</strong>
+      <span></span>
+      <strong>想いと未来をつなぐ。</strong>
+    </div>
+
+    <div class="concept-bottom">
+      <p>私たちが届けたいのは、イベントそのものではなく、その先にある価値です。</p>
+      <p>
+        「Grow（成長）」と「Pass（つなぐ・受け渡す）」の名のもとに、<br>
+        確かな運営力と柔軟な対応力で、お客様の想いを成功という体験へと導きます。
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
                       <!-- 画像なしの場合 -->
                                                                                                                   
 </div><!-- /.container SUPPORT full width -->
