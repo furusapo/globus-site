@@ -225,233 +225,6 @@
 }
 
 </style>
-
-
-<style id="globus-support-style">
-
-#globus-support {
-  position: relative;
-  padding: 110px 24px 120px;
-  background: #f8f8f6;
-  overflow: hidden;
-}
-
-#globus-support::before {
-  content: "";
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  border: 1px solid rgba(203, 180, 120, .28);
-  border-radius: 50%;
-  top: -260px;
-  right: -170px;
-}
-
-#globus-support .gs-inner {
-  width: min(1180px, 100%);
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-#globus-support .gs-heading {
-  text-align: center;
-  margin-bottom: 70px;
-}
-
-#globus-support .gs-label {
-  margin: 0 0 12px;
-  font-size: 14px;
-  letter-spacing: .18em;
-  color: #b29b66;
-  font-weight: 500;
-}
-
-#globus-support .gs-title {
-  margin: 0;
-  font-size: clamp(28px, 3.2vw, 42px);
-  line-height: 1.45;
-  font-weight: 400;
-  letter-spacing: .03em;
-  color: #1f2a36;
-}
-
-#globus-support .gs-copy {
-  max-width: 820px;
-  margin: 28px auto 0;
-  font-size: 16px;
-  line-height: 2;
-  color: #5d6670;
-}
-
-#globus-support .gs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-#globus-support .gs-card {
-  position: relative;
-  min-height: 390px;
-  border-radius: 18px;
-  overflow: hidden;
-  text-decoration: none;
-  background: #fff;
-  box-shadow: 0 18px 45px rgba(0,0,0,.07);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-#globus-support .gs-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 55px rgba(0,0,0,.11);
-}
-
-#globus-support .gs-card-wide {
-  grid-column: 1 / -1;
-}
-
-#globus-support .gs-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#globus-support .gs-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(7, 28, 57, .08) 0%,
-      rgba(7, 28, 57, .22) 35%,
-      rgba(7, 28, 57, .76) 100%
-    );
-}
-
-#globus-support .gs-content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 34px 36px 32px;
-  color: #fff;
-}
-
-#globus-support .gs-no {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 13px;
-  letter-spacing: .16em;
-  opacity: .78;
-}
-
-#globus-support .gs-card-title {
-  margin: 0 0 11px;
-  font-size: 28px;
-  line-height: 1.4;
-  font-weight: 400;
-  letter-spacing: .03em;
-}
-
-#globus-support .gs-card-copy {
-  margin: 0;
-  max-width: 620px;
-  font-size: 14px;
-  line-height: 1.8;
-  opacity: .92;
-}
-
-#globus-support .gs-arrow {
-  position: absolute;
-  right: 30px;
-  bottom: 28px;
-  width: 46px;
-  height: 46px;
-  border: 1px solid rgba(255,255,255,.8);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: #fff;
-  transition: .25s ease;
-}
-
-#globus-support .gs-card:hover .gs-arrow {
-  background: rgba(255,255,255,.14);
-  transform: translateX(4px);
-}
-
-#globus-support .gs-cta-wrap {
-  text-align: center;
-  margin-top: 55px;
-}
-
-#globus-support .gs-cta {
-  display: inline-flex;
-  min-width: 320px;
-  min-height: 68px;
-  padding: 16px 36px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #173d70;
-  color: #173d70;
-  text-decoration: none;
-  font-size: 17px;
-  letter-spacing: .05em;
-  transition: .25s ease;
-}
-
-#globus-support .gs-cta:hover {
-  background: #173d70;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-
-  #globus-support {
-    padding: 80px 18px 90px;
-  }
-
-  #globus-support .gs-heading {
-    margin-bottom: 45px;
-  }
-
-  #globus-support .gs-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  #globus-support .gs-card,
-  #globus-support .gs-card-wide {
-    grid-column: auto;
-    min-height: 330px;
-  }
-
-  #globus-support .gs-content {
-    padding: 28px 24px 26px;
-  }
-
-  #globus-support .gs-card-title {
-    font-size: 24px;
-  }
-
-  #globus-support .gs-arrow {
-    right: 22px;
-    bottom: 22px;
-  }
-
-  #globus-support .gs-cta {
-    min-width: 0;
-    width: 100%;
-  }
-}
-
-</style>
-
-
 <style id="hero-width-fix">
 /* PC幅による右余白のズレ対策 */
 #mainVisual,
@@ -501,417 +274,6 @@
   }
 }
 </style>
-
-
-
-
-
-
-
-
-<style id="support-card-redesign">
-
-/* =========================
-   SUPPORT 全体
-========================= */
-
-#globus-support {
-  position: relative !important;
-  padding: 100px 40px 110px !important;
-  box-sizing: border-box !important;
-  overflow: hidden !important;
-
-  background:
-    linear-gradient(rgba(255,255,255,.10), rgba(255,255,255,.18)),
-    url("assets/support-bg.png") center top / cover no-repeat !important;
-}
-
-#globus-support::before {
-  display: none !important;
-}
-
-#globus-support .gs-inner {
-  width: min(1420px, 100%) !important;
-  margin: 0 auto !important;
-}
-
-
-/* =========================
-   見出し
-========================= */
-
-#globus-support .gs-heading {
-  text-align: center !important;
-  margin-bottom: 58px !important;
-}
-
-#globus-support .gs-label {
-  margin: 0 0 16px !important;
-  font-size: 14px !important;
-  letter-spacing: .25em !important;
-  color: #248da8 !important;
-  font-weight: 600 !important;
-}
-
-#globus-support .gs-label::after {
-  content: "";
-  display: block;
-  width: 86px;
-  height: 1px;
-  margin: 12px auto 0;
-  background: #248da8;
-}
-
-#globus-support .gs-title {
-  margin: 0 !important;
-  font-size: clamp(30px, 3vw, 48px) !important;
-  line-height: 1.45 !important;
-  font-weight: 500 !important;
-  letter-spacing: .035em !important;
-  color: #173354 !important;
-}
-
-#globus-support .gs-copy {
-  max-width: 980px !important;
-  margin: 26px auto 0 !important;
-  font-size: 15px !important;
-  line-height: 2 !important;
-  color: #495a69 !important;
-}
-
-
-/* =========================
-   5カード配置
-   上3 / 下2
-========================= */
-
-#globus-support .gs-grid {
-  display: grid !important;
-  grid-template-columns: repeat(6, 1fr) !important;
-  gap: 24px !important;
-}
-
-#globus-support .gs-card {
-  grid-column: span 2 !important;
-
-  position: relative !important;
-  min-height: 280px !important;
-  overflow: hidden !important;
-
-  border-radius: 12px !important;
-  background: rgba(255,255,255,.97) !important;
-  box-shadow: 0 12px 35px rgba(31,54,73,.10) !important;
-
-  text-decoration: none !important;
-  isolation: isolate !important;
-
-  transition:
-    transform .3s ease,
-    box-shadow .3s ease !important;
-}
-
-/* 4枚目・5枚目は横長 */
-#globus-support .gs-card:nth-child(4),
-#globus-support .gs-card:nth-child(5),
-#globus-support .gs-card-wide {
-  grid-column: span 3 !important;
-}
-
-
-/* =========================
-   写真：右側を曲線で見せる
-========================= */
-
-#globus-support .gs-image {
-  position: absolute !important;
-
-  top: 0 !important;
-  right: 0 !important;
-  left: auto !important;
-  bottom: auto !important;
-
-  width: 60% !important;
-  height: 100% !important;
-
-  object-fit: cover !important;
-  object-position: center !important;
-
-  /*
-   白い情報面との境界を大きな曲線に
-  */
-  clip-path: ellipse(73% 115% at 100% 50%) !important;
-
-  transition:
-    transform .55s ease,
-    filter .4s ease !important;
-}
-
-
-/* 既存の濃いオーバーレイは消す */
-#globus-support .gs-overlay {
-  display: none !important;
-}
-
-
-/* =========================
-   白い情報エリア
-========================= */
-
-#globus-support .gs-content {
-  position: relative !important;
-  z-index: 3 !important;
-
-  left: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-
-  width: 56% !important;
-  min-height: 280px !important;
-
-  padding: 34px 26px 28px 30px !important;
-  box-sizing: border-box !important;
-
-  color: #173354 !important;
-
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-
-  /*
-   写真の下に確実に白面を作る
-  */
-  background: transparent !important;
-}
-
-
-/* =========================
-   番号
-========================= */
-
-#globus-support .gs-no {
-  display: block !important;
-
-  margin-bottom: 22px !important;
-
-  font-size: 29px !important;
-  line-height: 1 !important;
-  letter-spacing: .03em !important;
-
-  color: #2a9ab2 !important;
-  font-weight: 300 !important;
-}
-
-
-/* =========================
-   カードタイトル
-========================= */
-
-#globus-support .gs-card-title {
-  margin: 0 0 16px !important;
-
-  font-size: 24px !important;
-  line-height: 1.4 !important;
-
-  color: #173354 !important;
-  font-weight: 600 !important;
-  letter-spacing: .04em !important;
-}
-
-
-/* =========================
-   説明文
-========================= */
-
-#globus-support .gs-card-copy {
-  margin: 0 !important;
-
-  max-width: 280px !important;
-
-  font-size: 13px !important;
-  line-height: 1.9 !important;
-
-  color: #4e606d !important;
-  opacity: 1 !important;
-}
-
-
-/* =========================
-   小さい丸矢印
-========================= */
-
-#globus-support .gs-arrow {
-  position: absolute !important;
-
-  right: 22px !important;
-  bottom: 20px !important;
-
-  width: 34px !important;
-  height: 34px !important;
-
-  border: 1px solid #2a9ab2 !important;
-  border-radius: 50% !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  color: #2a9ab2 !important;
-  background: rgba(255,255,255,.78) !important;
-
-  font-size: 16px !important;
-  font-weight: 400 !important;
-
-  z-index: 5 !important;
-}
-
-
-/* =========================
-   Hover
-========================= */
-
-#globus-support .gs-card:hover {
-  transform: translateY(-5px) !important;
-  box-shadow: 0 18px 45px rgba(31,54,73,.16) !important;
-}
-
-#globus-support .gs-card:hover .gs-image {
-  transform: scale(1.035) !important;
-}
-
-#globus-support .gs-card:hover .gs-arrow {
-  background: #2a9ab2 !important;
-  color: #fff !important;
-}
-
-
-/* =========================
-   CTA
-========================= */
-
-#globus-support .gs-cta-wrap {
-  margin-top: 42px !important;
-  text-align: center !important;
-}
-
-#globus-support .gs-cta {
-  min-width: 430px !important;
-  min-height: 72px !important;
-
-  padding: 16px 42px !important;
-
-  border: none !important;
-  border-radius: 6px !important;
-
-  background:
-    linear-gradient(
-      90deg,
-      #258ca7 0%,
-      #45a4a3 55%,
-      #b5ad75 100%
-    ) !important;
-
-  color: #fff !important;
-
-  font-size: 17px !important;
-  font-weight: 500 !important;
-  letter-spacing: .06em !important;
-
-  box-shadow: 0 10px 28px rgba(38,122,145,.18) !important;
-}
-
-#globus-support .gs-cta:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.04);
-}
-
-
-/* =========================
-   Tablet
-========================= */
-
-@media screen and (max-width: 1100px) {
-
-  #globus-support {
-    padding: 80px 25px 90px !important;
-  }
-
-  #globus-support .gs-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-
-  #globus-support .gs-card,
-  #globus-support .gs-card:nth-child(4),
-  #globus-support .gs-card:nth-child(5),
-  #globus-support .gs-card-wide {
-    grid-column: span 1 !important;
-  }
-
-  #globus-support .gs-card:last-child {
-    grid-column: 1 / -1 !important;
-  }
-
-}
-
-
-/* =========================
-   Mobile
-========================= */
-
-@media screen and (max-width: 700px) {
-
-  #globus-support {
-    padding: 70px 16px 75px !important;
-    background-position: center top !important;
-  }
-
-  #globus-support .gs-grid {
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
-  }
-
-  #globus-support .gs-card,
-  #globus-support .gs-card:nth-child(4),
-  #globus-support .gs-card:nth-child(5),
-  #globus-support .gs-card-wide,
-  #globus-support .gs-card:last-child {
-    grid-column: 1 !important;
-    min-height: 320px !important;
-  }
-
-  #globus-support .gs-image {
-    width: 67% !important;
-    clip-path: ellipse(76% 110% at 100% 50%) !important;
-  }
-
-  #globus-support .gs-content {
-    width: 60% !important;
-    min-height: 320px !important;
-    padding: 28px 18px 25px 22px !important;
-  }
-
-  #globus-support .gs-no {
-    font-size: 25px !important;
-    margin-bottom: 18px !important;
-  }
-
-  #globus-support .gs-card-title {
-    font-size: 21px !important;
-  }
-
-  #globus-support .gs-card-copy {
-    font-size: 12px !important;
-    line-height: 1.8 !important;
-  }
-
-  #globus-support .gs-cta {
-    min-width: 0 !important;
-    width: 100% !important;
-  }
-}
-
-</style>
-
-
 <style id="news-hover-line">
 
 #newsTopics .news-title {
@@ -960,87 +322,6 @@
 }
 
 </style>
-
-
-<style id="support-cta-gradient-fix">
-
-#globus-support .gs-cta {
-  background:
-    linear-gradient(
-      90deg,
-      #9BE8FF 0%,
-      #BDF2E8 55%,
-      #DDF5C4 100%
-    ) !important;
-
-  color: #0B78C4 !important;
-  border: none !important;
-
-  box-shadow:
-    0 10px 28px rgba(71, 169, 191, .16) !important;
-}
-
-#globus-support .gs-cta:hover {
-  background:
-    linear-gradient(
-      90deg,
-      #91E3FA 0%,
-      #B4ECE2 55%,
-      #D5EEBC 100%
-    ) !important;
-
-  color: #086DAF !important;
-  filter: none !important;
-}
-
-</style>
-
-
-<style id="support-title-match">
-
-/* SUPPORT見出しを
-   「想いを、成功という体験へ。」と同じ文字設定へ */
-#globus-support .gs-title {
-  font-family: inherit !important;
-  font-size: 36px !important;
-  font-weight: 400 !important;
-  line-height: 1.3 !important;
-  letter-spacing: normal !important;
-  color: #0877c9 !important;
-}
-
-@media screen and (max-width: 768px) {
-  #globus-support .gs-title {
-    font-size: 28px !important;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #globus-support .gs-title {
-    font-size: 24px !important;
-  }
-}
-
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <style id="globus-top-hero-style">
 
 @media screen and (max-width:1200px){
@@ -1087,62 +368,6 @@
 }
 
 </style>
-
-
-
-
-
-<style id="support-2x2-fix">
-
-/* SUPPORTを2列×2段に固定 */
-#globus-support .gs-grid{
-  display:grid !important;
-  grid-template-columns:repeat(2, minmax(0,1fr)) !important;
-  gap:28px !important;
-}
-
-/* 全カードを同じ幅に */
-#globus-support .gs-card,
-#globus-support .gs-card:nth-child(4),
-#globus-support .gs-card:nth-child(5),
-#globus-support .gs-card-wide,
-#globus-support .gs-card:last-child{
-  grid-column:auto !important;
-  width:100% !important;
-  min-height:360px !important;
-}
-
-/* 採用情報だけ横長にならないよう解除 */
-#globus-support .gs-card-wide{
-  grid-column:auto !important;
-}
-
-/* 2列でも見た目が崩れないよう調整 */
-#globus-support .gs-image{
-  width:58% !important;
-}
-
-#globus-support .gs-content{
-  width:58% !important;
-  min-height:360px !important;
-}
-
-/* タブレット以下は1列 */
-@media screen and (max-width:900px){
-  #globus-support .gs-grid{
-    grid-template-columns:1fr !important;
-  }
-
-  #globus-support .gs-card,
-  #globus-support .gs-card-wide,
-  #globus-support .gs-card:last-child{
-    grid-column:1 !important;
-  }
-}
-
-</style>
-
-
 <style id="globus-hero-typography-fix">
 
 #globus-top-hero .gph-copy{
@@ -2015,8 +1240,13 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+<style id="support-clean-final">
+/* ===== TOP SUPPORT / cleaned final ===== */
+#globus-support,
+#globus-support *{
+  box-sizing:border-box;
+}
 
-<style id="support-final-reference">
 #globus-support{
   position:relative!important;
   padding:78px 28px 90px!important;
@@ -2026,9 +1256,16 @@ footer img[src*="glowpas-logo"]{
     url("assets/support-bg.png") center/cover no-repeat!important;
 }
 
+#globus-support::before{
+  display:none!important;
+}
+
 #globus-support .gs-inner{
   width:min(1360px,100%)!important;
+  max-width:1360px!important;
   margin:0 auto!important;
+  position:relative!important;
+  z-index:1!important;
 }
 
 #globus-support .gs-heading{
@@ -2056,6 +1293,7 @@ footer img[src*="glowpas-logo"]{
 #globus-support .gs-title{
   margin:0!important;
   color:#0b78c4!important;
+  font-family:inherit!important;
   font-size:clamp(30px,3vw,46px)!important;
   font-weight:700!important;
   line-height:1.35!important;
@@ -2081,33 +1319,38 @@ footer img[src*="glowpas-logo"]{
   grid-template-columns:repeat(3,minmax(0,1fr))!important;
   gap:22px!important;
   width:100%!important;
+  margin:0!important;
 }
 
 #globus-support .gs-card,
-#globus-support .gs-card:nth-child(4),
-#globus-support .gs-card:nth-child(5),
 #globus-support .gs-card-wide,
 #globus-support .gs-card:last-child{
   grid-column:auto!important;
   position:relative!important;
-  min-height:340px!important;
   width:100%!important;
+  min-height:340px!important;
   overflow:hidden!important;
   border-radius:14px!important;
   background:#fff!important;
   box-shadow:0 10px 30px rgba(30,78,102,.08)!important;
   text-decoration:none!important;
+  isolation:isolate!important;
+  transition:transform .3s ease,box-shadow .3s ease!important;
 }
 
+/* 写真は3枚とも同じ「斜め直線」で統一 */
 #globus-support .gs-image{
   position:absolute!important;
   top:0!important;
   right:0!important;
+  bottom:auto!important;
   left:auto!important;
   width:56%!important;
   height:100%!important;
+  max-width:none!important;
   object-fit:cover!important;
   object-position:center!important;
+  border-radius:0!important;
   clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)!important;
   transition:transform .4s ease!important;
 }
@@ -2119,6 +1362,9 @@ footer img[src*="glowpas-logo"]{
 #globus-support .gs-content{
   position:relative!important;
   z-index:3!important;
+  left:auto!important;
+  right:auto!important;
+  bottom:auto!important;
   width:54%!important;
   min-height:340px!important;
   padding:42px 24px 28px 28px!important;
@@ -2130,6 +1376,7 @@ footer img[src*="glowpas-logo"]{
 }
 
 #globus-support .gs-no{
+  display:block!important;
   margin:0 0 18px!important;
   color:#44aac3!important;
   font-size:38px!important;
@@ -2144,6 +1391,7 @@ footer img[src*="glowpas-logo"]{
   font-size:23px!important;
   line-height:1.35!important;
   font-weight:700!important;
+  letter-spacing:normal!important;
 }
 
 #globus-support .gs-card-copy{
@@ -2170,6 +1418,7 @@ footer img[src*="glowpas-logo"]{
   color:#1aa0c4!important;
   background:#fff!important;
   font-size:16px!important;
+  z-index:5!important;
 }
 
 #globus-support .gs-card:hover{
@@ -2179,6 +1428,11 @@ footer img[src*="glowpas-logo"]{
 
 #globus-support .gs-card:hover .gs-image{
   transform:scale(1.025)!important;
+}
+
+#globus-support .gs-card:hover .gs-arrow{
+  color:#fff!important;
+  background:#1aa0c4!important;
 }
 
 #globus-support .gs-cta-wrap{
@@ -2202,6 +1456,12 @@ footer img[src*="glowpas-logo"]{
   font-size:16px!important;
   font-weight:700!important;
   text-decoration:none!important;
+}
+
+#globus-support .gs-cta:hover{
+  color:#fff!important;
+  filter:brightness(1.03)!important;
+  transform:translateY(-2px)!important;
 }
 
 @media(max-width:980px){
@@ -2232,13 +1492,14 @@ footer img[src*="glowpas-logo"]{
   }
 
   #globus-support .gs-content{
-    min-height:300px!important;
     width:58%!important;
+    min-height:300px!important;
     padding:30px 18px 24px!important;
   }
 
   #globus-support .gs-image{
     width:58%!important;
+    clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)!important;
   }
 
   #globus-support .gs-no{
