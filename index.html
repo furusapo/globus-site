@@ -1338,21 +1338,30 @@ footer img[src*="glowpas-logo"]{
   transition:transform .3s ease,box-shadow .3s ease!important;
 }
 
-/* 写真は3枚とも同じ「斜め直線」で統一 */
+/* 写真はカード右側を全面使用 */
 #globus-support .gs-image{
   position:absolute!important;
-  top:0!important;
-  right:0!important;
-  bottom:auto!important;
-  left:auto!important;
-  width:56%!important;
+  inset:0 0 0 auto!important;
+  width:60%!important;
   height:100%!important;
   max-width:none!important;
   object-fit:cover!important;
   object-position:center!important;
   border-radius:0!important;
-  clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)!important;
+  clip-path:none!important;
+  z-index:1!important;
   transition:transform .4s ease!important;
+}
+
+/* 白面そのものを斜めに切る。3枚とも完全に同じ角度 */
+#globus-support .gs-card::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:2!important;
+  background:#fff!important;
+  clip-path:polygon(0 0,58% 0,48% 100%,0 100%)!important;
+  pointer-events:none!important;
 }
 
 #globus-support .gs-overlay{
@@ -1365,14 +1374,14 @@ footer img[src*="glowpas-logo"]{
   left:auto!important;
   right:auto!important;
   bottom:auto!important;
-  width:54%!important;
+  width:48%!important;
   min-height:340px!important;
-  padding:42px 24px 28px 28px!important;
+  padding:42px 20px 28px 28px!important;
   display:flex!important;
   flex-direction:column!important;
   justify-content:center!important;
   color:#173354!important;
-  background:#fff!important;
+  background:transparent!important;
 }
 
 #globus-support .gs-no{
@@ -1418,7 +1427,7 @@ footer img[src*="glowpas-logo"]{
   color:#1aa0c4!important;
   background:#fff!important;
   font-size:16px!important;
-  z-index:5!important;
+  z-index:4!important;
 }
 
 #globus-support .gs-card:hover{
@@ -1491,15 +1500,18 @@ footer img[src*="glowpas-logo"]{
     min-height:300px!important;
   }
 
+  #globus-support .gs-card::before{
+    clip-path:polygon(0 0,62% 0,50% 100%,0 100%)!important;
+  }
+
   #globus-support .gs-content{
-    width:58%!important;
+    width:50%!important;
     min-height:300px!important;
-    padding:30px 18px 24px!important;
+    padding:30px 14px 24px 18px!important;
   }
 
   #globus-support .gs-image{
-    width:58%!important;
-    clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)!important;
+    width:62%!important;
   }
 
   #globus-support .gs-no{
