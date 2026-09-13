@@ -1036,6 +1036,42 @@ img{
 }
 </style>
 
+
+<style id="recruit-job-overlay-final">
+/* 募集職種：写真を活かし、左側だけに薄いグラデーション */
+.job-card,
+.recruit-job-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 既存オーバーレイを調整 */
+.job-card::before,
+.recruit-job-card::before {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 91, 150, .55) 0%,
+    rgba(0, 91, 150, .38) 22%,
+    rgba(0, 91, 150, .16) 40%,
+    rgba(0, 91, 150, 0) 58%
+  ) !important;
+}
+
+/* イベント運営側 */
+.job-card.event::before,
+.job-card:nth-of-type(2)::before,
+.recruit-job-card.event::before,
+.recruit-job-card:nth-of-type(2)::before {
+  background: linear-gradient(
+    90deg,
+    rgba(229, 91, 55, .52) 0%,
+    rgba(229, 91, 55, .34) 22%,
+    rgba(229, 91, 55, .14) 40%,
+    rgba(229, 91, 55, 0) 58%
+  ) !important;
+}
+</style>
+
 </head>
 <body>
 
