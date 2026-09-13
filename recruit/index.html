@@ -713,47 +713,248 @@ img{
 </style>
 
 
-<style id="voice-photo-style">
-#voices .voice-card{
-  display:flex;
-  flex-direction:column;
-}
 
-#voices .voice-photo{
-  width:100%;
-  aspect-ratio:4 / 3;
+<style id="voices-reference-redesign">
+.voices-redesign{
+  position:relative;
+  padding:95px 34px 105px !important;
+  background:
+    radial-gradient(circle at 0 0,rgba(72,188,220,.10),transparent 28%),
+    radial-gradient(circle at 100% 100%,rgba(100,210,197,.12),transparent 26%),
+    #f8fcfe !important;
   overflow:hidden;
-  background:#eef5f8;
 }
 
-#voices .voice-photo img{
-  display:block;
+.voices-redesign .voices-heading{
+  text-align:center;
+  margin-bottom:52px;
+}
+
+.voices-redesign .voices-en{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  color:#267eaa;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.30em;
+}
+
+.voices-redesign .voices-en span{
+  width:38px;
+  height:1px;
+  background:#6db3d6;
+}
+
+.voices-redesign .voices-heading h2{
+  margin:18px 0 0;
+  color:#11365d;
+  font-size:42px;
+  line-height:1.3;
+  letter-spacing:.08em;
+}
+
+.voices-redesign .voice-grid{
+  max-width:1320px !important;
+  margin:0 auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:22px !important;
+}
+
+.voices-redesign .voice-card{
+  display:grid !important;
+  grid-template-columns:34% 66%;
+  min-height:310px;
+  border:1px solid #e2edf3;
+  border-radius:18px !important;
+  overflow:hidden;
+  background:rgba(255,255,255,.96) !important;
+  box-shadow:0 10px 28px rgba(34,81,109,.06) !important;
+}
+
+.voices-redesign .voice-photo{
   width:100%;
   height:100%;
+  min-height:310px;
+  aspect-ratio:auto !important;
+  overflow:hidden;
+  background:#edf5f8;
+}
+
+.voices-redesign .voice-photo img{
+  width:100%;
+  height:100%;
+  display:block;
   object-fit:cover;
-  object-position:center 28%;
+  object-position:center 22%;
 }
 
-#voices .voice-card:nth-child(2) .voice-photo img{
-  object-position:center 25%;
+.voices-redesign .voice-content{
+  padding:28px 30px 26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-#voices .voice-card:nth-child(3) .voice-photo img,
-#voices .voice-card:nth-child(4) .voice-photo img{
-  object-position:center 24%;
+.voices-redesign .voice-meta{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  color:#667786;
+  font-size:13px;
 }
 
-#voices .voice-head{
-  min-height:76px;
+.voices-redesign .voice-meta i{
+  width:1px;
+  height:14px;
+  background:#aab9c3;
 }
 
-#voices .voice-text{
-  flex:1;
+.voices-redesign .voice-role{
+  display:inline-flex;
+  align-items:center;
+  min-height:30px;
+  padding:5px 14px;
+  border-radius:999px;
+  font-weight:700;
 }
 
-@media(max-width:900px){
-  #voices .voice-photo{
-    aspect-ratio:16 / 10;
+.voices-redesign .tech .voice-role{
+  color:#0b76a7;
+  background:#e5f5fd;
+}
+
+.voices-redesign .eventvoice .voice-role{
+  color:#d95f3d;
+  background:#fff0e9;
+}
+
+.voices-redesign .voice-content h3{
+  margin:22px 0 18px;
+  color:#12395f;
+  font-size:24px;
+  line-height:1.55;
+  font-weight:700;
+}
+
+.voices-redesign .voice-content p{
+  margin:0;
+  color:#586d7c;
+  font-size:14px;
+  line-height:1.9;
+}
+
+.voices-redesign .voice-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:22px;
+}
+
+.voices-redesign .voice-tags span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:34px;
+  padding:6px 18px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+}
+
+.voices-redesign .tech .voice-tags span{
+  color:#176f9c;
+  background:#eaf6fc;
+}
+
+.voices-redesign .eventvoice .voice-tags span{
+  color:#cf6548;
+  background:#fff1eb;
+}
+
+@media(max-width:1000px){
+  .voices-redesign .voice-card{
+    grid-template-columns:38% 62%;
+  }
+  .voices-redesign .voice-content{
+    padding:24px 22px;
+  }
+  .voices-redesign .voice-content h3{
+    font-size:21px;
+  }
+}
+
+@media(max-width:768px){
+  .voices-redesign{
+    padding:70px 16px 80px !important;
+  }
+
+  .voices-redesign .voices-heading h2{
+    font-size:32px;
+  }
+
+  .voices-redesign .voice-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  .voices-redesign .voice-card{
+    grid-template-columns:34% 66%;
+    min-height:260px;
+  }
+
+  .voices-redesign .voice-photo{
+    min-height:260px;
+  }
+
+  .voices-redesign .voice-content{
+    padding:20px 18px;
+  }
+
+  .voices-redesign .voice-content h3{
+    margin:16px 0 12px;
+    font-size:18px;
+  }
+
+  .voices-redesign .voice-content p{
+    font-size:12px;
+    line-height:1.75;
+  }
+
+  .voices-redesign .voice-tags{
+    gap:7px;
+    margin-top:16px;
+  }
+
+  .voices-redesign .voice-tags span{
+    padding:5px 11px;
+    font-size:10px;
+  }
+
+  .voices-redesign .voice-meta{
+    font-size:11px;
+    gap:7px;
+  }
+
+  .voices-redesign .voice-role{
+    padding:4px 10px;
+  }
+}
+
+@media(max-width:520px){
+  .voices-redesign .voice-card{
+    grid-template-columns:1fr;
+  }
+
+  .voices-redesign .voice-photo{
+    height:260px;
+    min-height:0;
+  }
+
+  .voices-redesign .voice-photo img{
+    object-position:center 20%;
   }
 }
 </style>
@@ -907,31 +1108,78 @@ img{
   </div>
 </section>
 
-<section class="voices" id="voices">
-  <h2 class="section-title">スタッフの声</h2>
+
+<section class="voices voices-redesign" id="voices">
+  <div class="voices-heading">
+    <div class="voices-en"><span></span>STAFF VOICE<span></span></div>
+    <h2>スタッフの声</h2>
+  </div>
+
   <div class="voice-grid">
-    <div class="voice-card tech">
-      <div class="voice-photo"><img src="../assets/recruit/voice-tech-c.jpg" alt="テクニカルスタッフ Cさん"></div>
-      <div class="voice-head">テクニカルスタッフ<br>Cさん（28歳・経験3年）</div>
-      <div class="voice-text">音響の専門学校を卒業後、こちらでお世話になっています。毎回異なる会場、異なる要求に対応するため、技術者としてのスキルが飛躍的に向上しました。特に同時通訳システムの技術は他では学べない貴重な経験です。</div>
-    </div>
-    <div class="voice-card tech">
-      <div class="voice-photo"><img src="../assets/recruit/voice-tech-d.jpg" alt="テクニカルスタッフ Dさん"></div>
-      <div class="voice-head">テクニカルスタッフ<br>Dさん（35歳・経験5年）</div>
-      <div class="voice-text">放送局での経験を活かして転職しました。官公庁のイベントは社会的意義が高く、自分の技術が多くの人に届くことにやりがいを感じています。最新機材に触れる機会も多く、技術者として常に成長できる環境です。</div>
-    </div>
-    <div class="voice-card eventvoice">
-      <div class="voice-photo"><img src="../assets/recruit/voice-event-a.jpg" alt="イベント運営スタッフ Aさん"></div>
-      <div class="voice-head">イベント運営スタッフ<br>大学生・Aさん（20歳）</div>
-      <div class="voice-text">初めてのアルバイトでしたが、先輩スタッフの皆さんが優しく教えてくださり、すぐに慣れることができました。様々な分野の専門家の方々とお話しできるのがとても勉強になります。将来の就職活動にも活かせそうです。</div>
-    </div>
-    <div class="voice-card eventvoice">
-      <div class="voice-photo"><img src="../assets/recruit/voice-event-b.jpg" alt="イベント運営スタッフ Bさん"></div>
-      <div class="voice-head">イベント運営スタッフ<br>主婦・Bさん（35歳）</div>
-      <div class="voice-text">子育ての合間に働けるシフト制が魅力的でした。イベントごとに違う会場で働けるので、毎回新鮮な気持ちで取り組めます。参加者の方から「ありがとう」と言われると、とてもやりがいを感じます。</div>
-    </div>
+
+    <article class="voice-card tech">
+      <div class="voice-photo">
+        <img src="../assets/recruit/voice-tech-c.jpg" alt="テクニカルスタッフ Cさん">
+      </div>
+      <div class="voice-content">
+        <div class="voice-meta">
+          <span class="voice-role">テクニカルスタッフ</span>
+          <span>20代後半</span><i></i><span>経験3年</span>
+        </div>
+        <h3>「現場が変わるたびに、<br>できることが増えていきます。」</h3>
+        <p>音響・映像・配信など幅広い現場に関わりながら、実践を通して着実に成長できます。</p>
+        <div class="voice-tags"><span>音響</span><span>映像</span><span>現場対応</span></div>
+      </div>
+    </article>
+
+    <article class="voice-card eventvoice">
+      <div class="voice-photo">
+        <img src="../assets/recruit/voice-event-a.jpg" alt="イベント運営スタッフ Aさん">
+      </div>
+      <div class="voice-content">
+        <div class="voice-meta">
+          <span class="voice-role">イベント運営スタッフ</span>
+          <span>大学生</span>
+        </div>
+        <h3>「初めてでも、<br>安心して挑戦できました。」</h3>
+        <p>先輩スタッフのサポートがあり、受付や案内などを通して現場での対応力が身につきます。</p>
+        <div class="voice-tags"><span>受付</span><span>案内</span><span>学生歓迎</span></div>
+      </div>
+    </article>
+
+    <article class="voice-card tech">
+      <div class="voice-photo">
+        <img src="../assets/recruit/voice-tech-d.jpg" alt="テクニカルスタッフ Dさん">
+      </div>
+      <div class="voice-content">
+        <div class="voice-meta">
+          <span class="voice-role">テクニカルスタッフ</span>
+          <span>30代半ば</span><i></i><span>経験5年</span>
+        </div>
+        <h3>「官公庁案件だからこそ、<br>技術の質が問われます。」</h3>
+        <p>責任ある現場に携わる中で、判断力と対応力を高めながら技術者として経験を積めます。</p>
+        <div class="voice-tags"><span>配信</span><span>オペレーション</span><span>チーム連携</span></div>
+      </div>
+    </article>
+
+    <article class="voice-card eventvoice">
+      <div class="voice-photo">
+        <img src="../assets/recruit/voice-event-b.jpg" alt="イベント運営スタッフ Bさん">
+      </div>
+      <div class="voice-content">
+        <div class="voice-meta">
+          <span class="voice-role">イベント運営スタッフ</span>
+          <span>40代</span><i></i><span>子育てと両立</span>
+        </div>
+        <h3>「家庭と両立しながら、<br>やりがいを感じています。」</h3>
+        <p>シフトの柔軟さがあり、参加者対応や会場運営を通して人と関わる楽しさを感じられます。</p>
+        <div class="voice-tags"><span>シフト相談</span><span>未経験可</span><span>人と接する仕事</span></div>
+      </div>
+    </article>
+
   </div>
 </section>
+
 
 <section class="attraction" id="attraction">
   <h2 class="section-title">グローパスで働く魅力</h2>
