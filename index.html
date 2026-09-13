@@ -1443,6 +1443,20 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="contact-icon-image-fix">
+#globus-contact .gc-card-icon{
+  overflow:hidden !important;
+}
+#globus-contact .gc-card-icon img{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  object-fit:cover !important;
+  border-radius:50% !important;
+}
+</style>
+
 </head>
 
 <body id="top" style="">
@@ -1632,14 +1646,14 @@ footer img[src*="glowpas-logo"]{
     <div class="gc-contact-grid">
       <div class="gc-card gc-card-form">
         <div class="gc-card-top">
-          <div class="gc-card-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="8" y="14" width="48" height="36" rx="4"></rect><path d="M10 18l22 18 22-18"></path></svg></div>
+          <div class="gc-card-icon"><img src="assets/contact-form-icon.png" alt="お問い合わせフォーム"></div>
           <div><h3 class="gc-card-heading">お問い合わせフォーム</h3><p class="gc-card-copy">企業・官公庁・イベント主催者の方へ<br>正式なお見積り・ご相談はこちらから。</p></div>
         </div>
         <a class="gc-card-btn gc-form-btn" href="contact/index.html">フォームから相談する <span>→</span></a>
       </div>
       <div class="gc-card gc-card-line">
         <div class="gc-card-top">
-          <div class="gc-card-icon" aria-hidden="true"><span class="gc-line-mini">LINE</span></div>
+          <div class="gc-card-icon"><img src="assets/line-contact-icon.png" alt="LINEで相談する"></div>
           <div><h3 class="gc-card-heading">LINEで相談する</h3><p class="gc-card-copy">まずは気軽に相談したい方へ<br>担当者が迅速に対応いたします。</p></div>
         </div>
         <a class="gc-card-btn gc-line-btn" href="https://lin.ee/WwHYCKs" target="_blank" rel="noopener"><span class="gc-line-mini">LINE</span>友だち追加して相談する <span>→</span></a>
