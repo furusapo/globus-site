@@ -1991,6 +1991,280 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="top-intro-copy-style">
+/* TOP 会社紹介文 */
+.gs-intro-copy{
+  max-width:1100px !important;
+  margin:0 auto !important;
+  padding:72px 32px !important;
+  text-align:center !important;
+  color:#123b66 !important;
+  font-size:18px !important;
+  font-weight:700 !important;
+  line-height:2 !important;
+  letter-spacing:.04em !important;
+}
+
+@media(max-width:767px){
+  .gs-intro-copy{
+    padding:48px 22px !important;
+    font-size:15px !important;
+    line-height:1.9 !important;
+  }
+}
+</style>
+
+
+<style id="support-final-reference">
+#globus-support{
+  position:relative!important;
+  padding:78px 28px 90px!important;
+  overflow:hidden!important;
+  background:
+    linear-gradient(rgba(244,252,255,.58),rgba(245,252,255,.64)),
+    url("assets/support-bg.png") center/cover no-repeat!important;
+}
+
+#globus-support .gs-inner{
+  width:min(1360px,100%)!important;
+  margin:0 auto!important;
+}
+
+#globus-support .gs-heading{
+  margin:0 auto 46px!important;
+  text-align:center!important;
+}
+
+#globus-support .gs-label{
+  margin:0 0 10px!important;
+  color:#1590b0!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  letter-spacing:.28em!important;
+}
+
+#globus-support .gs-label::after{
+  content:""!important;
+  display:block!important;
+  width:58px!important;
+  height:1px!important;
+  margin:11px auto 0!important;
+  background:#1590b0!important;
+}
+
+#globus-support .gs-title{
+  margin:0!important;
+  color:#0b78c4!important;
+  font-size:clamp(30px,3vw,46px)!important;
+  font-weight:700!important;
+  line-height:1.35!important;
+  letter-spacing:.02em!important;
+}
+
+#globus-support .gs-title span{
+  color:#16385d!important;
+  font-size:.72em!important;
+  font-weight:700!important;
+}
+
+#globus-support .gs-copy{
+  max-width:980px!important;
+  margin:24px auto 0!important;
+  color:#52697a!important;
+  font-size:14px!important;
+  line-height:1.9!important;
+}
+
+#globus-support .gs-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:22px!important;
+  width:100%!important;
+}
+
+#globus-support .gs-card,
+#globus-support .gs-card:nth-child(4),
+#globus-support .gs-card:nth-child(5),
+#globus-support .gs-card-wide,
+#globus-support .gs-card:last-child{
+  grid-column:auto!important;
+  position:relative!important;
+  min-height:340px!important;
+  width:100%!important;
+  overflow:hidden!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  box-shadow:0 10px 30px rgba(30,78,102,.08)!important;
+  text-decoration:none!important;
+}
+
+#globus-support .gs-image{
+  position:absolute!important;
+  top:0!important;
+  right:0!important;
+  left:auto!important;
+  width:56%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  clip-path:polygon(24% 0,100% 0,100% 100%,0 100%)!important;
+  transition:transform .4s ease!important;
+}
+
+#globus-support .gs-overlay{
+  display:none!important;
+}
+
+#globus-support .gs-content{
+  position:relative!important;
+  z-index:3!important;
+  width:54%!important;
+  min-height:340px!important;
+  padding:42px 24px 28px 28px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  color:#173354!important;
+  background:#fff!important;
+}
+
+#globus-support .gs-no{
+  margin:0 0 18px!important;
+  color:#44aac3!important;
+  font-size:38px!important;
+  line-height:1!important;
+  font-weight:300!important;
+  letter-spacing:.01em!important;
+}
+
+#globus-support .gs-card-title{
+  margin:0 0 16px!important;
+  color:#173354!important;
+  font-size:23px!important;
+  line-height:1.35!important;
+  font-weight:700!important;
+}
+
+#globus-support .gs-card-copy{
+  max-width:220px!important;
+  margin:0!important;
+  color:#52697a!important;
+  font-size:13px!important;
+  line-height:1.9!important;
+  opacity:1!important;
+}
+
+#globus-support .gs-arrow{
+  position:absolute!important;
+  left:28px!important;
+  right:auto!important;
+  bottom:24px!important;
+  width:38px!important;
+  height:38px!important;
+  border:1px solid #1aa0c4!important;
+  border-radius:50%!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  color:#1aa0c4!important;
+  background:#fff!important;
+  font-size:16px!important;
+}
+
+#globus-support .gs-card:hover{
+  transform:translateY(-4px)!important;
+  box-shadow:0 16px 38px rgba(30,78,102,.13)!important;
+}
+
+#globus-support .gs-card:hover .gs-image{
+  transform:scale(1.025)!important;
+}
+
+#globus-support .gs-cta-wrap{
+  margin-top:42px!important;
+  text-align:center!important;
+}
+
+#globus-support .gs-cta{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:18px!important;
+  min-width:380px!important;
+  min-height:62px!important;
+  padding:14px 34px!important;
+  border:0!important;
+  border-radius:999px!important;
+  color:#fff!important;
+  background:linear-gradient(90deg,#087fd0 0%,#0ea9d4 55%,#18c9d7 100%)!important;
+  box-shadow:0 10px 24px rgba(13,151,199,.20)!important;
+  font-size:16px!important;
+  font-weight:700!important;
+  text-decoration:none!important;
+}
+
+@media(max-width:980px){
+  #globus-support .gs-grid{
+    grid-template-columns:1fr!important;
+    max-width:720px!important;
+    margin:0 auto!important;
+  }
+}
+
+@media(max-width:640px){
+  #globus-support{
+    padding:62px 16px 70px!important;
+  }
+
+  #globus-support .gs-title{
+    font-size:28px!important;
+  }
+
+  #globus-support .gs-title span{
+    display:inline-block!important;
+    margin-top:5px!important;
+    font-size:.68em!important;
+  }
+
+  #globus-support .gs-card{
+    min-height:300px!important;
+  }
+
+  #globus-support .gs-content{
+    min-height:300px!important;
+    width:58%!important;
+    padding:30px 18px 24px!important;
+  }
+
+  #globus-support .gs-image{
+    width:58%!important;
+  }
+
+  #globus-support .gs-no{
+    font-size:30px!important;
+  }
+
+  #globus-support .gs-card-title{
+    font-size:20px!important;
+  }
+
+  #globus-support .gs-card-copy{
+    font-size:11px!important;
+  }
+
+  #globus-support .gs-arrow{
+    left:18px!important;
+    bottom:18px!important;
+  }
+
+  #globus-support .gs-cta{
+    min-width:0!important;
+    width:100%!important;
+  }
+}
+</style>
+
 </head>
 
 <body id="top" style="">
@@ -2046,8 +2320,10 @@ footer img[src*="glowpas-logo"]{
 
                       <div class="container">
                         <article id="siteDesc" class="slide">
-                官公庁や企業のセミナー・シンポジウム・展示会などのイベントを企画から運営までワンストップでサポート。<br>
+                <p class="gs-intro-copy">
+官公庁や企業のセミナー・シンポジウム・展示会などのイベントを企画から運営までワンストップでサポート。<br>
 オンライン配信や人材手配にも対応し、豊富な実績と柔軟な対応力でイベント成功を支える株式会社グローパスの公式サイトです。
+</p>
             </article>
             
                             <article id="newsTopics">
@@ -2101,62 +2377,46 @@ footer img[src*="glowpas-logo"]{
   <div class="gs-inner">
 
     <div class="gs-heading">
-
       <p class="gs-label">SUPPORT</p>
 
       <h2 class="gs-title">
-        官公庁案件から企業イベントまで<br>
-        幅広く対応
+        幅広いイベント支援に対応<br>
+        <span>官公庁・自治体から企業イベントまで</span>
       </h2>
 
       <p class="gs-copy">
-        企画から制作、キャスティング、当日の運営まで。
-        グローパスは、イベントに必要な業務を一貫してサポートします。
+        企画から制作、キャスティング、当日の運営まで。グローパスは、イベントに必要な業務を一貫してサポートします。
       </p>
-
     </div>
 
     <div class="gs-grid">
 
-      
-
       <a class="gs-card" href="#">
-        <img class="gs-image" src="assets/support-service.jpg" alt="サービス内容">
-        <div class="gs-overlay"></div>
+        <img class="gs-image" src="assets/support-concept.jpg" alt="コンセプト">
         <div class="gs-content">
-          <span class="gs-no">03</span>
+          <span class="gs-no">01</span>
+          <h3 class="gs-card-title">コンセプト</h3>
+          <p class="gs-card-copy">想いをくみ取り、目的に沿ったイベントづくりを大切にしています。</p>
+          <span class="gs-arrow">→</span>
+        </div>
+      </a>
+
+      <a class="gs-card" href="service/index.html">
+        <img class="gs-image" src="assets/support-service.jpg" alt="サービス内容">
+        <div class="gs-content">
+          <span class="gs-no">02</span>
           <h3 class="gs-card-title">サービス内容</h3>
-          <p class="gs-card-copy">
-            企画・制作・運営・配信など、イベントに必要な業務を幅広くサポート。
-          </p>
+          <p class="gs-card-copy">企画・制作・運営・配信など、イベントに必要な業務を幅広くサポート。</p>
           <span class="gs-arrow">→</span>
         </div>
       </a>
 
       <a class="gs-card" href="results/index.html">
         <img class="gs-image" src="assets/support-results.jpg" alt="実績">
-        <div class="gs-overlay"></div>
         <div class="gs-content">
           <span class="gs-no">03</span>
           <h3 class="gs-card-title">実績</h3>
-          <p class="gs-card-copy">
-            官公庁・自治体・企業イベントなど、多様な現場で培った経験があります。
-          </p>
-          <span class="gs-arrow">→</span>
-        </div>
-      </a>
-
-      
-
-      <a class="gs-card gs-card-wide" href="recruit/index.html">
-        <img class="gs-image" src="assets/support-staff.jpg" alt="採用情報">
-        <div class="gs-overlay"></div>
-        <div class="gs-content">
-          <span class="gs-no">04</span>
-          <h3 class="gs-card-title">採用情報</h3>
-          <p class="gs-card-copy">
-            イベント運営の現場で一緒に働くスタッフを募集しています。
-          </p>
+          <p class="gs-card-copy">官公庁・自治体・企業イベントなど、多様な現場で培った経験があります。</p>
           <span class="gs-arrow">→</span>
         </div>
       </a>
@@ -2164,9 +2424,7 @@ footer img[src*="glowpas-logo"]{
     </div>
 
     <div class="gs-cta-wrap">
-      <a class="gs-cta" href="#globus-contact">
-        イベントのご相談はこちら →
-      </a>
+      <a class="gs-cta" href="#globus-contact">イベントのご相談はこちら <span>→</span></a>
     </div>
 
   </div>
