@@ -1390,6 +1390,59 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="contact-typography-match-support">
+
+/* CONTACT → SUPPORTのラベルと統一 */
+#globus-contact .gc-title{
+  margin:0 0 10px !important;
+  color:#1590b0 !important;
+  font-family:inherit !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+  line-height:1.2 !important;
+  letter-spacing:.28em !important;
+}
+
+#globus-contact .gc-title::after{
+  content:"" !important;
+  display:block !important;
+  width:58px !important;
+  height:1px !important;
+  margin:11px auto 0 !important;
+  background:#1590b0 !important;
+}
+
+/* お問い合わせ → SUPPORTメイン見出しと統一 */
+#globus-contact .gc-subtitle{
+  margin:20px 0 0 !important;
+  color:#0b78c4 !important;
+  font-family:inherit !important;
+  font-size:clamp(30px,3vw,46px) !important;
+  font-weight:700 !important;
+  line-height:1.35 !important;
+  letter-spacing:.02em !important;
+}
+
+/* 説明文 → SUPPORT説明文と統一 */
+#globus-contact .gc-copy{
+  max-width:980px !important;
+  margin:24px auto 46px !important;
+  color:#52697a !important;
+  font-family:inherit !important;
+  font-size:14px !important;
+  font-weight:400 !important;
+  line-height:1.9 !important;
+  letter-spacing:normal !important;
+}
+
+@media(max-width:640px){
+  #globus-contact .gc-subtitle{
+    font-size:28px !important;
+  }
+}
+</style>
+
 </head>
 
 <body id="top" style="">
