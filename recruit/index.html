@@ -652,6 +652,66 @@ img{
 }
 </style>
 
+
+<style id="jobs-reference-redesign">
+.jobs-redesign{padding:90px 38px 110px!important;background:#fff!important}
+.jobs-heading{max-width:1300px;margin:0 auto 55px;text-align:center}
+.jobs-en{color:#0b5687;font-size:14px;font-weight:700;letter-spacing:.35em}
+.jobs-heading-line{width:32px;height:3px;margin:13px auto 23px;background:#087caf}
+.jobs-heading>h2{margin:0!important;color:#102d55;font-size:44px!important;line-height:1.35;font-weight:700;letter-spacing:.12em}
+.jobs-heading>p{margin:18px 0 0;color:#52697a;font-size:17px;letter-spacing:.05em}
+.jobs-redesign .jobs-grid{max-width:1360px!important;margin:0 auto!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:26px!important}
+.jobs-redesign .job-card{overflow:hidden;border-radius:16px!important;background:#fff;box-shadow:0 12px 36px rgba(21,66,94,.08),0 2px 8px rgba(21,66,94,.04)!important}
+.jobs-redesign .job-visual{position:relative;height:375px!important;overflow:hidden}
+.jobs-redesign .job-visual img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.jobs-redesign .job-card:hover .job-visual img{transform:scale(1.025)}
+.jobs-redesign .job-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:38px 34px 32px!important;color:#fff}
+.jobs-redesign .technical .job-overlay{background:linear-gradient(90deg,rgba(3,79,126,.93),rgba(3,91,143,.78) 42%,rgba(3,104,159,.30) 75%,rgba(3,104,159,.05))!important}
+.jobs-redesign .event .job-overlay{background:linear-gradient(90deg,rgba(222,83,46,.91),rgba(235,101,62,.76) 42%,rgba(238,117,77,.28) 75%,rgba(238,117,77,.04))!important}
+.jobs-redesign .job-label{margin:0 0 9px;font-size:19px!important;font-weight:500;font-style:italic}
+.jobs-redesign .job-card .job-overlay h2{margin:0!important;color:#fff!important;font-size:31px!important;line-height:1.35!important;font-weight:700!important}
+.jobs-redesign .job-copy{margin-top:12px!important;color:#fff;font-size:15px!important;line-height:1.7!important}
+.jobs-redesign .job-body{padding:27px 28px 31px!important}
+.jobs-redesign .technical .job-body{background:linear-gradient(180deg,#f7fcff,#fff)!important}
+.jobs-redesign .event .job-body{background:linear-gradient(180deg,#fff9f5,#fff)!important}
+.jobs-redesign .job-tags{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:24px}
+.jobs-redesign .job-tags span{min-height:42px;display:flex;align-items:center;justify-content:center;padding:7px 8px;border-radius:999px;font-size:13px;font-weight:700;text-align:center;white-space:nowrap}
+.jobs-redesign .technical .job-tags span{color:#086b9c;background:#edf7fd}
+.jobs-redesign .event .job-tags span{color:#dc6442;background:#fff0e9}
+.jobs-redesign .job-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.jobs-redesign .job-info-box{padding:20px 18px 18px;border-radius:11px}
+.jobs-redesign .technical .job-info-box{background:#f3f9fd}
+.jobs-redesign .event .job-info-box{background:#fff5f0}
+.jobs-redesign .job-info-box h3{margin:0 0 14px!important;font-size:16px!important;font-weight:700!important}
+.jobs-redesign .technical .job-info-box h3{color:#076b9c!important}
+.jobs-redesign .event .job-info-box h3{color:#d75c37!important}
+.jobs-redesign .job-check-list{margin:0!important;padding:0!important;list-style:none!important}
+.jobs-redesign .job-check-list li{position:relative;margin:0 0 9px;padding-left:25px;color:#52697a;font-size:12.5px;line-height:1.65!important}
+.jobs-redesign .job-check-list li::before{content:"✓";position:absolute;left:0;top:1px;width:17px;height:17px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font-size:10px;font-weight:700}
+.jobs-redesign .technical .job-check-list li::before{background:#74b8e4}
+.jobs-redesign .event .job-check-list li::before{background:#f19a7d}
+.jobs-redesign .job-career{margin-top:22px;padding:15px 17px;border-radius:9px;color:#52697a;font-size:12px;line-height:1.8}
+.jobs-redesign .technical .job-career{background:#f5fbfe}
+.jobs-redesign .event .job-career{background:#fff7f3}
+@media(max-width:1050px){
+  .jobs-redesign{padding:75px 24px 90px!important}
+  .jobs-redesign .job-visual{height:320px!important}
+  .jobs-redesign .job-tags{grid-template-columns:repeat(2,1fr)}
+  .jobs-redesign .job-info-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .jobs-redesign{padding:65px 16px 75px!important}
+  .jobs-heading{margin-bottom:38px}
+  .jobs-heading>h2{font-size:32px!important}
+  .jobs-heading>p{font-size:14px;line-height:1.8}
+  .jobs-redesign .jobs-grid{grid-template-columns:1fr!important;gap:28px!important}
+  .jobs-redesign .job-visual{height:290px!important}
+  .jobs-redesign .job-overlay{padding:28px 24px 25px!important}
+  .jobs-redesign .job-card .job-overlay h2{font-size:25px!important}
+  .jobs-redesign .job-body{padding:22px 18px 25px!important}
+}
+</style>
+
 </head>
 <body>
 
@@ -696,42 +756,49 @@ img{
   </div>
 </section>
 
-<section class="jobs" id="jobs">
-  <div class="jobs-grid">
 
+<section class="jobs jobs-redesign" id="jobs">
+  <div class="jobs-heading">
+    <div class="jobs-en">JOB</div>
+    <div class="jobs-heading-line"></div>
+    <h2>募集職種</h2>
+    <p>それぞれの専門性で、イベントの成功を支えます。</p>
+  </div>
+
+  <div class="jobs-grid">
     <article class="job-card technical">
       <div class="job-visual">
         <img src="../assets/recruit/technical-card.jpg" alt="テクニカルスタッフ">
         <div class="job-overlay">
           <div class="job-label">Technical Staff</div>
-          <h2>テクニカル<br>スタッフ募集</h2>
-          <div class="job-copy">音響・映像・配信の技術で、<br>イベントを支える仕事です。</div>
+          <h2>テクニカルスタッフ募集</h2>
+          <div class="job-copy">音響・照明・映像などの技術で、<br>イベントの空間をつくる仕事です。</div>
         </div>
       </div>
       <div class="job-body">
-        <p>セミナーやシンポジウム、展示会などの現場で、音響・映像・オンライン配信を中心としたテクニカル業務を担当していただきます。</p>
-        <h3>主な業務内容</h3>
-        <ul>
-          <li>音響機材の設営、調整、オペレーション</li>
-          <li>マイク、ミキサー等の管理</li>
-          <li>カメラ、映像スイッチャーの操作</li>
-          <li>プロジェクター、モニター等の映像調整</li>
-          <li>Zoom、YouTube Live等を使用したオンライン配信</li>
-          <li>ライブ配信中の映像、音声、通信状況の監視</li>
-          <li>同時通訳システムの設営、オペレーション</li>
-          <li>機材の搬入、設営、撤去</li>
-          <li>本番中のトラブル対応 など</li>
-        </ul>
-        <h3>こんな方を歓迎します</h3>
-        <ul>
-          <li>音響、映像、配信業務の経験がある方</li>
-          <li>カメラ、ミキサー、スイッチャーの操作経験がある方</li>
-          <li>Zoom、YouTube Live等の知識がある方</li>
-          <li>イベント・ライブ・放送業界での経験を活かしたい方</li>
-          <li>対応力があり、チームワークを大切にできる方</li>
-          <li>新しい技術を学ぶことが好きな方</li>
-        </ul>
-        <div class="job-note">経験やスキルに応じて、アシスタント → メインオペレーター → チーフオペレーター → テクニカルディレクターを目指すこともできます。</div>
+        <div class="job-tags">
+          <span>音響</span><span>照明</span><span>映像</span><span>機材設営</span>
+        </div>
+        <div class="job-info-grid">
+          <div class="job-info-box">
+            <h3>▣ 主な業務</h3>
+            <ul class="job-check-list">
+              <li>音響・映像機材の設営・調整</li>
+              <li>カメラ・スイッチャー操作</li>
+              <li>オンライン配信対応</li>
+              <li>本番中のオペレーション・撤去</li>
+            </ul>
+          </div>
+          <div class="job-info-box">
+            <h3>♙ 歓迎する方</h3>
+            <ul class="job-check-list">
+              <li>機材や配信に興味がある方</li>
+              <li>チームで働く仕事が好きな方</li>
+              <li>現場対応力を身につけたい方</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-career">経験やスキルに応じて、アシスタント → メインオペレーター → チーフオペレーター → テクニカルディレクターを目指すこともできます。</div>
       </div>
     </article>
 
@@ -740,37 +807,39 @@ img{
         <img src="../assets/recruit/event-main.jpg" alt="イベント運営スタッフ">
         <div class="job-overlay">
           <div class="job-label">Event Staff</div>
-          <h2>イベント運営<br>スタッフ募集</h2>
-          <div class="job-copy">イベントの最前線で、<br>参加者を迎える仕事です。</div>
+          <h2>イベント運営スタッフ募集</h2>
+          <div class="job-copy">イベントの進行・運営を支え、<br>スムーズな現場づくりを行う仕事です。</div>
         </div>
       </div>
       <div class="job-body">
-        <p>セミナー・シンポジウム・展示会などの会場で、受付や参加者案内、会場運営のサポートを担当していただきます。特別な専門知識は必要ありません。</p>
-        <h3>主な業務内容</h3>
-        <ul>
-          <li>参加者受付、名簿確認</li>
-          <li>資料、名札、参加証等の配布</li>
-          <li>会場内の案内、誘導</li>
-          <li>質疑応答時のマイク対応</li>
-          <li>参加者からのお問い合わせ対応</li>
-          <li>会場設営、撤去のサポート</li>
-          <li>その他、イベント運営に関する業務</li>
-        </ul>
-        <h3>こんな方を歓迎します</h3>
-        <ul>
-          <li>人と接することが好きな方</li>
-          <li>明るく丁寧な対応ができる方</li>
-          <li>チームワークを大切にできる方</li>
-          <li>責任を持って仕事に取り組める方</li>
-          <li>イベント業界に興味がある方</li>
-          <li>学生、フリーランス、Wワークの方</li>
-        </ul>
-        <div class="job-note">未経験の方でも、現場で業務を覚えていただける環境です。</div>
+        <div class="job-tags">
+          <span>運営・進行</span><span>来場者対応</span><span>会場設営</span><span>チーム連携</span>
+        </div>
+        <div class="job-info-grid">
+          <div class="job-info-box">
+            <h3>▣ 主な業務</h3>
+            <ul class="job-check-list">
+              <li>受付・案内・誘導</li>
+              <li>会場設営・撤去サポート</li>
+              <li>参加者対応・問い合わせ対応</li>
+              <li>進行補助・現場サポート</li>
+            </ul>
+          </div>
+          <div class="job-info-box">
+            <h3>♙ 歓迎する方</h3>
+            <ul class="job-check-list">
+              <li>人と接することが好きな方</li>
+              <li>丁寧な対応を大切にできる方</li>
+              <li>イベント業界に興味がある方</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job-career">未経験の方でも、現場で業務を覚えていただける環境です。</div>
       </div>
     </article>
-
   </div>
 </section>
+
 
 <section class="gallery-wrap">
   <h2 class="gallery-title">イベントの現場</h2>
