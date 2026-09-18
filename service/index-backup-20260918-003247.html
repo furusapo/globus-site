@@ -382,113 +382,38 @@ footer{padding:34px 20px;text-align:center;color:#7c8d98;font-size:11px;border-t
 }
 </style>
 <style id="service-long-background">
-/* ===== 背景とコンテンツの位置合わせ 最終調整 =====
-   1枚の長い背景をmain全体に引き伸ばさず、
-   各セクションの意味に合う位置を切り出して使用する。
-*/
 main{
   position:relative;
-  background:#fff !important;
+  background:url("../assets/service/service-page-long-bg.png")
+             top center / 100% 100% no-repeat !important;
 }
 
-/* 共通：文字の可読性を優先した薄い背景レイヤー */
 .service-page-hero,
 .why,
-.overview,
 .service-detail,
 .problems,
 .coverage{
-  position:relative;
-  isolation:isolate;
-  background-repeat:no-repeat !important;
-  background-color:#fff;
+  background:transparent !important;
 }
 
-/* HERO：背景画像の上部（カンファレンス） */
-.service-page-hero{
-  background:
-    linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.88) 48%,rgba(255,255,255,.48) 100%),
-    url("../assets/service/service-page-long-bg.png") center 4% / cover no-repeat !important;
-}
-
-/* WHY：白〜淡いブルーの都市・波部分 */
-.why{
-  background:
-    linear-gradient(rgba(255,255,255,.88),rgba(255,255,255,.88)),
-    url("../assets/service/service-page-long-bg.png") center 24% / cover no-repeat !important;
-}
-
-/* SERVICE OVERVIEW：撮影・イベント現場の濃いブルー部分 */
 .overview{
-  background:
-    linear-gradient(rgba(7,54,94,.82),rgba(7,54,94,.82)),
-    url("../assets/service/service-page-long-bg.png") center 43% / cover no-repeat !important;
+  background:rgba(7,54,94,.78) !important;
 }
 
-/* SERVICE DETAIL：打合せ・会場の明るい部分 */
-.service-detail{
-  background:
-    linear-gradient(rgba(248,252,254,.91),rgba(248,252,254,.91)),
-    url("../assets/service/service-page-long-bg.png") center 61% / cover no-repeat !important;
+.cta{
+  background:rgba(7,65,105,.80) !important;
 }
 
-/* SUPPORT：ゴールド〜白の波部分。文章の後ろはかなり薄くする */
-.problems{
-  background:
-    linear-gradient(rgba(255,255,255,.90),rgba(255,255,255,.90)),
-    url("../assets/service/service-page-long-bg.png") center 78% / cover no-repeat !important;
-}
-
-/* COVERAGE：最下部のロビー・地球イメージ */
-.coverage{
-  background:
-    linear-gradient(rgba(247,250,252,.88),rgba(247,250,252,.88)),
-    url("../assets/service/service-page-long-bg.png") center 96% / cover no-repeat !important;
-}
-
-/* カード類は背景と喧嘩しない半透明の白に統一 */
 .point,
 .task,
 .problem{
-  background:rgba(255,255,255,.94) !important;
-  backdrop-filter:blur(3px);
-  -webkit-backdrop-filter:blur(3px);
-  box-shadow:0 10px 30px rgba(18,59,102,.05);
+  background:rgba(255,255,255,.90) !important;
+  backdrop-filter:blur(2px);
 }
 
-/* SERVICE OVERVIEW内のカードは白を維持 */
-.overview-card{
-  background:rgba(255,255,255,.97) !important;
-}
-
-/* CTAは独立した濃紺で締める */
-.cta{
-  background:
-    linear-gradient(135deg,rgba(10,62,112,.94),rgba(7,84,139,.92)) !important;
-}
-
-/* スマホ・タブレットでは背景写真をさらに薄くし、文字を優先 */
 @media(max-width:900px){
-  .service-page-hero{
-    background:
-      linear-gradient(rgba(255,255,255,.91),rgba(255,255,255,.91)),
-      url("../assets/service/service-page-long-bg.png") center 4% / cover no-repeat !important;
-  }
-  .why{
-    background:
-      linear-gradient(rgba(255,255,255,.93),rgba(255,255,255,.93)),
-      url("../assets/service/service-page-long-bg.png") center 24% / cover no-repeat !important;
-  }
-  .overview{
-    background:
-      linear-gradient(rgba(7,54,94,.88),rgba(7,54,94,.88)),
-      url("../assets/service/service-page-long-bg.png") center 43% / cover no-repeat !important;
-  }
-  .service-detail,
-  .problems,
-  .coverage{
-    background-color:#f8fcfe !important;
-    background-image:none !important;
+  main{
+    background-size:cover !important;
   }
 }
 </style>
@@ -504,8 +429,8 @@ main{
 <span class="service-copy-brand-text">官公庁・企業イベントの企画・運営</span>
 </a>
 <div class="service-copy-links">
-<a href="../company/index.html">会社概要</a>
-<a href="../company/index.html#access">アクセス</a>
+<a href="../index.html#company">会社概要</a>
+<a href="../index.html#access">アクセス</a>
 <a class="service-copy-contact" href="../contact/index.html">お問い合わせ</a>
 </div>
 </div>
