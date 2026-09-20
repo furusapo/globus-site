@@ -1112,3 +1112,53 @@ main{
   opacity:1 !important;
 }
 </style>
+
+<style id="service-overview-concept-style-final">
+/* SERVICE OVERVIEW → HOME CONCEPT風 */
+.overview .section-label{
+  display:inline-block !important;
+  position:relative !important;
+  margin:0 0 46px 0 !important;
+  padding:0 0 24px 0 !important;
+  color:#0088b3 !important;
+  background:transparent !important;
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif !important;
+  font-size:18px !important;
+  font-weight:500 !important;
+  line-height:1.2 !important;
+  letter-spacing:.22em !important;
+  text-shadow:none !important;
+  opacity:1 !important;
+}
+
+/* CONCEPTと同じ下線 */
+.overview .section-label::after{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  bottom:0 !important;
+  width:110px !important;
+  height:2px !important;
+  background:#0088b3 !important;
+}
+
+/* 見出しとの間隔調整 */
+.overview .section-head{
+  margin-bottom:48px !important;
+}
+
+@media(max-width:560px){
+  .overview .section-label{
+    font-size:16px !important;
+    margin-bottom:34px !important;
+    padding-bottom:18px !important;
+  }
+
+  .overview .section-label::after{
+    width:90px !important;
+  }
+}
+</style>
