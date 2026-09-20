@@ -712,6 +712,28 @@ main{
 .service-page-hero-visual::after{background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,255,255,.10))!important}
 .service-page-lead{margin:92px 8px 0 65px!important;max-width:calc(100% - 73px)!important}}
 </style>
+
+<style id="service-hero-photo-final-adjustment">
+/* サービスページ HERO写真 最終調整 */
+.service-page-hero-visual img{
+  opacity:1 !important;
+  filter:none !important;
+  object-fit:cover !important;
+  object-position:58% center !important;
+}
+
+/* 写真左端のフェードを弱め、写真をしっかり見せる */
+.service-page-hero-visual::after{
+  background:linear-gradient(
+    90deg,
+    rgba(255,255,255,.58) 0%,
+    rgba(255,255,255,.24) 11%,
+    rgba(255,255,255,.07) 22%,
+    rgba(255,255,255,0) 34%
+  ) !important;
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
