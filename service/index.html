@@ -604,99 +604,89 @@ main{
 </style>
 
 
-<style id="service-background-100-final">
-/* =========================================
-   SERVICE背景画像 100%表示
-   白・紺の透過レイヤーを完全に除去
-   ========================================= */
 
-.service-page-hero{
+<style id="service-continuous-background-final">
+
+/* ==========================================
+   SERVICE PAGE
+   長い背景画像をmain全体に1枚だけ配置
+   セクション境界で画像を切らない
+   ========================================== */
+
+main{
+  position:relative !important;
+  isolation:isolate !important;
   background:
     url("../assets/service/service-page-long-bg.png")
-    center 4% / cover no-repeat !important;
+    center top / 100% 100% no-repeat !important;
 }
 
-.why{
-  background:
-    url("../assets/service/service-page-long-bg.png")
-    center 24% / cover no-repeat !important;
-}
-
-.overview{
-  background:
-    url("../assets/service/service-page-long-bg.png")
-    center 43% / cover no-repeat !important;
-}
-
-.service-detail{
-  background:
-    url("../assets/service/service-page-long-bg.png")
-    center 61% / cover no-repeat !important;
-}
-
-.problems{
-  background:
-    url("../assets/service/service-page-long-bg.png")
-    center 78% / cover no-repeat !important;
-}
-
+/* 各セクション自身の背景画像を完全解除 */
+.service-page-hero,
+.why,
+.overview,
+.service-detail,
+.problems,
 .coverage{
-  background:
-    url("../assets/service/service-page-long-bg.png")
-    center 96% / cover no-repeat !important;
+  position:relative !important;
+  background:transparent !important;
+  background-image:none !important;
 }
 
-/* カード類は文字の可読性を維持 */
+/* HEROに元からある装飾円は残す */
+.service-page-hero::before{
+  background:#dff7fb !important;
+}
+
+/* カードは読みやすさを維持 */
 .point,
 .task,
 .problem{
   background:rgba(255,255,255,.94) !important;
+  backdrop-filter:blur(3px);
+  -webkit-backdrop-filter:blur(3px);
 }
 
-/* サービス概要カード */
 .overview-card{
   background:rgba(255,255,255,.97) !important;
 }
 
-/* iPad・スマホでも背景を消さず100%表示 */
+/* 濃い背景上でもOVERVIEW文字を読みやすく */
+.overview .section-label,
+.overview .section-title,
+.overview .section-lead{
+  color:#fff !important;
+}
+
+/* CTAは従来通り独立 */
+.cta{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(10,62,112,.94),
+      rgba(7,84,139,.92)
+    ) !important;
+}
+
+/* iPad・スマホでも同じ1枚背景 */
 @media(max-width:900px){
-
-  .service-page-hero{
+  main{
     background:
       url("../assets/service/service-page-long-bg.png")
-      center 4% / cover no-repeat !important;
+      center top / 100% 100% no-repeat !important;
   }
 
-  .why{
-    background:
-      url("../assets/service/service-page-long-bg.png")
-      center 24% / cover no-repeat !important;
-  }
-
-  .overview{
-    background:
-      url("../assets/service/service-page-long-bg.png")
-      center 43% / cover no-repeat !important;
-  }
-
-  .service-detail{
-    background:
-      url("../assets/service/service-page-long-bg.png")
-      center 61% / cover no-repeat !important;
-  }
-
-  .problems{
-    background:
-      url("../assets/service/service-page-long-bg.png")
-      center 78% / cover no-repeat !important;
-  }
-
+  .service-page-hero,
+  .why,
+  .overview,
+  .service-detail,
+  .problems,
   .coverage{
-    background:
-      url("../assets/service/service-page-long-bg.png")
-      center 96% / cover no-repeat !important;
+    background:transparent !important;
+    background-image:none !important;
   }
 }
+
 </style>
 
 </head>
