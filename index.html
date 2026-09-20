@@ -1525,151 +1525,483 @@ footer img[src*="glowpas-logo"]{
 </style>
 
 
-<style id="concept-layout-final">
-/* CONCEPT：背景画像は変更せず、文字レイアウトのみ調整 */
+
+
+
+<style id="concept-two-stage-final">
+
+/* ==================================================
+   CONCEPT
+   背景画像は既存の #ydc1 をそのまま使用
+================================================== */
+
 #ydc1{
   position:relative !important;
+  display:block !important;
+  width:100% !important;
+  margin:0 !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  color:#103f6c !important;
 }
 
-#ydc1 .concept-inner{
+
+/* =========================
+   上段 CONCEPT
+========================= */
+
+#ydc1 .concept-main{
   position:relative !important;
   z-index:2 !important;
-  width:min(1120px, calc(100% - 48px)) !important;
-  min-height:0 !important;
+
+  width:min(1100px, calc(100% - 48px)) !important;
+  min-height:470px !important;
+
   margin:0 auto !important;
-  padding:105px 24px 115px !important;
+  padding:55px 20px 38px !important;
+
   text-align:center !important;
 }
 
+
 #ydc1 .concept-label{
-  margin:0 0 42px !important;
-  color:#008fb5 !important;
-  font-size:16px !important;
+  margin:0 0 28px !important;
+
+  color:#0088b3 !important;
+
+  font-size:15px !important;
   line-height:1 !important;
   font-weight:700 !important;
-  letter-spacing:.25em !important;
+  letter-spacing:.22em !important;
 }
+
 
 #ydc1 .concept-label::after{
   content:"" !important;
+
   display:block !important;
-  width:68px !important;
+
+  width:55px !important;
   height:1px !important;
-  margin:22px auto 0 !important;
-  background:#008fb5 !important;
+
+  margin:17px auto 0 !important;
+
+  background:#0088b3 !important;
 }
 
+
 #ydc1 .concept-title{
-  margin:0 0 38px !important;
-  color:#073b6d !important;
-  font-size:clamp(36px,3.1vw,54px) !important;
+  margin:0 0 22px !important;
+
+  color:#083b6d !important;
+
+  font-size:clamp(34px,2.7vw,48px) !important;
   line-height:1.35 !important;
+
   font-weight:700 !important;
+  letter-spacing:.035em !important;
+}
+
+
+#ydc1 .concept-lead{
+  margin:0 auto 25px !important;
+
+  color:#355a77 !important;
+
+  font-size:15px !important;
+  line-height:1.9 !important;
+
+  font-weight:500 !important;
   letter-spacing:.03em !important;
 }
 
-#ydc1 .concept-lead{
-  margin:0 auto 58px !important;
-  color:#365b78 !important;
-  font-size:17px !important;
-  line-height:2 !important;
-  font-weight:500 !important;
-}
 
 #ydc1 .concept-values{
   display:flex !important;
+
   align-items:center !important;
   justify-content:center !important;
-  gap:42px !important;
-  margin:0 auto 62px !important;
+
+  gap:32px !important;
+
+  margin:0 auto 25px !important;
 }
+
 
 #ydc1 .concept-values strong{
   color:#006c9d !important;
-  font-size:21px !important;
-  line-height:1.5 !important;
+
+  font-size:18px !important;
+  line-height:1.4 !important;
+
   font-weight:700 !important;
+
   white-space:nowrap !important;
 }
 
+
 #ydc1 .concept-values span{
   display:block !important;
+
   width:1px !important;
-  height:38px !important;
-  background:#31a9cf !important;
+  height:30px !important;
+
   flex:0 0 1px !important;
+
+  background:#35a7c9 !important;
 }
 
+
 #ydc1 .concept-bottom{
-  margin:0 auto !important;
   max-width:900px !important;
+
+  margin:0 auto !important;
   padding:0 !important;
-  color:#365b78 !important;
-  font-size:16px !important;
-  line-height:2 !important;
+
+  color:#35536d !important;
+
+  font-size:14px !important;
+  line-height:1.85 !important;
+
   font-weight:500 !important;
 }
 
+
 #ydc1 .concept-bottom p{
-  margin:0 0 16px !important;
+  margin:0 0 7px !important;
 }
+
 
 #ydc1 .concept-bottom p:last-child{
   margin-bottom:0 !important;
 }
 
-@media(max-width:767px){
-  #ydc1 .concept-inner{
-    width:100% !important;
-    padding:72px 22px 82px !important;
+
+
+/* =========================
+   下段 OUR APPROACH
+========================= */
+
+#ydc1 .concept-approach{
+  position:relative !important;
+  z-index:2 !important;
+
+  display:grid !important;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(300px, .95fr) !important;
+
+  gap:70px !important;
+
+  align-items:center !important;
+
+  width:min(1280px, calc(100% - 80px)) !important;
+
+  min-height:480px !important;
+
+  margin:0 auto !important;
+
+  padding:50px 30px 65px !important;
+
+  text-align:left !important;
+}
+
+
+#ydc1 .concept-approach-copy{
+  max-width:650px !important;
+}
+
+
+#ydc1 .approach-label{
+  margin:0 0 31px !important;
+
+  color:#0088b3 !important;
+
+  font-size:13px !important;
+  line-height:1 !important;
+
+  font-weight:700 !important;
+
+  letter-spacing:.20em !important;
+}
+
+
+#ydc1 .approach-label::after{
+  content:"" !important;
+
+  display:block !important;
+
+  width:54px !important;
+  height:1px !important;
+
+  margin-top:17px !important;
+
+  background:#0088b3 !important;
+}
+
+
+#ydc1 .approach-title{
+  margin:0 0 24px !important;
+
+  color:#083b6d !important;
+
+  font-size:clamp(30px,2.35vw,42px) !important;
+  line-height:1.45 !important;
+
+  font-weight:700 !important;
+
+  letter-spacing:.025em !important;
+}
+
+
+#ydc1 .approach-text{
+  margin:0 0 20px !important;
+
+  color:#294e6c !important;
+
+  font-size:14px !important;
+  line-height:1.9 !important;
+
+  font-weight:500 !important;
+
+  letter-spacing:.02em !important;
+}
+
+
+#ydc1 .approach-text:last-child{
+  margin-bottom:0 !important;
+}
+
+
+
+/* =========================
+   下段右側メッセージ
+========================= */
+
+#ydc1 .concept-approach-message{
+  position:relative !important;
+
+  align-self:stretch !important;
+
+  display:flex !important;
+
+  flex-direction:column !important;
+
+  justify-content:center !important;
+
+  min-height:350px !important;
+
+  padding:35px 20px 35px 105px !important;
+}
+
+
+#ydc1 .approach-side-label{
+  display:block !important;
+
+  margin:0 0 65px !important;
+  padding-left:28px !important;
+
+  border-left:1px solid #1697bd !important;
+
+  color:#47718d !important;
+
+  font-size:11px !important;
+  line-height:1.75 !important;
+
+  font-weight:600 !important;
+
+  letter-spacing:.16em !important;
+}
+
+
+#ydc1 .concept-approach-message p{
+  margin:0 !important;
+
+  color:#083b6d !important;
+
+  font-size:clamp(25px,2vw,34px) !important;
+  line-height:1.65 !important;
+
+  font-weight:700 !important;
+
+  letter-spacing:.04em !important;
+}
+
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media(max-width:1000px){
+
+  #ydc1 .concept-main{
+    min-height:auto !important;
+    padding:65px 25px 55px !important;
   }
+
+  #ydc1 .concept-approach{
+    grid-template-columns:1fr 1fr !important;
+
+    gap:30px !important;
+
+    width:calc(100% - 48px) !important;
+
+    min-height:440px !important;
+
+    padding:55px 15px 65px !important;
+  }
+
+  #ydc1 .concept-approach-message{
+    padding-left:45px !important;
+  }
+
+}
+
+
+
+/* ==================================================
+   SMARTPHONE
+================================================== */
+
+@media(max-width:767px){
+
+  #ydc1{
+    background-position:center top !important;
+  }
+
+
+  #ydc1 .concept-main{
+    width:100% !important;
+
+    min-height:auto !important;
+
+    padding:58px 22px 50px !important;
+  }
+
 
   #ydc1 .concept-label{
-    margin-bottom:32px !important;
-    font-size:13px !important;
+    margin-bottom:28px !important;
+
+    font-size:12px !important;
   }
+
 
   #ydc1 .concept-title{
-    margin-bottom:28px !important;
-    font-size:30px !important;
-    line-height:1.45 !important;
+    margin-bottom:22px !important;
+
+    font-size:29px !important;
+    line-height:1.5 !important;
   }
 
+
   #ydc1 .concept-lead{
-    margin-bottom:38px !important;
-    font-size:15px !important;
-    line-height:1.9 !important;
+    margin-bottom:30px !important;
+
+    font-size:14px !important;
+    line-height:1.85 !important;
   }
+
 
   #ydc1 .concept-lead br{
     display:none !important;
   }
 
+
   #ydc1 .concept-values{
     flex-direction:column !important;
-    gap:13px !important;
-    margin-bottom:42px !important;
+
+    gap:12px !important;
+
+    margin-bottom:30px !important;
   }
+
 
   #ydc1 .concept-values strong{
-    font-size:18px !important;
+    font-size:17px !important;
   }
 
+
   #ydc1 .concept-values span{
-    width:34px !important;
+    width:32px !important;
     height:1px !important;
+
     flex:0 0 1px !important;
   }
 
+
   #ydc1 .concept-bottom{
-    font-size:14px !important;
-    line-height:1.9 !important;
+    font-size:13px !important;
+    line-height:1.85 !important;
   }
+
 
   #ydc1 .concept-bottom br{
     display:none !important;
   }
+
+
+
+  /* 下段 */
+
+  #ydc1 .concept-approach{
+    display:block !important;
+
+    width:100% !important;
+
+    min-height:auto !important;
+
+    padding:60px 24px 75px !important;
+  }
+
+
+  #ydc1 .concept-approach-copy{
+    max-width:none !important;
+  }
+
+
+  #ydc1 .approach-title{
+    font-size:28px !important;
+  }
+
+
+  #ydc1 .approach-text{
+    font-size:13px !important;
+    line-height:1.85 !important;
+  }
+
+
+  #ydc1 .approach-text br{
+    display:none !important;
+  }
+
+
+  #ydc1 .concept-approach-message{
+    min-height:0 !important;
+
+    margin-top:48px !important;
+
+    padding:0 0 0 20px !important;
+
+    border-left:1px solid rgba(0,137,179,.5) !important;
+  }
+
+
+  #ydc1 .approach-side-label{
+    margin-bottom:22px !important;
+    padding-left:0 !important;
+
+    border-left:0 !important;
+  }
+
+
+  #ydc1 .concept-approach-message p{
+    font-size:24px !important;
+  }
+
 }
+
 </style>
 
 </head>
@@ -1747,28 +2079,72 @@ footer img[src*="glowpas-logo"]{
 </article>
 <!-- === articleArea === -->
 <section class="articleBox noImg bg_color" id="ydc1">
-<div class="concept-inner">
-<p class="concept-label">CONCEPT</p>
-<h2 class="concept-title">想いを、成功という体験へ。</h2>
-<p class="concept-lead">
-      グローパスは、官公庁・自治体・企業のイベントを<br/>
+
+  <!-- 上段：CONCEPT -->
+  <div class="concept-main">
+    <p class="concept-label">CONCEPT</p>
+
+    <h2 class="concept-title">想いを、成功という体験へ。</h2>
+
+    <p class="concept-lead">
+      グローパスは、官公庁・自治体・企業のイベントを<br>
       企画から運営まで一貫して支援するプロフェッショナルチームです。
     </p>
-<div class="concept-values">
-<strong>人と人をつなぐ。</strong>
-<span></span>
-<strong>企業と社会をつなぐ。</strong>
-<span></span>
-<strong>想いと未来をつなぐ。</strong>
-</div>
-<div class="concept-bottom">
-<p>私たちが届けたいのは、イベントそのものではなく、その先にある価値です。</p>
-<p>
-        「Grow（成長）」と「Pass（つなぐ・受け渡す）」の名のもとに、<br/>
+
+    <div class="concept-values">
+      <strong>人と人をつなぐ。</strong>
+      <span></span>
+      <strong>企業と社会をつなぐ。</strong>
+      <span></span>
+      <strong>想いと未来をつなぐ。</strong>
+    </div>
+
+    <div class="concept-bottom">
+      <p>
+        私たちが届けたいのは、イベントそのものではなく、その先にある価値です。
+      </p>
+      <p>
+        「Grow（成長）」と「Pass（つなぐ・受け渡す）」の名のもとに、<br>
         確かな運営力と柔軟な対応力で、お客様の想いを成功という体験へと導きます。
       </p>
-</div>
-</div>
+    </div>
+  </div>
+
+  <!-- 下段：OUR APPROACH -->
+  <div class="concept-approach">
+
+    <div class="concept-approach-copy">
+      <p class="approach-label">OUR APPROACH</p>
+
+      <h3 class="approach-title">
+        一つひとつの現場に、<br>
+        同じ答えはない。
+      </h3>
+
+      <p class="approach-text">
+        イベントの目的も、規模も、関わる人も、それぞれ異なります。<br>
+        だからこそ私たちは、決まった形に当てはめるのではなく、<br>
+        主催者の想いや課題を丁寧にくみ取り、その現場に最適な方法を考えます。
+      </p>
+
+      <p class="approach-text">
+        企画から制作、キャスティング、音響・映像・配信、当日の運営まで。<br>
+        必要な業務を一つにつなぎ、状況の変化にも柔軟に対応しながら、<br>
+        最後まで責任を持って伴走します。
+      </p>
+    </div>
+
+    <div class="concept-approach-message">
+      <span class="approach-side-label">TAILORED<br>FOR EACH STORY</span>
+
+      <p>
+        それぞれの想いに、<br>
+        それぞれのカタチを。
+      </p>
+    </div>
+
+  </div>
+
 </section>
 <!-- 画像なしの場合 -->
 </div><!-- /.container SUPPORT full width -->
