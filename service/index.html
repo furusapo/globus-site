@@ -1185,3 +1185,28 @@ main{
   }
 }
 </style>
+
+<style id="service-overview-position-final-v2">
+/* SERVICE OVERVIEW一式を白いエリアまで上げる */
+.overview .section-head{
+  position:relative !important;
+  transform:translateY(-170px) !important;
+  margin-bottom:-122px !important;
+}
+
+/* タブレット */
+@media(max-width:900px){
+  .overview .section-head{
+    transform:translateY(-90px) !important;
+    margin-bottom:-42px !important;
+  }
+}
+
+/* スマホ */
+@media(max-width:560px){
+  .overview .section-head{
+    transform:translateY(-55px) !important;
+    margin-bottom:-7px !important;
+  }
+}
+</style>
