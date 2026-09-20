@@ -1524,6 +1524,154 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="concept-layout-final">
+/* CONCEPT：背景画像は変更せず、文字レイアウトのみ調整 */
+#ydc1{
+  position:relative !important;
+}
+
+#ydc1 .concept-inner{
+  position:relative !important;
+  z-index:2 !important;
+  width:min(1120px, calc(100% - 48px)) !important;
+  min-height:0 !important;
+  margin:0 auto !important;
+  padding:105px 24px 115px !important;
+  text-align:center !important;
+}
+
+#ydc1 .concept-label{
+  margin:0 0 42px !important;
+  color:#008fb5 !important;
+  font-size:16px !important;
+  line-height:1 !important;
+  font-weight:700 !important;
+  letter-spacing:.25em !important;
+}
+
+#ydc1 .concept-label::after{
+  content:"" !important;
+  display:block !important;
+  width:68px !important;
+  height:1px !important;
+  margin:22px auto 0 !important;
+  background:#008fb5 !important;
+}
+
+#ydc1 .concept-title{
+  margin:0 0 38px !important;
+  color:#073b6d !important;
+  font-size:clamp(36px,3.1vw,54px) !important;
+  line-height:1.35 !important;
+  font-weight:700 !important;
+  letter-spacing:.03em !important;
+}
+
+#ydc1 .concept-lead{
+  margin:0 auto 58px !important;
+  color:#365b78 !important;
+  font-size:17px !important;
+  line-height:2 !important;
+  font-weight:500 !important;
+}
+
+#ydc1 .concept-values{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:42px !important;
+  margin:0 auto 62px !important;
+}
+
+#ydc1 .concept-values strong{
+  color:#006c9d !important;
+  font-size:21px !important;
+  line-height:1.5 !important;
+  font-weight:700 !important;
+  white-space:nowrap !important;
+}
+
+#ydc1 .concept-values span{
+  display:block !important;
+  width:1px !important;
+  height:38px !important;
+  background:#31a9cf !important;
+  flex:0 0 1px !important;
+}
+
+#ydc1 .concept-bottom{
+  margin:0 auto !important;
+  max-width:900px !important;
+  padding:0 !important;
+  color:#365b78 !important;
+  font-size:16px !important;
+  line-height:2 !important;
+  font-weight:500 !important;
+}
+
+#ydc1 .concept-bottom p{
+  margin:0 0 16px !important;
+}
+
+#ydc1 .concept-bottom p:last-child{
+  margin-bottom:0 !important;
+}
+
+@media(max-width:767px){
+  #ydc1 .concept-inner{
+    width:100% !important;
+    padding:72px 22px 82px !important;
+  }
+
+  #ydc1 .concept-label{
+    margin-bottom:32px !important;
+    font-size:13px !important;
+  }
+
+  #ydc1 .concept-title{
+    margin-bottom:28px !important;
+    font-size:30px !important;
+    line-height:1.45 !important;
+  }
+
+  #ydc1 .concept-lead{
+    margin-bottom:38px !important;
+    font-size:15px !important;
+    line-height:1.9 !important;
+  }
+
+  #ydc1 .concept-lead br{
+    display:none !important;
+  }
+
+  #ydc1 .concept-values{
+    flex-direction:column !important;
+    gap:13px !important;
+    margin-bottom:42px !important;
+  }
+
+  #ydc1 .concept-values strong{
+    font-size:18px !important;
+  }
+
+  #ydc1 .concept-values span{
+    width:34px !important;
+    height:1px !important;
+    flex:0 0 1px !important;
+  }
+
+  #ydc1 .concept-bottom{
+    font-size:14px !important;
+    line-height:1.9 !important;
+  }
+
+  #ydc1 .concept-bottom br{
+    display:none !important;
+  }
+}
+</style>
+
 </head>
 <body id="top" style="">
 <!-- === header === -->
