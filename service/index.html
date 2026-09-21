@@ -899,6 +899,84 @@ main{
 }
 </style>
 
+
+<style id="service-team-three-cards-final">
+/* 社内連携・一括管理・柔軟対応：3枚の独立カード */
+
+.service-team-points{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:28px !important;
+  max-width:1120px !important;
+  margin:58px auto 70px !important;
+  align-items:stretch !important;
+}
+
+.service-team-point{
+  position:relative !important;
+  padding:34px 28px 32px !important;
+  background:rgba(255,255,255,.94) !important;
+  border:1px solid rgba(7,63,125,.08) !important;
+  border-radius:20px !important;
+  box-shadow:0 12px 32px rgba(7,63,125,.10) !important;
+  backdrop-filter:blur(4px) !important;
+  -webkit-backdrop-filter:blur(4px) !important;
+  text-align:center !important;
+  height:100% !important;
+}
+
+/* 既存のカード間の縦線を完全に消す */
+.service-team-point + .service-team-point::before{
+  content:none !important;
+  display:none !important;
+}
+
+.service-team-point h3{
+  margin:0 0 16px !important;
+  color:#073F7D !important;
+  font-size:clamp(21px,1.8vw,28px) !important;
+  line-height:1.45 !important;
+  font-weight:700 !important;
+}
+
+.service-team-point p{
+  margin:0 !important;
+  color:#263746 !important;
+  font-size:16px !important;
+  line-height:1.8 !important;
+  font-weight:500 !important;
+}
+
+/* タブレット */
+@media(max-width:900px){
+  .service-team-points{
+    gap:18px !important;
+  }
+
+  .service-team-point{
+    padding:28px 20px !important;
+  }
+}
+
+/* スマホ */
+@media(max-width:700px){
+  .service-team-points{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    margin:38px auto 45px !important;
+  }
+
+  .service-team-point{
+    padding:28px 24px !important;
+  }
+
+  .service-team-point + .service-team-point::before{
+    content:none !important;
+    display:none !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
