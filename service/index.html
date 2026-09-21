@@ -1628,3 +1628,50 @@ main{
   }
 }
 </style>
+
+<style id="why-three-cards-final">
+/* 3つの特徴を独立カード化 */
+.why .why-item{
+  background:rgba(255,255,255,.94) !important;
+  border-radius:20px !important;
+  padding:34px 32px 32px !important;
+  box-shadow:0 10px 30px rgba(7,63,125,.10) !important;
+  border:1px solid rgba(255,255,255,.85) !important;
+  height:100% !important;
+}
+
+/* カード同士にしっかり余白 */
+.why .why-grid{
+  gap:28px !important;
+}
+
+/* 既存の縦区切り線は不要 */
+.why .why-item + .why-item{
+  border-left:none !important;
+}
+
+/* 見出し */
+.why .why-item h3{
+  color:#073F7D !important;
+  margin-top:0 !important;
+  margin-bottom:22px !important;
+}
+
+/* 説明文 */
+.why .why-item p{
+  color:#263746 !important;
+  margin-bottom:0 !important;
+}
+
+/* スマホ */
+@media(max-width:760px){
+  .why .why-grid{
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+  }
+
+  .why .why-item{
+    padding:28px 24px !important;
+  }
+}
+</style>
