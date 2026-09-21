@@ -1761,3 +1761,46 @@ main{
   line-height:1.65 !important;
 }
 </style>
+
+<style id="service-detail-white-gradient-final">
+/* サービス詳細：文字の後ろに白→透明グラデーション */
+.service-detail{
+  position:relative !important;
+}
+
+/* 左側を白く、右に向かって透明にする */
+.service-detail::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  pointer-events:none !important;
+  background:linear-gradient(
+    90deg,
+    rgba(255,255,255,.96) 0%,
+    rgba(255,255,255,.92) 20%,
+    rgba(255,255,255,.72) 38%,
+    rgba(255,255,255,.32) 53%,
+    rgba(255,255,255,0) 68%
+  ) !important;
+}
+
+/* 文字・写真はグラデーションより手前 */
+.service-detail > *{
+  position:relative !important;
+  z-index:1 !important;
+}
+
+/* スマホは文字の後ろを広めに白く */
+@media(max-width:760px){
+  .service-detail::before{
+    background:linear-gradient(
+      90deg,
+      rgba(255,255,255,.96) 0%,
+      rgba(255,255,255,.88) 55%,
+      rgba(255,255,255,.25) 85%,
+      rgba(255,255,255,0) 100%
+    ) !important;
+  }
+}
+</style>
