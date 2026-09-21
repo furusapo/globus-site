@@ -2007,3 +2007,44 @@ main{
   font-weight:700 !important;
 }
 </style>
+
+<style id="service-team-lead-readability-final">
+/* チーム紹介文：背景ウェーブの上でも読める白グラデーション */
+.service-team-heading .section-lead{
+  position:relative !important;
+  z-index:1 !important;
+  padding:22px 48px !important;
+}
+
+.service-team-heading .section-lead::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:-1 !important;
+  top:-8px !important;
+  bottom:-8px !important;
+  left:-6% !important;
+  right:-6% !important;
+  background:linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.72) 15%,
+    rgba(255,255,255,.94) 32%,
+    rgba(255,255,255,.97) 50%,
+    rgba(255,255,255,.94) 68%,
+    rgba(255,255,255,.72) 85%,
+    rgba(255,255,255,0) 100%
+  ) !important;
+  pointer-events:none !important;
+}
+
+@media(max-width:700px){
+  .service-team-heading .section-lead{
+    padding:18px 16px !important;
+  }
+
+  .service-team-heading .section-lead::before{
+    left:-10px !important;
+    right:-10px !important;
+  }
+}
+</style>
