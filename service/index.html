@@ -1804,3 +1804,20 @@ main{
   }
 }
 </style>
+
+<style id="contact-heading-size-final">
+/* お問い合わせ見出しを2回り大きく */
+.contact-section h2,
+.contact-cta h2{
+  font-size:clamp(52px,5vw,76px) !important;
+  line-height:1.15 !important;
+  font-weight:700 !important;
+}
+
+@media(max-width:760px){
+  .contact-section h2,
+  .contact-cta h2{
+    font-size:clamp(40px,11vw,56px) !important;
+  }
+}
+</style>
