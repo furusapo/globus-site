@@ -2048,3 +2048,22 @@ main{
   }
 }
 </style>
+
+<style id="service-hero-title-spacing-match-works">
+/* 実績一覧の WORKS と同じ感覚に、日本語→英語の余白を統一 */
+.service-page-hero h1::after{
+  top:82px !important;
+}
+
+@media(max-width:900px){
+  .service-page-hero h1::after{
+    top:68px !important;
+  }
+}
+
+@media(max-width:560px){
+  .service-page-hero h1::after{
+    top:62px !important;
+  }
+}
+</style>
