@@ -759,6 +759,106 @@ main{
   color:#fff !important;
 }
 </style>
+
+<style id="service-spacing-text-final-20260921">
+
+/* 1. HERO左側を下げ、右写真の下端側へ寄せる */
+.service-page-hero-inner{
+  padding-top:105px !important;
+}
+.service-page-heading{
+  transform:translateY(28px) !important;
+}
+
+/* 2. 社内連携・一括管理・柔軟対応：説明を黒＋少し大きく */
+.service-team-point p{
+  color:#222 !important;
+  font-size:16px !important;
+  line-height:1.8 !important;
+}
+
+/* 3. SERVICE OVERVIEW下の余白を圧縮 */
+.overview{
+  padding-bottom:45px !important;
+}
+.overview-grid{
+  margin-bottom:0 !important;
+}
+.service-detail{
+  padding-top:45px !important;
+}
+
+/* 4. 01・02 セクションの説明文：黒＋2px */
+.service-top p{
+  color:#222 !important;
+  font-size:17px !important;
+  line-height:1.9 !important;
+}
+
+/* 5. 01と02の間も少し締める */
+.service-block + .service-block{
+  margin-top:65px !important;
+}
+
+/* 6. 02カード群の下〜SUPPORTの余白を圧縮 */
+.service-detail{
+  padding-bottom:45px !important;
+}
+.problems{
+  padding-top:45px !important;
+  padding-bottom:45px !important;
+}
+
+/* 7. SUPPORT〜COVERAGE間の余白を圧縮 */
+.problems .section-inner{
+  margin-bottom:0 !important;
+}
+.coverage{
+  padding-top:45px !important;
+}
+
+/* タブレット */
+@media(max-width:900px){
+  .service-page-hero-inner{
+    padding-top:78px !important;
+  }
+  .service-page-heading{
+    transform:translateY(20px) !important;
+  }
+  .overview{
+    padding-bottom:38px !important;
+  }
+  .service-detail{
+    padding-top:38px !important;
+    padding-bottom:38px !important;
+  }
+  .problems{
+    padding-top:38px !important;
+    padding-bottom:38px !important;
+  }
+  .coverage{
+    padding-top:38px !important;
+  }
+}
+
+/* スマホ */
+@media(max-width:560px){
+  .service-page-hero-inner{
+    padding-top:58px !important;
+  }
+  .service-page-heading{
+    transform:translateY(10px) !important;
+  }
+  .service-team-point p{
+    font-size:15px !important;
+  }
+  .service-top p{
+    font-size:16px !important;
+  }
+}
+
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
@@ -856,29 +956,29 @@ main{
 </div>
 <div class="task-grid">
 <article class="task">
-<div class="task-no">01</div>
+
 <img alt="企画・設計" class="task-icon" src="../assets/service/service-icon-planning.png?v=20260910-1749"/>
 <h4>企画・設計</h4>
 <p>目的の整理、企画設計、戦略の策定</p>
 </article>
 <article class="task">
-<div class="task-no">02</div>
+
 <img alt="会場・制作" class="task-icon" src="../assets/service/service-icon-venue.png?v=20260910-1749"/>
 <h4>会場・制作</h4>
 <p>会場設計、デザイン、制作物の準備</p>
 </article>
-<article class="task"><div class="task-no">03</div>
+<article class="task">
 <img alt="広報・集客" class="task-icon" src="../assets/service/service-icon-promotion.png?v=20260910-3"/><h4>広報・集客</h4><p>告知、集客、運営ツールの制作</p></article>
-<article class="task"><div class="task-no">04</div>
+<article class="task">
 <img alt="会場・備品" class="task-icon" src="../assets/service/service-icon-equipment.png?v=20260910-04"/>
 <h4>会場・備品</h4><p>設営準備、必要備品の手配と管理</p></article>
-<article class="task"><div class="task-no">05</div><img alt="進行管理・問い合わせ対応" class="task-icon" src="../assets/service/service-icon-schedule-inquiry.png?v=20260910-2"/>
+<article class="task"><img alt="進行管理・問い合わせ対応" class="task-icon" src="../assets/service/service-icon-schedule-inquiry.png?v=20260910-2"/>
 <h4>進行管理</h4><p>進行管理、各種お問い合わせ対応</p></article>
-<article class="task"><div class="task-no">06</div><img alt="運営・受付" class="task-icon" src="../assets/service/service-icon-staff.png"/>
+<article class="task"><img alt="運営・受付" class="task-icon" src="../assets/service/service-icon-staff.png"/>
 <h4>運営・受付</h4><p>スタッフ手配、教育、受付運営</p></article>
-<article class="task"><div class="task-no">07</div><img alt="各種手配" class="task-icon" src="../assets/service/service-icon-transport.png"/>
+<article class="task"><img alt="各種手配" class="task-icon" src="../assets/service/service-icon-transport.png"/>
 <h4>各種手配</h4><p>ケータリング、輸送、宿泊等の手配</p></article>
-<article class="task"><div class="task-no">08</div><img alt="フォローアップ" class="task-icon" src="../assets/service/service-icon-management.png"/>
+<article class="task"><img alt="フォローアップ" class="task-icon" src="../assets/service/service-icon-management.png"/>
 <h4>フォローアップ</h4><p>終了後の報告、振り返り、改善提案</p></article>
 </div>
 </div>
@@ -892,25 +992,25 @@ main{
 </div>
 <div class="task-grid">
 <article class="task">
-<div class="task-no">01</div>
+
 <img alt="進行管理" class="task-icon" src="../assets/service/service-icon-direction-progress.png?v=20260910-1907"/>
 <h4>進行管理</h4>
 <p>スムーズなタイムテーブル運営を実現</p>
 </article>
 <article class="task">
-<div class="task-no">02</div>
+
 <img alt="現場統括" class="task-icon" src="../assets/service/service-icon-direction-director.png?v=20260910-1907"/>
 <h4>現場統括</h4>
 <p>関係者との密な連携で円滑に対応</p>
 </article>
 <article class="task">
-<div class="task-no">03</div>
+
 <img alt="緊急時対応" class="task-icon" src="../assets/service/service-icon-direction-emergency.png?v=20260910-1907"/>
 <h4>緊急時対応</h4>
 <p>トラブル時も迅速かつ柔軟に対応</p>
 </article>
 <article class="task">
-<div class="task-no">04</div>
+
 <img alt="トラブル対応" class="task-icon" src="../assets/service/service-icon-direction-trouble.png?v=20260910-1907"/>
 <h4>トラブル対応</h4>
 <p>想定外の事態にも安心のサポート体制</p>
