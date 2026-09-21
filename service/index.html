@@ -1435,33 +1435,14 @@ main{
 </style>
 
 <style id="coverage-list-visibility-final">
-/* 対応業務：背景上でも読みやすく */
-.coverage .coverage-item{
-  color:#fff !important;
-}
-
-/* 項目内の文字もすべて白 */
+/* 対応業務：白カード上の文字をGLOWPAS濃紺に固定 */
 .coverage .coverage-item,
 .coverage .coverage-item *{
-  color:#fff !important;
+  color:#073F7D !important;
 }
 
-/* チェック丸：白背景 */
-.coverage .coverage-check{
-  background:#fff !important;
-  border-color:#fff !important;
-  color:#0088b3 !important;
-}
-
-/* ✓だけ青 */
-.coverage .coverage-check,
-.coverage .coverage-check *{
-  color:#0088b3 !important;
-}
-
-/* 区切り線 */
 .coverage .coverage-item{
-  border-color:rgba(255,255,255,.85) !important;
+  border-color:rgba(7,63,125,.14) !important;
 }
 </style>
 
@@ -1491,5 +1472,21 @@ main{
   border-radius:50% !important;
   box-shadow:none !important;
   font-weight:700 !important;
+}
+</style>
+
+
+<style id="coverage-color-absolute-final">
+.coverage .coverage-grid .coverage-item,
+.coverage .coverage-grid .coverage-item *{
+  color:#073F7D !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+}
+
+.coverage .coverage-grid .coverage-item::before{
+  color:#0088B3 !important;
+  background:#EEF7FB !important;
+  border:0 !important;
 }
 </style>
