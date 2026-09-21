@@ -1002,13 +1002,102 @@ main{
 </style>
 
 
-<style id="service-hero-jp-en-spacing-final">
-/*
-  実績一覧と同じ見出し→英字の距離感に統一。
-  サービスページ固有の文字サイズ・線サイズは変更しない。
-*/
+<style id="service-hero-match-results-actual-final">
+/* 実績一覧のファイル末尾で実際に効いているHERO値に統一 */
+
+.service-page-hero{
+  min-height:430px !important;
+  height:430px !important;
+}
+
+/* 写真レイアウトはサービス固有なので維持 */
+.service-page-hero-inner{
+  position:relative !important;
+  z-index:3 !important;
+  width:min(1280px,calc(100% - 48px)) !important;
+  height:100% !important;
+  margin:0 auto !important;
+  padding:72px 0 54px !important;
+  align-items:flex-start !important;
+}
+
+.service-page-heading{
+  position:relative !important;
+  z-index:4 !important;
+  width:48% !important;
+  max-width:620px !important;
+  transform:none !important;
+}
+
+/* ↓ 実績一覧の最終値と同一 */
+.service-page-hero h1{
+  position:relative !important;
+  margin:0 !important;
+  padding-left:90px !important;
+  color:#12385f !important;
+  font-size:38px !important;
+  line-height:1.3 !important;
+  font-weight:700 !important;
+}
+
+.service-page-hero h1::before{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  top:50% !important;
+  width:65px !important;
+  height:3px !important;
+  background:#12385f !important;
+  transform:translateY(-50%) !important;
+}
+
 .service-page-hero h1::after{
-  top:58px !important;
+  content:"SERVICE" !important;
+  position:absolute !important;
+  left:20px !important;
+  top:45px !important;
+  color:rgba(100,165,200,.15) !important;
+  font-size:95px !important;
+  line-height:1 !important;
+  font-weight:700 !important;
+  letter-spacing:-.04em !important;
+  white-space:nowrap !important;
+  z-index:-1 !important;
+}
+
+/* 説明文だけSERVICEの下へ */
+.service-page-lead{
+  position:relative !important;
+  z-index:5 !important;
+  margin:125px 0 0 90px !important;
+  max-width:520px !important;
+  color:#073F7D !important;
+  font-size:17px !important;
+  line-height:1.9 !important;
+  font-weight:700 !important;
+}
+
+@media(max-width:900px){
+  .service-page-hero h1{
+    font-size:30px !important;
+    padding-left:65px !important;
+  }
+
+  .service-page-hero h1::before{
+    width:45px !important;
+    height:2px !important;
+  }
+
+  .service-page-hero h1::after{
+    left:15px !important;
+    top:38px !important;
+    font-size:65px !important;
+  }
+
+  .service-page-lead{
+    margin:90px 15px 0 65px !important;
+    font-size:14px !important;
+  }
 }
 </style>
 
@@ -2058,157 +2147,4 @@ main{
     right:-10px !important;
   }
 }
-</style>
-
-<style id="service-hero-match-results-layout-final-v2">
-
-/* =====================================================
-   SERVICE HERO
-   「実績一覧」のHEROレイアウトを基準に統一
-   ===================================================== */
-
-.service-page-hero{
-  min-height:430px !important;
-  height:430px !important;
-}
-
-/* 実績一覧と同じ1100px基準 */
-.service-page-hero-inner{
-  position:relative !important;
-  z-index:3 !important;
-  width:min(1100px,calc(100% - 80px)) !important;
-  height:100% !important;
-  margin:0 auto !important;
-  padding:80px 0 !important;
-  align-items:flex-start !important;
-}
-
-/* 以前のサービス固有の下移動を解除 */
-.service-page-heading{
-  position:relative !important;
-  z-index:4 !important;
-  width:52% !important;
-  max-width:none !important;
-  transform:none !important;
-}
-
-/* 日本語見出し：実績一覧と同値 */
-.service-page-hero h1{
-  position:relative !important;
-  z-index:5 !important;
-  margin:0 !important;
-  padding-left:130px !important;
-  color:#12385f !important;
-  font-size:54px !important;
-  line-height:1.2 !important;
-  font-weight:700 !important;
-  letter-spacing:.02em !important;
-}
-
-/* 左の横線：実績一覧と同値 */
-.service-page-hero h1::before{
-  content:"" !important;
-  position:absolute !important;
-  left:0 !important;
-  top:50% !important;
-  width:95px !important;
-  height:3px !important;
-  background:#12385f !important;
-  transform:translateY(-50%) !important;
-}
-
-/* SERVICE：WORKSと同値 */
-.service-page-hero h1::after{
-  content:"SERVICE" !important;
-  position:absolute !important;
-  left:10px !important;
-  top:65px !important;
-  z-index:-1 !important;
-  color:rgba(100,165,200,.15) !important;
-  font-size:150px !important;
-  line-height:1 !important;
-  font-weight:700 !important;
-  letter-spacing:-.04em !important;
-  white-space:nowrap !important;
-}
-
-/* 説明文はSERVICEの下 */
-.service-page-lead{
-  position:relative !important;
-  z-index:5 !important;
-  max-width:500px !important;
-  margin:175px 0 0 130px !important;
-  color:#073F7D !important;
-  font-size:17px !important;
-  line-height:1.9 !important;
-  font-weight:700 !important;
-}
-
-/* 写真はサービスページ固有なので維持 */
-.service-page-hero-visual{
-  z-index:1 !important;
-}
-
-/* ---------- tablet ---------- */
-@media(max-width:900px){
-
-  .service-page-hero-inner{
-    width:calc(100% - 40px) !important;
-    padding:55px 0 !important;
-  }
-
-  .service-page-heading{
-    transform:none !important;
-  }
-
-  .service-page-hero h1{
-    padding-left:90px !important;
-    font-size:42px !important;
-  }
-
-  .service-page-hero h1::before{
-    width:65px !important;
-  }
-
-  .service-page-hero h1::after{
-    left:8px !important;
-    top:55px !important;
-    font-size:105px !important;
-  }
-
-  .service-page-lead{
-    margin:135px 0 0 90px !important;
-    font-size:14px !important;
-  }
-}
-
-/* ---------- mobile ---------- */
-@media(max-width:560px){
-
-  .service-page-heading{
-    width:100% !important;
-    transform:none !important;
-  }
-
-  .service-page-hero h1{
-    padding-left:65px !important;
-    font-size:32px !important;
-  }
-
-  .service-page-hero h1::before{
-    width:45px !important;
-    height:2px !important;
-  }
-
-  .service-page-hero h1::after{
-    left:5px !important;
-    top:45px !important;
-    font-size:72px !important;
-  }
-
-  .service-page-lead{
-    margin:100px 8px 0 65px !important;
-  }
-}
-
 </style>
