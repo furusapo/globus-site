@@ -926,7 +926,7 @@ main{
 <main>
 <section class="service-page-hero">
 <div class="service-page-hero-visual" aria-hidden="true">
-<img src="../素材/LINE_ALBUM_グローパス_260913_31.jpg" alt=""/>
+<img src="../assets/service/service-hero.jpg" alt="イベント運営の様子"/>
 </div>
 <div class="service-page-hero-inner">
 <div class="service-page-heading">
@@ -1105,71 +1105,100 @@ main{
 <footer>© 株式会社グローパス</footer>
 
 <script id="service-photo-gallery-script">
-(()=>{
-  const track=document.getElementById('service-photo-track');
-  if(!track)return;
-  const viewport=track.closest('.service-photo-flow');
+(() => {
+  const track = document.getElementById("service-photo-track");
+  if (!track) return;
 
-  const frag=document.createDocumentFragment();
-  for(let r=0;r<2;r++){
-    for(let i=1;i<=41;i++){
-      const card=document.createElement('div');
-      card.className='service-flow-photo';
-      const img=document.createElement('img');
-      img.src=`../素材/LINE_ALBUM_グローパス_260917_${i}.jpg`;
-      img.alt=`グローパス イベント実績 ${i}`;
-      img.loading='lazy';
-      img.draggable=false;
+  const viewport = track.closest(".service-photo-flow");
+  if (!viewport) return;
+
+  const TOTAL = 41;
+  const fragment = document.createDocumentFragment();
+
+  /* 2セット作り、途切れない横スクロールにする */
+  for (let repeat = 0; repeat < 2; repeat++) {
+    for (let i = 1; i <= TOTAL; i++) {
+      const card = document.createElement("div");
+      card.className = "service-flow-photo";
+
+      const img = document.createElement("img");
+      img.src =
+        "../assets/service/gallery/gallery-" +
+        String(i).padStart(2, "0") +
+        ".jpg";
+
+      img.alt = "グローパス イベント実績 " + i;
+      img.loading = i <= 6 ? "eager" : "lazy";
+      img.decoding = "async";
+      img.draggable = false;
+
+      /* 公開先に存在しない画像はカードごと除外 */
+      img.addEventListener("error", () => card.remove());
+
       card.appendChild(img);
-      frag.appendChild(card);
+      fragment.appendChild(card);
     }
   }
-  track.appendChild(frag);
 
-  let dragging=false,startX=0,startScroll=0,hover=false,last=performance.now();
+  track.replaceChildren(fragment);
 
-  viewport.addEventListener('pointerdown',e=>{
-    if(e.button!==0)return;
-    dragging=true;
-    startX=e.clientX;
-    startScroll=viewport.scrollLeft;
-    viewport.classList.add('is-dragging');
-    viewport.setPointerCapture(e.pointerId);
-    e.preventDefault();
-  });
+  let dragging = false;
+  let startX = 0;
+  let startScroll = 0;
+  let lastTime = performance.now();
 
-  viewport.addEventListener('pointermove',e=>{
-    if(!dragging)return;
-    viewport.scrollLeft=startScroll-(e.clientX-startX);
-    e.preventDefault();
-  });
+  const startDrag = (e) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
 
-  const endDrag=e=>{
-    if(!dragging)return;
-    dragging=false;
-    viewport.classList.remove('is-dragging');
-    try{viewport.releasePointerCapture(e.pointerId)}catch(_){}
+    dragging = true;
+    startX = e.clientX;
+    startScroll = viewport.scrollLeft;
+    viewport.classList.add("is-dragging");
+
+    try {
+      viewport.setPointerCapture(e.pointerId);
+    } catch (_) {}
   };
-  viewport.addEventListener('pointerup',endDrag);
-  viewport.addEventListener('pointercancel',endDrag);
 
-  viewport.addEventListener('mouseenter',()=>hover=true);
-  viewport.addEventListener('mouseleave',()=>{hover=false;dragging=false;viewport.classList.remove('is-dragging')});
+  const moveDrag = (e) => {
+    if (!dragging) return;
+    viewport.scrollLeft =
+      startScroll - (e.clientX - startX);
+  };
 
-  function loop(now){
-    const dt=Math.min(now-last,40);
-    last=now;
+  const endDrag = (e) => {
+    dragging = false;
+    viewport.classList.remove("is-dragging");
 
-    if(!dragging&&!hover&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-      viewport.scrollLeft += dt*0.030;
+    try {
+      viewport.releasePointerCapture(e.pointerId);
+    } catch (_) {}
+  };
+
+  viewport.addEventListener("pointerdown", startDrag);
+  viewport.addEventListener("pointermove", moveDrag);
+  viewport.addEventListener("pointerup", endDrag);
+  viewport.addEventListener("pointercancel", endDrag);
+
+  /* 自動スクロール */
+  function animate(now) {
+    const delta = Math.min(now - lastTime, 40);
+    lastTime = now;
+
+    if (!dragging) {
+      viewport.scrollLeft += delta * 0.035;
     }
 
-    const half=track.scrollWidth/2;
-    if(half>0&&viewport.scrollLeft>=half)viewport.scrollLeft-=half;
+    const half = track.scrollWidth / 2;
 
-    requestAnimationFrame(loop);
+    if (half > 0 && viewport.scrollLeft >= half) {
+      viewport.scrollLeft -= half;
+    }
+
+    requestAnimationFrame(animate);
   }
-  requestAnimationFrame(loop);
+
+  requestAnimationFrame(animate);
 })();
 </script>
 </body>
