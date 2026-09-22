@@ -1706,7 +1706,25 @@ footer img[src*="glowpas-logo"]{
 <style id="concept-background-final">
 #ydc1{
   background-image:
-    linear-gradient(rgba(255,255,255,.45), rgba(255,255,255,.45)),
+
+    /* OUR APPROACH左側：文章の後ろを白くぼかす */
+    radial-gradient(
+      ellipse 42% 31% at 23% 76%,
+      rgba(255,255,255,.98) 0%,
+      rgba(255,255,255,.94) 30%,
+      rgba(255,255,255,.80) 48%,
+      rgba(255,255,255,.48) 65%,
+      rgba(255,255,255,.18) 80%,
+      rgba(255,255,255,0) 100%
+    ),
+
+    /* 今ある全体の薄い白 */
+    linear-gradient(
+      rgba(255,255,255,.45),
+      rgba(255,255,255,.45)
+    ),
+
+    /* 今ある中央の白グラデーション */
     linear-gradient(
       90deg,
       rgba(255,255,255,0) 0%,
@@ -1719,6 +1737,7 @@ footer img[src*="glowpas-logo"]{
       rgba(255,255,255,.08) 82%,
       rgba(255,255,255,0) 100%
     ),
+
     url("assets/concept-background.png?v=20260922-1525") !important;
   background-size:cover !important;
   background-position:center center !important;
