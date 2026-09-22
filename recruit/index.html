@@ -1443,6 +1443,146 @@ img{
 }
 </style>
 
+
+<style id="recruit-attraction-mobile-spacing-fix-20260923">
+/* 働く魅力：スマホ最終レイアウト調整 */
+@media (max-width:767px){
+
+  /* セクション全体はカード用の余白を維持 */
+  .attraction{
+    padding:46px 20px 52px !important;
+  }
+
+  /* タイトルだけ左右いっぱいまで広げる */
+  .attraction .section-title{
+    width:calc(100% + 24px) !important;
+    max-width:none !important;
+    margin:0 -12px 30px !important;
+    padding:0 !important;
+
+    font-size:28px !important;
+    line-height:1.25 !important;
+    letter-spacing:0 !important;
+    white-space:nowrap !important;
+    text-align:center !important;
+  }
+
+  /* カード：左アイコン領域を完全確保 */
+  .attraction-card{
+    display:grid !important;
+    grid-template-columns:110px minmax(0,1fr) !important;
+    grid-template-rows:auto auto !important;
+    column-gap:22px !important;
+    row-gap:22px !important;
+
+    width:100% !important;
+    min-height:0 !important;
+    padding:28px 26px 30px !important;
+    box-sizing:border-box !important;
+  }
+
+  /* 左上アイコン */
+  .attraction-icon{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    width:100px !important;
+    height:100px !important;
+    margin:0 !important;
+
+    align-self:center !important;
+    justify-self:start !important;
+
+    position:relative !important;
+    z-index:1 !important;
+  }
+
+  .attraction-icon img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+  }
+
+  /* 右上見出し：アイコン領域へ侵入させない */
+  .attraction-card h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+
+    width:100% !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    position:relative !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+
+    align-self:center !important;
+
+    font-size:16px !important;
+    line-height:1.55 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
+
+    overflow-wrap:anywhere !important;
+    word-break:normal !important;
+    z-index:2 !important;
+  }
+
+  /* 説明文はその下から全幅 */
+  .attraction-card p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:14px !important;
+    line-height:1.85 !important;
+    text-align:left !important;
+  }
+}
+
+/* 幅の狭いスマホ */
+@media (max-width:390px){
+
+  .attraction{
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+
+  .attraction .section-title{
+    width:calc(100% + 20px) !important;
+    margin-left:-10px !important;
+    margin-right:-10px !important;
+    font-size:25px !important;
+  }
+
+  .attraction-card{
+    grid-template-columns:88px minmax(0,1fr) !important;
+    column-gap:16px !important;
+    padding:24px 20px 26px !important;
+  }
+
+  .attraction-icon{
+    width:84px !important;
+    height:84px !important;
+  }
+
+  .attraction-card h3{
+    font-size:15px !important;
+    line-height:1.5 !important;
+  }
+
+  .attraction-card p{
+    font-size:13px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
