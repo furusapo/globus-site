@@ -67,6 +67,47 @@ a{color:inherit;text-decoration:none}
  .overview-value{padding-top:7px}
 }
 </style>
+
+<style id="company-mobile-message-position-20260923">
+/* スマホのみ：
+   「イベントで つながる未来を、ともに。」を
+   ヒーロー下端〜会社概要見出しの間へ移動 */
+@media (max-width:800px){
+
+  .company-hero{
+    overflow:visible !important;
+    margin-bottom:150px !important;
+  }
+
+  .hero-inner{
+    position:relative !important;
+  }
+
+  .hero-message{
+    position:absolute !important;
+    top:100% !important;
+    left:18px !important;
+    right:18px !important;
+    width:auto !important;
+    margin:0 !important;
+    padding:18px 22px !important;
+    z-index:5 !important;
+  }
+}
+
+/* 小さいスマホでも左右余白を維持 */
+@media (max-width:480px){
+  .company-hero{
+    margin-bottom:145px !important;
+  }
+
+  .hero-message{
+    left:18px !important;
+    right:18px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
