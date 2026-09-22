@@ -579,6 +579,134 @@ img{
 }
 </style>
 
+
+<style id="results-mobile-layout-fix-20260923">
+/* =========================================
+   RESULTS：スマホ表示調整
+   ========================================= */
+@media (max-width:768px){
+
+  /* 実績一覧のヒーローをコンパクトにして文字を上へ */
+  .page-hero{
+    height:150px !important;
+    min-height:150px !important;
+    padding:0 !important;
+  }
+
+  .page-hero-inner{
+    width:100% !important;
+    height:100% !important;
+    padding:26px 20px 18px !important;
+    margin:0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:flex-start !important;
+  }
+
+  .page-hero .eyebrow{
+    margin:0 0 8px !important;
+  }
+
+  .page-hero h1{
+    margin:0 !important;
+    font-size:32px !important;
+    line-height:1.2 !important;
+  }
+
+  /* スマホでは説明文を非表示 */
+  .page-hero p{
+    display:none !important;
+  }
+
+  /* 実績エリア全体の余白を縮小 */
+  .results{
+    padding:26px 18px 70px !important;
+  }
+
+  .results-inner{
+    width:100% !important;
+    max-width:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+  }
+
+  /* PC用の左余白を完全解除 */
+  .year-block{
+    width:100% !important;
+    min-height:0 !important;
+    padding:0 !important;
+    margin-left:0 !important;
+  }
+
+  .year-block + .year-block{
+    margin-top:60px !important;
+  }
+
+  /* 2024 / 2025 を横向きで見出し位置へ */
+  .year-heading{
+    display:block !important;
+    width:100% !important;
+    margin:0 0 12px !important;
+    padding:0 0 14px !important;
+    border-bottom:1px solid #d8e7ed !important;
+  }
+
+  .year-number{
+    position:static !important;
+    display:block !important;
+    margin:0 0 4px !important;
+    padding:0 !important;
+    transform:none !important;
+    writing-mode:horizontal-tb !important;
+    color:#0d90b2 !important;
+    font-size:24px !important;
+    line-height:1.2 !important;
+    font-weight:700 !important;
+    letter-spacing:.02em !important;
+    opacity:1 !important;
+  }
+
+  .year-title{
+    margin:0 !important;
+    padding:0 !important;
+    color:#123b63 !important;
+    font-size:30px !important;
+    line-height:1.25 !important;
+    font-weight:700 !important;
+  }
+
+  /* 実績リストを左詰め */
+  .result-list{
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+    border-top:0 !important;
+  }
+
+  .result-item{
+    display:block !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:20px 0 !important;
+    border-bottom:1px solid #e5edf1 !important;
+  }
+
+  .organization{
+    margin:0 0 6px !important;
+    padding:0 !important;
+    font-size:15px !important;
+    line-height:1.6 !important;
+  }
+
+  .project{
+    margin:0 !important;
+    padding:0 !important;
+    font-size:15px !important;
+    line-height:1.7 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
