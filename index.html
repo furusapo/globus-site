@@ -2002,6 +2002,29 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="concept-approach-height-fix-20260922">
+/* CONCEPT：上段の位置を維持したまま、OUR APPROACH側だけ表示領域を拡張 */
+@media (min-width:1001px){
+
+  #ydc1.articleBox{
+    aspect-ratio:auto !important;
+    height:calc(100vw * 9 / 16 + 120px) !important;
+    min-height:880px !important;
+  }
+
+  /* 元の16:9高さの50%を境界として維持 */
+  #ydc1 .concept-main{
+    height:calc((100vw * 9 / 16) / 2) !important;
+  }
+
+  #ydc1 .concept-approach{
+    top:calc((100vw * 9 / 16) / 2) !important;
+    height:calc(100% - (100vw * 9 / 16) / 2) !important;
+  }
+}
+</style>
+
 </head>
 <body id="top" style="">
 <!-- === header === -->
