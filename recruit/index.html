@@ -1794,29 +1794,42 @@ img{
 
 
 <style id="entry-mobile-redesign-20260923">
-/* 応募エリア：スマホのみデザイン整理 */
+/* 応募エリア：スマホ／ふわっと透過デザイン */
 @media (max-width:768px){
 
   .entry{
     position:relative !important;
-    padding:56px 24px 64px !important;
+    padding:58px 24px 66px !important;
     min-height:auto !important;
-    text-align:left !important;
+    text-align:center !important;
     background:
       linear-gradient(
-        rgba(232,247,252,.42),
-        rgba(232,247,252,.56)
+        to bottom,
+        rgba(232,247,252,.22) 0%,
+        rgba(255,255,255,.12) 35%,
+        rgba(226,243,249,.28) 100%
       ),
       url("../assets/recruit/international.jpg") center / cover no-repeat !important;
   }
 
   .entry h2{
+    position:relative !important;
     display:block !important;
-    margin:0 0 24px !important;
-    padding:24px 26px !important;
-    border-radius:18px !important;
-    background:rgba(255,255,255,.90) !important;
-    box-shadow:0 8px 28px rgba(15,66,103,.08) !important;
+    margin:0 -8px 30px !important;
+    padding:34px 28px 38px !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(255,255,255,.92) 0%,
+        rgba(255,255,255,.78) 45%,
+        rgba(255,255,255,.40) 72%,
+        rgba(255,255,255,0) 100%
+      ) !important;
 
     color:#074879 !important;
     font-size:clamp(28px,7.2vw,36px) !important;
@@ -1828,24 +1841,33 @@ img{
 
   .entry p{
     margin:0 !important;
-    padding:25px 26px !important;
-    border-radius:18px !important;
-    background:rgba(255,255,255,.90) !important;
-    box-shadow:0 8px 28px rgba(15,66,103,.08) !important;
+    padding:22px 18px 26px !important;
+
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(255,255,255,.72) 0%,
+        rgba(255,255,255,.48) 52%,
+        rgba(255,255,255,0) 100%
+      ) !important;
 
     color:#405f73 !important;
     font-size:16px !important;
     line-height:2 !important;
     letter-spacing:.015em !important;
-    text-align:left !important;
+    text-align:center !important;
   }
 
   .entry .line-btn{
     display:block !important;
-    width:100% !important;
-    max-width:none !important;
-    margin:26px 0 0 !important;
-    padding:18px 20px !important;
+    width:calc(100% - 34px) !important;
+    max-width:520px !important;
+    margin:28px auto 0 !important;
+    padding:19px 20px !important;
     box-sizing:border-box !important;
 
     border-radius:999px !important;
@@ -1856,7 +1878,7 @@ img{
     line-height:1.4 !important;
     text-align:center !important;
     text-decoration:none !important;
-    box-shadow:0 12px 26px rgba(6,199,85,.22) !important;
+    box-shadow:0 12px 30px rgba(6,199,85,.24) !important;
   }
 }
 </style>
