@@ -1164,6 +1164,103 @@ img{
 }
 </style>
 
+
+<style id="staff-voice-mobile-horizontal-20260923">
+/* スタッフの声：スマホ専用レイアウト */
+@media (max-width:520px){
+
+  .voices-redesign .voice-card{
+    display:grid !important;
+    grid-template-columns:38% 62% !important;
+    grid-template-rows:auto auto !important;
+    align-items:start !important;
+    min-height:0 !important;
+    border-radius:16px !important;
+    overflow:hidden !important;
+  }
+
+  /* 左上：写真 */
+  .voices-redesign .voice-photo{
+    grid-column:1 !important;
+    grid-row:1 !important;
+    width:100% !important;
+    height:190px !important;
+    min-height:190px !important;
+    align-self:stretch !important;
+  }
+
+  .voices-redesign .voice-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center 20% !important;
+  }
+
+  /* 右上：職種・年齢・見出し */
+  .voices-redesign .voice-content{
+    display:contents !important;
+  }
+
+  .voices-redesign .voice-meta{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+    margin:0 !important;
+    padding:20px 16px 0 !important;
+    display:flex !important;
+    align-items:center !important;
+    flex-wrap:wrap !important;
+    gap:6px !important;
+    font-size:11px !important;
+  }
+
+  .voices-redesign .voice-role{
+    width:max-content !important;
+    min-height:28px !important;
+    padding:4px 10px !important;
+    font-size:10px !important;
+  }
+
+  .voices-redesign .voice-content h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+    margin:78px 16px 0 !important;
+    padding:0 !important;
+    color:#12395f !important;
+    font-size:18px !important;
+    line-height:1.65 !important;
+  }
+
+  /* 写真の下：本文をカード横幅いっぱい */
+  .voices-redesign .voice-content p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+    margin:0 !important;
+    padding:22px 20px 10px !important;
+    color:#586d7c !important;
+    font-size:13px !important;
+    line-height:1.9 !important;
+  }
+
+  /* タグも全幅 */
+  .voices-redesign .voice-tags{
+    grid-column:1 / -1 !important;
+    grid-row:3 !important;
+    margin:0 !important;
+    padding:8px 20px 22px !important;
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+  }
+
+  .voices-redesign .voice-tags span{
+    padding:6px 12px !important;
+    font-size:10px !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
