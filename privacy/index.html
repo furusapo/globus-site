@@ -664,6 +664,42 @@ body{color:#34495e;background:#fff;line-height:1.8}
 @media(max-width:900px){.policy-inner{width:min(760px,100%)!important}.policy-section:nth-of-type(2){grid-template-columns:210px 1fr}.intro{padding-left:10px!important;padding-right:10px!important}}
 @media(max-width:680px){.hero{padding:34px 18px!important}.hero-title{font-size:28px!important}.policy{padding:24px 18px 55px!important}.intro{padding:0 0 20px!important;text-align:left;font-size:13px}.policy-section{padding:20px 0}.policy-section h2{font-size:17px!important}.policy-section p{margin-left:0!important;margin-right:0!important;font-size:13px}.policy-section:nth-of-type(2){display:block}.policy-section:nth-of-type(2)>h3{margin-top:10px!important;padding:12px 14px!important;border-right:0;background:#eaf1f5}.policy-section:nth-of-type(2)>ul{padding:12px 14px!important;background:#f6f8fa}.contact-box{margin-left:0!important;margin-right:0!important}.signature{display:block}.signature p+p{margin-top:12px!important}}
 </style>
+
+<style id="privacy-mobile-intro-move-20260923">
+/* スマホのみ：
+   個人情報保護方針の導入文をヒーロー下部の空白へ移動 */
+@media (max-width:680px){
+
+  .hero{
+    padding-bottom:300px !important;
+  }
+
+  .policy{
+    position:relative !important;
+    padding-top:0 !important;
+  }
+
+  .policy-inner{
+    position:relative !important;
+  }
+
+  .intro{
+    position:absolute !important;
+    left:0 !important;
+    right:0 !important;
+    bottom:100% !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 18px 48px !important;
+    background:transparent !important;
+    text-align:left !important;
+    font-size:13px !important;
+    line-height:1.9 !important;
+    z-index:5 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
