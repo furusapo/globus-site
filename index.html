@@ -1705,7 +1705,9 @@ footer img[src*="glowpas-logo"]{
 
 <style id="concept-background-final">
 #ydc1{
-  background-image:url("assets/concept-background.png?v=20260920") !important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.45), rgba(255,255,255,.45)),
+    url("assets/concept-background.png?v=20260922-1505") !important;
   background-size:cover !important;
   background-position:center center !important;
   background-repeat:no-repeat !important;
@@ -1950,30 +1952,6 @@ footer img[src*="glowpas-logo"]{
   }
 }
 </style>
-
-
-<style id="concept-white-veil-20260922">
-/* CONCEPT 背景の視認性向上：白いベール */
-#ydc1{
-  position:relative !important;
-  isolation:isolate !important;
-}
-
-#ydc1::before{
-  content:"" !important;
-  position:absolute !important;
-  inset:0 !important;
-  z-index:0 !important;
-  background:rgba(255,255,255,.45) !important;
-  pointer-events:none !important;
-}
-
-#ydc1 > *{
-  position:relative;
-  z-index:1;
-}
-</style>
-
 </head>
 <body id="top" style="">
 <!-- === header === -->
