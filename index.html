@@ -2147,6 +2147,34 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="mobile-hero-type-balance-20260923">
+/* HOMEスマホ：ヒーロー文字サイズだけ微調整 */
+@media screen and (max-width:768px){
+
+  /* タイトル：1行を維持して少しだけ大きく */
+  #globus-top-hero .gph-title{
+    font-size:clamp(20px, 5.8vw, 30px) !important;
+    line-height:1.15 !important;
+    letter-spacing:-0.045em !important;
+    white-space:nowrap !important;
+  }
+
+  #globus-top-hero .gph-title br{
+    display:none !important;
+  }
+
+  /* 本文：少し小さく、行間を詰める */
+  #globus-top-hero .gph-description{
+    display:block !important;
+    font-size:clamp(12px, 3.45vw, 16px) !important;
+    line-height:1.65 !important;
+    letter-spacing:0 !important;
+    margin-top:18px !important;
+  }
+}
+</style>
+
 </head>
 <body id="top" style="">
 <!-- === header === -->
