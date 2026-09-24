@@ -1947,24 +1947,35 @@ img{
 @media (max-width:768px){
 
   .recruit-message{
-    padding:42px 20px 38px !important;
+    padding:42px 26px 40px !important;
   }
 
+  /*
+    rm-inner自体をcontents化して、
+    rm-left / rm-right内の文章を同じGrid上へ配置
+  */
   .recruit-message .rm-inner{
     width:100% !important;
     max-width:none !important;
     margin:0 !important;
     padding:0 !important;
+
     display:grid !important;
-    grid-template-columns:36% minmax(0,1fr) !important;
-    gap:20px !important;
+    grid-template-columns:38% minmax(0,1fr) !important;
+    column-gap:22px !important;
+    row-gap:0 !important;
     align-items:start !important;
   }
 
+  /* 左上：採用情報 */
   .recruit-message .rm-left{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
     position:relative !important;
-    min-height:145px !important;
-    padding:10px 0 0 !important;
+    min-height:125px !important;
+    margin:0 !important;
+    padding:5px 0 0 !important;
     display:block !important;
   }
 
@@ -1973,64 +1984,110 @@ img{
     align-items:center !important;
     gap:9px !important;
     margin:0 !important;
+    padding:0 !important;
   }
 
   .recruit-message .rm-title::before{
-    width:24px !important;
+    content:"" !important;
+    display:block !important;
+    width:23px !important;
     height:2px !important;
-    flex:0 0 24px !important;
+    flex:0 0 23px !important;
+    background:#173354 !important;
   }
 
   .recruit-message .rm-title h2{
     margin:0 !important;
     padding:0 !important;
+    color:#173354 !important;
     font-size:19px !important;
     line-height:1.3 !important;
-    letter-spacing:.02em !important;
+    font-weight:700 !important;
+    letter-spacing:0 !important;
     white-space:nowrap !important;
   }
 
   .recruit-message .rm-watermark{
     position:absolute !important;
-    left:22px !important;
-    top:49px !important;
+    left:23px !important;
+    top:48px !important;
     bottom:auto !important;
-    font-size:39px !important;
+    margin:0 !important;
+
+    color:rgba(40,133,188,.10) !important;
+    font-size:37px !important;
     line-height:1 !important;
+    font-weight:800 !important;
     letter-spacing:-.05em !important;
     white-space:nowrap !important;
   }
 
+  /*
+    rm-rightをcontentsにすることで、
+    中のpをrm-innerのGridへ直接配置
+  */
   .recruit-message .rm-right{
-    width:100% !important;
-    margin:0 !important;
-    padding:7px 0 0 !important;
-    border:0 !important;
+    display:contents !important;
   }
 
-  .recruit-message .rm-right p{
-    margin:0 0 13px !important;
-    padding:0 !important;
+  /* 1段落目：右上 */
+  .recruit-message .rm-right p:first-child{
+    grid-column:2 !important;
+    grid-row:1 !important;
+
+    margin:0 !important;
+    padding:3px 0 0 !important;
+
     color:#324b5c !important;
-    font-size:11px !important;
-    line-height:1.8 !important;
+    font-size:12px !important;
+    line-height:1.85 !important;
     letter-spacing:0 !important;
     text-align:left !important;
   }
 
-  .recruit-message .rm-right p:last-child{
-    margin-bottom:0 !important;
+  /* 2〜4段落：左右いっぱい */
+  .recruit-message .rm-right p:nth-child(n+2){
+    grid-column:1 / -1 !important;
+
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    color:#324b5c !important;
+    font-size:13px !important;
+    line-height:1.9 !important;
+    letter-spacing:0 !important;
+    text-align:left !important;
   }
 
+  .recruit-message .rm-right p:nth-child(2){
+    grid-row:2 !important;
+    margin-top:24px !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(3){
+    grid-row:3 !important;
+    margin-top:18px !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(4){
+    grid-row:4 !important;
+    margin-top:18px !important;
+  }
+
+  /* 下の英字ライン */
   .recruit-message .rm-bottom{
     width:100% !important;
-    margin:26px 0 0 !important;
+    margin:28px 0 0 !important;
+    display:flex !important;
+    align-items:center !important;
     gap:14px !important;
   }
 
   .recruit-message .rm-bottom span{
     font-size:8px !important;
-    letter-spacing:.16em !important;
+    letter-spacing:.15em !important;
+    white-space:nowrap !important;
   }
 }
 </style>
