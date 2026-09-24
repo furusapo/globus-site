@@ -2294,6 +2294,50 @@ img{
 }
 </style>
 
+<style id="recruit-mobile-gallery-compact-auto-20260924">
+@media (max-width:768px){
+
+  .gallery-wrap{
+    padding:42px 0 46px !important;
+    overflow:hidden !important;
+  }
+
+  .gallery-title{
+    margin:0 0 26px !important;
+    font-size:28px !important;
+    line-height:1.2 !important;
+  }
+
+  .event-gallery{
+    width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scrollbar-width:none !important;
+    -webkit-overflow-scrolling:touch !important;
+  }
+
+  .event-gallery::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .gallery-track{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:10px !important;
+    width:max-content !important;
+    padding:0 10px !important;
+  }
+
+  .gallery-track img{
+    flex:0 0 44vw !important;
+    width:44vw !important;
+    height:29vw !important;
+    max-width:none !important;
+    object-fit:cover !important;
+    border-radius:12px !important;
+  }
+}
+</style>
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
@@ -2572,6 +2616,50 @@ img{
       slider.scrollLeft += e.deltaY;
     }
   }, {passive:false});
+})();
+</script>
+<script id="recruit-mobile-gallery-autoscroll-20260924">
+(() => {
+  const gallery = document.getElementById('eventGallery');
+  if (!gallery) return;
+
+  let paused = false;
+  let resumeTimer = null;
+
+  function isMobile(){
+    return window.matchMedia('(max-width:768px)').matches;
+  }
+
+  function pause(){
+    paused = true;
+    clearTimeout(resumeTimer);
+  }
+
+  function resumeLater(){
+    clearTimeout(resumeTimer);
+    resumeTimer = setTimeout(() => {
+      paused = false;
+    }, 1800);
+  }
+
+  gallery.addEventListener('touchstart', pause, {passive:true});
+  gallery.addEventListener('touchend', resumeLater, {passive:true});
+  gallery.addEventListener('pointerdown', pause);
+  gallery.addEventListener('pointerup', resumeLater);
+
+  function move(){
+    if(isMobile() && !paused){
+      gallery.scrollLeft += 0.45;
+
+      if(gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 2){
+        gallery.scrollLeft = 0;
+      }
+    }
+
+    requestAnimationFrame(move);
+  }
+
+  requestAnimationFrame(move);
 })();
 </script>
 </body>
