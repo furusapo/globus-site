@@ -2577,82 +2577,112 @@ img{
 <style id="recruit-mobile-attraction-three-columns-20260926">
 @media (max-width:520px){
 
-  /* ===== グローパスで働く魅力 ===== */
-
   .attraction{
-    padding:42px 12px 38px !important;
+    padding:38px 10px 34px !important;
     overflow:hidden !important;
   }
 
   .attraction .section-title{
-    margin:0 0 38px !important;
-    font-size:25px !important;
+    margin:0 0 34px !important;
+    font-size:24px !important;
     line-height:1.25 !important;
     text-align:center !important;
     white-space:nowrap !important;
   }
 
-  /* ラフ通り3枚横一列 */
+  /* 3カード横並び */
   .attraction-grid{
-    width:100% !important;
-    max-width:none !important;
-    margin:0 !important;
-
     display:grid !important;
     grid-template-columns:repeat(3,minmax(0,1fr)) !important;
     gap:7px !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
   }
 
   .attraction-card{
     position:relative !important;
+    display:block !important;
 
+    width:auto !important;
     min-width:0 !important;
-    min-height:185px !important;
+    min-height:190px !important;
 
     margin:0 !important;
-    padding:35px 9px 13px !important;
+    padding:38px 8px 12px !important;
 
     border-radius:13px !important;
     overflow:visible !important;
-  }
 
-  /* 丸アイコンをカード上部から少し飛び出させる */
-  .attraction-icon{
-    position:absolute !important;
-    top:-23px !important;
-    left:50% !important;
-    transform:translateX(-50%) !important;
-
-    width:52px !important;
-    height:52px !important;
-
-    margin:0 !important;
-    padding:0 !important;
-    z-index:2 !important;
-  }
-
-  .attraction-icon img{
-    display:block !important;
-    width:100% !important;
-    height:100% !important;
-    object-fit:contain !important;
-  }
-
-  .attraction-card h3{
-    margin:5px 0 8px !important;
-    padding:0 !important;
-
-    font-size:10px !important;
-    line-height:1.45 !important;
     text-align:center !important;
   }
 
+  /* ラフの丸アイコン */
+  .attraction-card .attraction-icon{
+    position:absolute !important;
+    top:-22px !important;
+    left:50% !important;
+    transform:translateX(-50%) !important;
+
+    display:block !important;
+    width:48px !important;
+    height:48px !important;
+    min-width:48px !important;
+    min-height:48px !important;
+
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .attraction-card .attraction-icon img{
+    display:block !important;
+    width:48px !important;
+    height:48px !important;
+    max-width:48px !important;
+    object-fit:contain !important;
+  }
+
+  /* 見出し：必ず横書き */
+  .attraction-card h3{
+    display:block !important;
+
+    width:100% !important;
+    max-width:100% !important;
+
+    margin:0 0 8px !important;
+    padding:0 !important;
+
+    font-size:8px !important;
+    font-weight:700 !important;
+    line-height:1.45 !important;
+    letter-spacing:-0.02em !important;
+
+    writing-mode:horizontal-tb !important;
+    text-orientation:mixed !important;
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:anywhere !important;
+    text-align:center !important;
+  }
+
+  /* 本文 */
   .attraction-card p{
+    display:block !important;
+
+    width:100% !important;
+    max-width:100% !important;
+
     margin:0 !important;
     padding:0 !important;
 
-    font-size:7.5px !important;
+    font-size:6.5px !important;
     line-height:1.65 !important;
+    letter-spacing:0 !important;
+
+    writing-mode:horizontal-tb !important;
+    text-orientation:mixed !important;
+    word-break:normal !important;
+    overflow-wrap:anywhere !important;
     text-align:left !important;
   }
 }
