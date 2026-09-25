@@ -2367,6 +2367,213 @@ img{
   }
 }
 </style>
+<style id="recruit-mobile-voice-gallery-layout-20260926">
+@media (max-width:520px){
+
+  /* ========================================
+     スマホだけ
+     スタッフの声 → イベントの現場 の順番
+     ======================================== */
+
+  main{
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  .voices-redesign{
+    order:50 !important;
+  }
+
+  .gallery-wrap{
+    order:51 !important;
+  }
+
+  .attraction{
+    order:52 !important;
+  }
+
+  .entry{
+    order:53 !important;
+  }
+
+  /* ===== スタッフの声 ===== */
+
+  .voices-redesign{
+    padding:38px 12px 34px !important;
+  }
+
+  .voices-redesign .voices-heading{
+    margin-bottom:22px !important;
+  }
+
+  .voices-redesign .voices-heading h2{
+    margin:8px 0 0 !important;
+    font-size:26px !important;
+    line-height:1.25 !important;
+  }
+
+  /* 4人を2列×2段 */
+  .voices-redesign .voice-grid{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:10px !important;
+  }
+
+  /* 1カード＝小さい横長 */
+  .voices-redesign .voice-card{
+    display:grid !important;
+    grid-template-columns:38% 62% !important;
+    grid-template-rows:auto auto auto !important;
+
+    min-width:0 !important;
+    min-height:0 !important;
+    margin:0 !important;
+
+    border-radius:11px !important;
+    overflow:hidden !important;
+  }
+
+  /* 左：写真 */
+  .voices-redesign .voice-photo{
+    grid-column:1 !important;
+    grid-row:1 !important;
+
+    width:100% !important;
+    height:105px !important;
+    min-height:105px !important;
+  }
+
+  .voices-redesign .voice-photo img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center 20% !important;
+  }
+
+  /*
+    voice-content を展開して
+    写真右側へ情報を配置
+  */
+  .voices-redesign .voice-content{
+    display:contents !important;
+  }
+
+  .voices-redesign .voice-meta{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+
+    margin:0 !important;
+    padding:9px 7px 0 !important;
+
+    display:flex !important;
+    align-items:flex-start !important;
+    flex-wrap:wrap !important;
+    gap:3px !important;
+
+    font-size:7px !important;
+    line-height:1.35 !important;
+  }
+
+  .voices-redesign .voice-role{
+    width:auto !important;
+    min-height:0 !important;
+
+    padding:3px 5px !important;
+    font-size:6.5px !important;
+    line-height:1.25 !important;
+  }
+
+  .voices-redesign .voice-content h3{
+    grid-column:2 !important;
+    grid-row:1 !important;
+    align-self:start !important;
+
+    margin:46px 7px 0 !important;
+    padding:0 !important;
+
+    font-size:9px !important;
+    line-height:1.45 !important;
+  }
+
+  /* 本文はカード下部を横いっぱい */
+  .voices-redesign .voice-content p{
+    grid-column:1 / -1 !important;
+    grid-row:2 !important;
+
+    margin:0 !important;
+    padding:9px 9px 5px !important;
+
+    font-size:7.5px !important;
+    line-height:1.55 !important;
+  }
+
+  .voices-redesign .voice-tags{
+    grid-column:1 / -1 !important;
+    grid-row:3 !important;
+
+    margin:0 !important;
+    padding:3px 9px 9px !important;
+
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:3px !important;
+  }
+
+  .voices-redesign .voice-tags span{
+    padding:3px 5px !important;
+    font-size:6.5px !important;
+    line-height:1.2 !important;
+  }
+
+  /* ===== イベントの現場 ===== */
+
+  .gallery-wrap{
+    padding:30px 0 34px !important;
+  }
+
+  .gallery-title{
+    margin:0 0 18px !important;
+    font-size:25px !important;
+    line-height:1.2 !important;
+  }
+
+  .event-gallery{
+    width:100% !important;
+    padding:0 !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    scrollbar-width:none !important;
+  }
+
+  .event-gallery::-webkit-scrollbar{
+    display:none !important;
+  }
+
+  .gallery-track{
+    display:flex !important;
+    flex-wrap:nowrap !important;
+    gap:8px !important;
+    width:max-content !important;
+    padding:0 10px !important;
+  }
+
+  /* ラフのような小さい横長写真 */
+  .gallery-track img{
+    flex:0 0 31vw !important;
+    width:31vw !important;
+    height:19vw !important;
+    max-width:none !important;
+
+    object-fit:cover !important;
+    border-radius:9px !important;
+  }
+}
+</style>
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
