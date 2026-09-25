@@ -2211,27 +2211,20 @@ img{
 <style id="recruit-mobile-message-font-compact-20260924">
 @media (max-width:768px){
 
-  /* 右上の導入文 */
-  .recruit-message .rm-right p:first-child{
-    font-size:10px !important;
-    line-height:1.7 !important;
-    letter-spacing:0 !important;
-  }
-
-  /* 下の本文 */
-  .recruit-message .rm-right p:nth-child(n+2){
-    font-size:11px !important;
+  /* 採用情報・導入本文をコンパクトに */
+  .recruit-message .rm-right p{
+    font-size:8.5px !important;
     line-height:1.75 !important;
     letter-spacing:0 !important;
   }
 
-  .recruit-message .rm-right p:nth-child(2){
-    margin-top:20px !important;
+  /* 段落間も縮める */
+  .recruit-message .rm-right p + p{
+    margin-top:10px !important;
   }
 
-  .recruit-message .rm-right p:nth-child(3),
-  .recruit-message .rm-right p:nth-child(4){
-    margin-top:13px !important;
+  .recruit-message .rm-right p:last-child{
+    margin-bottom:0 !important;
   }
 }
 </style>
