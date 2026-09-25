@@ -2982,6 +2982,75 @@ img{
 }
 </style>
 
+
+<style id="recruit-message-mobile-spacing-final-20260926">
+@media (max-width:768px){
+
+  /* セクション全体：左右余白を確保しつつ天地を圧縮 */
+  .recruit-message{
+    padding:24px 24px 22px !important;
+    box-sizing:border-box !important;
+  }
+
+  .recruit-message .rm-inner{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 auto !important;
+    padding:0 !important;
+
+    /* 上段と本文の間を詰める */
+    row-gap:0 !important;
+  }
+
+  /* 「採用情報」 */
+  .recruit-message .rm-left h2{
+    font-size:18px !important;
+    line-height:1.25 !important;
+    margin:0 !important;
+  }
+
+  /* タイトル横の線も少し小さく */
+  .recruit-message .rm-left h2::before{
+    width:24px !important;
+    margin-right:9px !important;
+  }
+
+  /* 薄い RECRUIT */
+  .recruit-message .rm-left .rm-en,
+  .recruit-message .rm-left .rm-bg-text{
+    font-size:36px !important;
+    line-height:1 !important;
+  }
+
+  /* 上段左右 */
+  .recruit-message .rm-left{
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  /* 右上説明 */
+  .recruit-message .rm-right p:first-child{
+    margin:0 !important;
+  }
+
+  /* 下本文を上へ寄せる */
+  .recruit-message .rm-right p:nth-child(2){
+    margin-top:4px !important;
+  }
+
+  .recruit-message .rm-right p:nth-child(3),
+  .recruit-message .rm-right p:nth-child(4){
+    margin-top:8px !important;
+  }
+
+  /* 下の英字ラインも近づける */
+  .recruit-message .rm-bottom{
+    margin-top:12px !important;
+    margin-bottom:0 !important;
+  }
+}
+</style>
+
 </head>
 <body>
 <header class="service-copy-header" id="gp-unified-header">
