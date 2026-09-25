@@ -2697,33 +2697,40 @@ img{
 }
 </style>
 <style id="recruit-mobile-entry-type-balance-20260926">
+
+/* PCでは改行しない */
+.entry-mobile-break{
+  display:none;
+}
+
 @media (max-width:520px){
 
   .entry{
     min-height:0 !important;
-    padding:38px 22px 42px !important;
+    padding:36px 22px 40px !important;
   }
 
-  /* 見出し */
   .entry h2{
     width:100% !important;
-    max-width:390px !important;
-
-    margin:0 auto 18px !important;
+    max-width:360px !important;
+    margin:0 auto 17px !important;
     padding:0 !important;
 
-    font-size:20px !important;
+    font-size:16px !important;
     font-weight:700 !important;
-    line-height:1.45 !important;
-    letter-spacing:0 !important;
+    line-height:1.55 !important;
+    letter-spacing:.01em !important;
     text-align:center !important;
   }
 
-  /* 説明文 */
+  /* スマホだけここで改行 */
+  .entry-mobile-break{
+    display:block !important;
+  }
+
   .entry p{
     width:88% !important;
     max-width:350px !important;
-
     margin:0 auto !important;
     padding:0 !important;
 
@@ -2734,15 +2741,13 @@ img{
     text-align:center !important;
   }
 
-  /* LINEボタン */
   .entry .line-btn{
     display:block !important;
-
     width:82% !important;
     max-width:330px !important;
 
     box-sizing:border-box !important;
-    margin:22px auto 0 !important;
+    margin:21px auto 0 !important;
     padding:13px 16px !important;
 
     font-size:14px !important;
@@ -2990,7 +2995,7 @@ img{
 </div>
 </section>
 <section class="entry" id="entry">
-<h2>あなたの力で、イベントをもっと特別なものに。</h2>
+<h2>あなたの力で、イベントを<span class="entry-mobile-break"></span>もっと特別なものに。</h2>
 <p>ご応募・お問い合わせは公式LINEより受け付けています。<br/>「イベント運営スタッフ希望」または「テクニカルスタッフ希望」とお送りください。<br/>まずは話を聞いてみたいという方も、お気軽にお問い合わせください。</p>
 <a class="line-btn" href="../index.html#globus-contact">LINEで応募する →</a>
 </section>
