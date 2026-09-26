@@ -2567,5 +2567,40 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="mobile-support-contact-gap-fix-20260926">
+@media screen and (max-width:560px){
+
+  /* SUPPORT直後〜CONTACTまでの不要な空白を消す */
+  #globus-support{
+    margin-bottom:0 !important;
+  }
+
+  #globus-support + .container{
+    display:none !important;
+    height:0 !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  #globus-contact{
+    margin-top:0 !important;
+  }
+
+  /* CONTACT直前の空asideを含むcontainerも高さを持たせない */
+  main + .container{
+    height:0 !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  main + .container #blog:empty{
+    display:none !important;
+  }
+}
+</style>
+
 </body></html>
 
