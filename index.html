@@ -2362,38 +2362,39 @@ footer img[src*="glowpas-logo"]{
 @media screen and (max-width:768px){
 
   #ydc1 .concept-values{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr) !important;
+    align-items:center !important;
+
     width:calc(100% - 32px) !important;
     max-width:none !important;
-    margin-left:auto !important;
-    margin-right:auto !important;
-
-    display:grid !important;
-    grid-template-columns:minmax(0,1fr) 18px minmax(0,1fr) 18px minmax(0,1fr) !important;
-    align-items:center !important;
-    justify-content:center !important;
-    column-gap:5px !important;
+    margin:22px auto !important;
+    padding:0 !important;
+    gap:8px !important;
   }
 
   #ydc1 .concept-values strong{
     display:block !important;
-    width:auto !important;
     margin:0 !important;
     padding:0 !important;
 
-    font-size:clamp(10px,2.8vw,13px) !important;
-    line-height:1.35 !important;
+    color:#0878a7 !important;
+    font-size:10px !important;
+    font-weight:700 !important;
+    line-height:1.45 !important;
     letter-spacing:0 !important;
     text-align:center !important;
     white-space:nowrap !important;
   }
 
+  /* 既存の横線を、ラフ通りの縦線へ */
   #ydc1 .concept-values span{
     display:block !important;
-    width:18px !important;
-    height:1px !important;
-    margin:0 !important;
+    width:1px !important;
+    height:24px !important;
+    margin:0 auto !important;
     padding:0 !important;
-    background:#159fc7 !important;
+    background:rgba(8,120,167,.55) !important;
   }
 }
 </style>
