@@ -2602,5 +2602,40 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="globus-contact-mobile-button-align-20260926">
+@media screen and (max-width:560px){
+
+  /* 左右カードを同じ高さにする */
+  #globus-contact .gc-contact-grid{
+    align-items:stretch !important;
+  }
+
+  #globus-contact .gc-card{
+    display:flex !important;
+    flex-direction:column !important;
+    height:100% !important;
+  }
+
+  /* 上部コンテンツは通常配置 */
+  #globus-contact .gc-card-top{
+    flex:0 0 auto !important;
+  }
+
+  /* ボタンを両カードとも下端に揃える */
+  #globus-contact .gc-card-btn{
+    margin-top:auto !important;
+    position:relative !important;
+    top:auto !important;
+    bottom:auto !important;
+  }
+
+  /* 本文とボタンの最低限の間隔 */
+  #globus-contact .gc-card-top + .gc-card-btn{
+    margin-top:auto !important;
+  }
+}
+</style>
+
 </body></html>
 
