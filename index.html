@@ -2175,6 +2175,72 @@ footer img[src*="glowpas-logo"]{
 }
 </style>
 
+
+<style id="home-mobile-news-compact-20260926">
+@media screen and (max-width:768px){
+
+  /* NEWSセクション全体をコンパクトに */
+  #newsTopics{
+    width:calc(100% - 36px) !important;
+    margin:0 auto !important;
+    padding:28px 0 32px !important;
+  }
+
+  /* NEWS見出し */
+  #newsTopics .heading{
+    margin:0 0 24px !important;
+    font-size:20px !important;
+    line-height:1.15 !important;
+    letter-spacing:.20em !important;
+  }
+
+  /* 一覧 */
+  #newsTopics .list{
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  #newsTopics .list li{
+    display:grid !important;
+    grid-template-columns:82px minmax(0,1fr) !important;
+    align-items:start !important;
+    column-gap:10px !important;
+
+    margin:0 !important;
+    padding:0 0 14px !important;
+
+    font-size:11px !important;
+    line-height:1.55 !important;
+  }
+
+  #newsTopics .list li:last-child{
+    padding-bottom:0 !important;
+  }
+
+  /* 日付 */
+  #newsTopics .day{
+    width:auto !important;
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:11px !important;
+    line-height:1.55 !important;
+    letter-spacing:.02em !important;
+    white-space:nowrap !important;
+  }
+
+  /* NEWS本文 */
+  #newsTopics .news-title{
+    margin:0 !important;
+    padding:0 !important;
+
+    font-size:11px !important;
+    line-height:1.55 !important;
+    letter-spacing:.02em !important;
+  }
+}
+</style>
+
 </head>
 <body id="top" style="">
 <!-- === header === -->
