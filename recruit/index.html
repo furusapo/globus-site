@@ -3466,48 +3466,84 @@ img{
   }, {passive:false});
 })();
 </script>
-<script id="recruit-mobile-gallery-autoscroll-20260924">
+<script id="recruit-mobile-gallery-autoscroll-20260926">
 (() => {
   const gallery = document.getElementById('eventGallery');
   if (!gallery) return;
 
   let paused = false;
   let resumeTimer = null;
+  let lastTime = null;
 
-  function isMobile(){
+  /* 1秒あたりの移動量。端末のfpsに依存させない */
+  const SPEED = 24;
+
+  function isMobile() {
     return window.matchMedia('(max-width:768px)').matches;
   }
 
-  function pause(){
+  function pause() {
     paused = true;
     clearTimeout(resumeTimer);
   }
 
-  function resumeLater(){
+  function resumeLater() {
     clearTimeout(resumeTimer);
+
     resumeTimer = setTimeout(() => {
       paused = false;
-    }, 1800);
+      lastTime = null;
+    }, 1500);
   }
 
-  gallery.addEventListener('touchstart', pause, {passive:true});
-  gallery.addEventListener('touchend', resumeLater, {passive:true});
-  gallery.addEventListener('pointerdown', pause);
-  gallery.addEventListener('pointerup', resumeLater);
+  /* iPhone Safari / Android Chrome / Pointer Events対応 */
+  gallery.addEventListener('touchstart', pause, { passive:true });
+  gallery.addEventListener('touchend', resumeLater, { passive:true });
+  gallery.addEventListener('touchcancel', resumeLater, { passive:true });
 
-  function move(){
-    if(isMobile() && !paused){
-      gallery.scrollLeft += 0.45;
+  if (window.PointerEvent) {
+    gallery.addEventListener('pointerdown', pause, { passive:true });
+    gallery.addEventListener('pointerup', resumeLater, { passive:true });
+    gallery.addEventListener('pointercancel', resumeLater, { passive:true });
+  }
 
-      if(gallery.scrollLeft >= gallery.scrollWidth - gallery.clientWidth - 2){
-        gallery.scrollLeft = 0;
+  /* マウス操作にも対応 */
+  gallery.addEventListener('mouseenter', pause);
+  gallery.addEventListener('mouseleave', resumeLater);
+
+  function animate(time) {
+    if (lastTime === null) {
+      lastTime = time;
+    }
+
+    const delta = Math.min(time - lastTime, 50);
+    lastTime = time;
+
+    if (isMobile() && !paused) {
+      const maxScroll = gallery.scrollWidth - gallery.clientWidth;
+
+      if (maxScroll > 0) {
+        gallery.scrollLeft += SPEED * (delta / 1000);
+
+        if (gallery.scrollLeft >= maxScroll - 1) {
+          gallery.scrollLeft = 0;
+        }
       }
     }
 
-    requestAnimationFrame(move);
+    requestAnimationFrame(animate);
   }
 
-  requestAnimationFrame(move);
+  /* タブ復帰時の大ジャンプ防止 */
+  document.addEventListener('visibilitychange', () => {
+    lastTime = null;
+  });
+
+  window.addEventListener('resize', () => {
+    lastTime = null;
+  });
+
+  requestAnimationFrame(animate);
 })();
 </script>
 
